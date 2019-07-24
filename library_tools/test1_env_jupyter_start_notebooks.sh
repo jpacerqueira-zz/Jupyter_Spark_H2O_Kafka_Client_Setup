@@ -20,6 +20,13 @@ export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 export PYSPARK_PYTHON=/home/joci/anaconda3/bin/python
 
+# Setup IP Spark IP
+MYIP=$(hostname -I | cut -d' ' -f1)
+echo $MYIP
+echo 'export SPARK_LOCAL_IP='${MYIP} >> ~/.bashrc
+export SPARK_LOCAL_IP=${MYIP}
+source ~/.bashrc
+#
 # workarround h2o for http://localhost in notebook session
 # unset http_proxy
 # unset https_proxy
