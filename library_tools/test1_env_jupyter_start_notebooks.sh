@@ -16,7 +16,7 @@ cd $HOME
 echo "spark.2.4.3"
 export SPARK_HOME=${HOME}/spark/spark-2.4.3-bin-hadoop2.7
 export HADOOP_HOME=${SPARK_HOME}
-export JAVA_HOME=/usr/bin/java/
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_221
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS=notebook
 export PYSPARK_PYTHON=${HOME}/anaconda3/bin/python
@@ -27,19 +27,21 @@ export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
 MYIP=$(hostname -I | cut -d' ' -f1)
 echo $MYIP
 ##export SPARK_LOCAL_IP=${MYIP}
-export SPARK_LOCAL_IP=0.0.0.0
-echo 'export SPARK_LOCAL_IP='${SPARK_LOCAL_IP} >> ~/.bashrc
-##export SPARK_LOCAL_IP=${MYIP}
+# export SPARK_LOCAL_IP=0.0.0.0
+# echo 'export SPARK_LOCAL_IP='${SPARK_LOCAL_IP} >> ~/.bashrc
+# export SPARK_LOCAL_IP=${MYIP}
+
 # Setup http_proxy and https_proxy
-HTTP_PROXY="export https_proxy=http://${MYIP}:3128/"
-HTTPS_PROXY="export https_proxy=http://${MYIP}:3128/"
+# HTTP_PROXY="export https_proxy=http://${MYIP}:3128/"
+# HTTPS_PROXY="export https_proxy=http://${MYIP}:3128/"
 #
-echo ${HTTP_PROXY} >> ~/.bashrc
-echo ${HTTPS_PROXY} >> ~/.bashrc
+#echo ${HTTP_PROXY} >> ~/.bashrc
+#echo ${HTTPS_PROXY} >> ~/.bashrc
 #
 source ~/.bashrc
 #
-export PYSPARK_SUBMIT_ARGS="--master ${SPARK_LOCAL_IP} pyspark-shell" 
+# export PYSPARK_SUBMIT_ARGS="--master ${SPARK_LOCAL_IP} pyspark-shell" 
+# export PYSPARK_SUBMIT_ARGS="--master local[*] pyspark-shell" 
 #
 # workarround h2o for http://localhost in notebook session
 # unset http_proxy
