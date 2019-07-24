@@ -11,3 +11,6 @@ tar -zvxf spark-2.4.3-bin-hadoop2.7.tgz
 echo  'export PATH="home/joci/spark/spark-2.4.3-bin-hadoop2.7/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 #
+# Force pyspark for Juoyter
+pip install pyspark
+#
