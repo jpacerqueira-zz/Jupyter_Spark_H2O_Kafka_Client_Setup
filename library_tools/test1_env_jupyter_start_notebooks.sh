@@ -19,7 +19,14 @@ export JAVA_HOME=/usr/bin/java/
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 export PYSPARK_PYTHON=/home/joci/anaconda3/bin/python
-
+#
+export PYSPARK_PYTHON=/home/joci/anaconda3/bin/python
+#
+export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH
+export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.4-src.zip:$PYTHONPATH
+#
+export PYSPARK_SUBMIT_ARGS='--master 0.0.0.0 --total-executor 2' 
+#
 # Setup IP Spark IP
 MYIP=$(hostname -I | cut -d' ' -f1)
 echo $MYIP
