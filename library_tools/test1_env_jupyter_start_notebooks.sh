@@ -15,18 +15,14 @@ cd $HOME
 # Spark.2.4.3
 echo "spark.2.4.3"
 export SPARK_HOME=${HOME}/spark/spark-2.4.3-bin-hadoop2.7
+export HADOOP_HOME=${SPARK_HOME}
 export JAVA_HOME=/usr/bin/java/
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS=notebook
 export PYSPARK_PYTHON=${HOME}/anaconda3/bin/python
 #
-export PYSPARK_PYTHON=${HOME}/anaconda3/bin/python
-#
 export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/build:$PYTHONPATH
 export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
-#
-export PYSPARK_SUBMIT_ARGS='--master local[2] pyspark-shell' 
-#
 # Setup IP Spark IP
 MYIP=$(hostname -I | cut -d' ' -f1)
 echo $MYIP
@@ -36,6 +32,8 @@ echo 'export SPARK_LOCAL_IP='${SPARK_LOCAL_IP} >> ~/.bashrc
 ##export SPARK_LOCAL_IP=${MYIP}
 source ~/.bashrc
 #
+export PYSPARK_SUBMIT_ARGS="--master ${SPARK_LOCAL_IP} pyspark-shell" 
+#
 # workarround h2o for http://localhost in notebook session
 # unset http_proxy
 # unset https_proxy
@@ -44,5 +42,5 @@ mkdir -p ~/notebooks/
 cd ~/notebooks/
 
 rm jupyter.log nohup.out 
-nohup  ~/anaconda3/bin/jupyter notebook --port 9003 --no-browser --ip=0.0.0.0  2>jupyter.log &
+nohup  ~/anaconda3/bin/jupyter notebook --port 9003 --no-browser --ip=${SPARK_LOCAL_IP}  2>jupyter.log &
 #
