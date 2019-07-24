@@ -6,4 +6,7 @@ mkdir -p ~/spark/
 mv spark-2.4.3-bin-hadoop2.7.tgz ~/spark
 cd ~/spark
 tar -zvxf spark-2.4.3-bin-hadoop2.7.tgz
+# env
+echo  'export PATH="/home/joci/spark/spark-2.4.3-bin-hadoop2.7/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 #
