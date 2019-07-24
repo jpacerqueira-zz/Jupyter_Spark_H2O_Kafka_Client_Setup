@@ -30,6 +30,13 @@ echo $MYIP
 export SPARK_LOCAL_IP=0.0.0.0
 echo 'export SPARK_LOCAL_IP='${SPARK_LOCAL_IP} >> ~/.bashrc
 ##export SPARK_LOCAL_IP=${MYIP}
+# Setup http_proxy and https_proxy
+HTTP_PROXY="export https_proxy=http://${MYIP}:3128/"
+HTTPS_PROXY="export https_proxy=http://${MYIP}:3128/"
+#
+echo ${HTTP_PROXY} >> ~/.bashrc
+echo ${HTTPS_PROXY} >> ~/.bashrc
+#
 source ~/.bashrc
 #
 export PYSPARK_SUBMIT_ARGS="--master ${SPARK_LOCAL_IP} pyspark-shell" 
