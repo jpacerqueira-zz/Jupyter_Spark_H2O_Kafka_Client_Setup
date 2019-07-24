@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # USING OPTION : pip install h2o-3.20.0.5
 #
-mkdir -p ~/python-additional-libraries/
-cd  ~/python-additional-libraries/
+cd $HOME
+mkdir -p $HOME/python-additional-libraries/
+cd  $HOME/python-additional-libraries/
 
 #
 #

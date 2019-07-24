@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # USING OPTION : pip install findspark
 #
+cd $HOME
 mkdir -p ~/python-additional-libraries/
 cd  ~/python-additional-libraries/
 
