@@ -11,4 +11,8 @@
 
 
    Use as is License
-   
+
+
+    3.- It is recommended to use JAVA8(Oracle) and not OpenJDK8
+      - Installation : https://www.linuxuprising.com/2019/02/install-any-oracle-java-jdk-version-in.html
+      - This installation resolve my issue here : https://github.com/jupyter/jupyter/issues/248    
