@@ -10,9 +10,11 @@
     2.-  cd ; cp library_tools/*.sh . ; bash -x anaconda_setup.sh
 
 
-   Use as is License
+   Issue and Workarround:
 
 
     3.- It is recommended to use JAVA8(Oracle) and not OpenJDK8
       - Installation : https://www.linuxuprising.com/2019/02/install-any-oracle-java-jdk-version-in.html
       - This installation resolve my issue here : https://github.com/jupyter/jupyter/issues/248    
+
+   License "use as it is! Fix it, improve it, share it back!"
