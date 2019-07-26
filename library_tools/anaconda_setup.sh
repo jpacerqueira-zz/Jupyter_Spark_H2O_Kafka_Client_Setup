@@ -8,5 +8,6 @@ bash Anaconda3-2019.03-Linux-x86_64.sh
 cd ..
 conda activate base
 bash install_packages.sh
+bash redirect-h2o.ai.as.9004.sh
 mkdir -p $HOME/library_tools
-cp *.sh $HOME/library_tools
+mv *.sh $HOME/library_tools
