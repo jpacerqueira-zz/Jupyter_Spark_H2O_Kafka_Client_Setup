@@ -13,5 +13,5 @@ sudo echo 'proxy_pass http://127.0.0.1:54321;' >> /etc/nginx/sites-available/def
 echo '/home/joci/.ssh/thekey.pem' | ssh-keygen
 chmod 400 /home/joci/.ssh/thekey.pem
 sudo service nginx restart
-ssh -i /home/joci/.ssh/thekey.pem -R 9004:localhost:54321 joci@10.241.2.157
+ssh -i /home/joci/.ssh/thekey.pem -R 9004:localhost:54321 joci@$(hostname -I | cut -d' ' -f1)
 ########
