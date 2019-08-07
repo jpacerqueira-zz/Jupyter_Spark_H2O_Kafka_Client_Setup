@@ -27,7 +27,7 @@ export PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.7-src.zip:$PYTHONPATH
 MYIP=$(hostname -I | cut -d' ' -f1)
 echo $MYIP
 ##export SPARK_LOCAL_IP=${MYIP}
-# export SPARK_LOCAL_IP=0.0.0.0
+export SPARK_LOCAL_IP=0.0.0.0
 # echo 'export SPARK_LOCAL_IP='${SPARK_LOCAL_IP} >> ~/.bashrc
 # export SPARK_LOCAL_IP=${MYIP}
 
@@ -43,6 +43,11 @@ source ~/.bashrc
 # export PYSPARK_SUBMIT_ARGS="--master ${SPARK_LOCAL_IP} pyspark-shell" 
 # export PYSPARK_SUBMIT_ARGS="--master local[*] pyspark-shell" 
 #
+### Workarround for Delta Lake format
+###
+export PACKAGES="io.delta:delta-core_2.11:0.3.0"
+export PYSPARK_SUBMIT_ARGS="--packages ${PACKAGES}  pyspark-shell"
+###
 # workarround h2o for http://localhost in notebook session
 # unset http_proxy
 # unset https_proxy
