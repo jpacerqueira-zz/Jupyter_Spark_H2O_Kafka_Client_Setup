@@ -24,6 +24,8 @@ ADD library_tools/stop-jupyter.sh /home/notebookuser
 
 ADD library_tools/install-pyarrow.sh /home/notebookuser
 
+RUN chown notebookuser:notebookuser -R /home/notebookuser
+
 USER notebookuser
 
 CMD /usr/local/bin/setup-env-tools.sh ; sleep infinity
