@@ -21,3 +21,9 @@ ADD notebooks/*.* /home/notebookuser/notebooks/
 CMD mkdir notebooks/data
 
 ADD notebooks/data/* /home/notebookuser/notebooks/data/
+
+ADD library_tools/start-jupyter.sh /home/notebookuser
+
+ADD library_tools/stop-jupyter.sh /home/notebookuser
+
+ADD library_tools/install-pyarrow.sh /home/notebookuser
