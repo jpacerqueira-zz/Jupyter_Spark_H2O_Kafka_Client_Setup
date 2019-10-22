@@ -6,7 +6,7 @@
    Setup Option 1 :
    
     1.- Run using Docker Hub with Dockerfile
-    2.- Control execution editing file shell.sh
+    2.- Control execution editing file setup-env-tools.sh
 
    Setup option 2 :
 
