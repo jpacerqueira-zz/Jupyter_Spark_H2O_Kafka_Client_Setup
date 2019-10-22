@@ -4,8 +4,20 @@ ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
 
 RUN chmod 777 /usr/local/bin/setup-env-tools.sh
 
-ADD library_tools/*.sh $HOME
+RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
-RUN chmod 777 $HHOME/*.sh 
+USER notebookuser
+
+ADD library_tools/*.sh /home/notebookuser/
+
+RUN chmod 777 /home/notebookuser/*.sh 
 
 CMD /usr/local/bin/setup-env-tools.sh ; sleep infinity
+
+CMD mkdir notebooks
+
+ADD notebooks/*.* /home/notebookuser/notebooks/
+
+CMD mkdir notebooks/data
+
+ADD notebooks/data/* /home/notebookuser/notebooks/data/
