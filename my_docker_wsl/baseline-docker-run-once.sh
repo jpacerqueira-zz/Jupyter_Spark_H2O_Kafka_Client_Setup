@@ -21,3 +21,5 @@ docker push gftjoao/datascience-fullstack-v1.0:helloworld
 #       70bba925263c: Skipped foreign layer
 #       helloworld: digest: sha256:1d8cbba3008c64d6e4351ab558a3d7cdbd004566ce9ecd50980b87312903606c size: 2824
 #
+docker pull python:alpine
+#
