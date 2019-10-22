@@ -5,7 +5,8 @@
 
    Setup Option 1 :
    
-    1.- Run usin Docker Hub with Dockerfile
+    1.- Run using Docker Hub with Dockerfile
+    2.- Control execution editing file shell.sh
 
    Setup option 2 :
 
