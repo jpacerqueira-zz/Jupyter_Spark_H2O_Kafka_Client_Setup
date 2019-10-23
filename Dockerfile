@@ -26,4 +26,6 @@ RUN chown notebookuser:notebookuser -R /home/notebookuser
 
 USER notebookuser
 
+CMD export HOME=/home/notebookuser
+
 CMD /usr/local/bin/setup-env-tools.sh ; sleep infinity
