@@ -10,11 +10,9 @@ ADD library_tools/*.sh /home/notebookuser/
 
 RUN chmod 777 /home/notebookuser/*.sh 
 
-CMD mkdir notebooks
+CMD mkdir -p  /home/notebookuser/notebooks/data/
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
-
-CMD mkdir notebooks/data
 
 ADD notebooks/data/* /home/notebookuser/notebooks/data/
 
