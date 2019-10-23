@@ -5,16 +5,14 @@
 
    Setup Option 1 :
    
-    1.- Run using Docker Hub with Dockerfile
-    2.- Control execution editing file setup-env-tools.sh
+    1.- Run using DockerHub with Dockerfile
+    2.- Control execution editing file setup-env-tools.sh that executes installation of tools in $HOME
 
-   Setup option 2 :
+   Setup Option 2 :
 
-    1.-  Run Setup in Ubunto 18.4.LTS or WSL Ubunto 18.4 LTS 
-    
-    2.-  git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
-
-    3.-  cd ; cp library_tools/*.sh . ; bash -x anaconda_setup.sh
+    1.-  Run Setup in Ubunto 18.4 LTS or Windows WSL Ubunto 18.4 LTS
+    2.-  cd ~ ; git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
+    3.-  cd ~ ; cp ~/Jupyter_Spark_H2O_Kafka_Client_Setup/library_tools/*.sh . ; bash -x anaconda_setup.sh
 
 
    Issue and Workarround:
