@@ -9,6 +9,12 @@ ADD library_tools/*.sh /home/notebookuser/
 
 RUN chmod 777 /home/notebookuser/*.sh 
 
+CMD mkdir -p /home/notebookuser/java/
+
+ADD java_tools/*.* /home/notebookuser/java/ 
+
+RUN chmod 777 /home/notebookuser/java/*.sh
+
 CMD mkdir -p  /home/notebookuser/notebooks/data/
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
