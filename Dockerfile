@@ -8,11 +8,11 @@ RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
 ADD library_tools/*.sh /home/notebookuser/
 
-RUN chmod 777 /home/notebookuser/*.sh 
+RUN chmod 777 /home/notebookuser/*.sh
 
 CMD mkdir -p /home/notebookuser/java/
 
-ADD java_tools/*.* /home/notebookuser/java/ 
+ADD java_tools/*.* /home/notebookuser/java/
 
 RUN chmod 777 /home/notebookuser/java/*.sh
 
@@ -38,12 +38,14 @@ USER notebookuser
 
 CMD export HOME=/home/notebookuser
 
-ADD library_tools/start-jupyter.sh /home/notebookuser/ 
+ADD library_tools/start-jupyter.sh /home/notebookuser/
 
-ADD library_tools/stop-jupyter.sh /home/notebookuser/ 
+ADD library_tools/stop-jupyter.sh /home/notebookuser/
 
 ADD library_tools/install-pyarrow.sh /home/notebookuser/
 
 # CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
+
 # CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
+
 CMD cd $HOME ; bash -x $HOME/setup-env-tools.sh ; sleep infinity
