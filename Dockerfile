@@ -39,3 +39,9 @@ CMD export HOME=/home/notebookuser
 
 # CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
 CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
+
+CMD cp $HOME/library_tools/start-jupyter.sh /home/notebookuser/ 
+
+CMD cp $HOME/library_tools/stop-jupyter.sh /home/notebookuser/ 
+
+CMD cp $HOME/library_tools/install-pyarrow.sh /home/notebookuser/
