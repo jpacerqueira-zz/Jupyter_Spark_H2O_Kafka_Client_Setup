@@ -6,6 +6,9 @@
 #
 cd $HOME
 #
+pwd
+ls -la
+#
 nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err  
 #
 echo 'Sleep for 12 minutes'
@@ -14,4 +17,10 @@ echo 'knode_ds.out'
 cat $HOME/knode_ds.out
 echo 'knote_ds.err'
 cat $HOME/knode_ds.err
-sleep 1 
+#
+sleep 1
+#
+#service supervisor start
+#/bin/bash
+#exit $?
+#
