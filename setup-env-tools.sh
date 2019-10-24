@@ -14,5 +14,4 @@ echo 'knode_ds.out'
 cat $HOME/knode_ds.out
 echo 'knote_ds.err'
 cat $HOME/knode_ds.err
-sleep 1
-#
+sleep 1 
