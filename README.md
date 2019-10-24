@@ -10,7 +10,7 @@
 
    Setup Option 2 :
 
-    1.-  Run Setup in Ubunto 18.4 LTS or Windows qWSL Ubunto 18.4 LTS
+    1.-  Run Setup in Ubunto 18.4 LTS or Windows WSL Ubunto 18.4 LTS
     2.-  cd ~ ; git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
     3.-  cd ~ ; cp ~/Jupyter_Spark_H2O_Kafka_Client_Setup/library_tools/*.sh . ; bash -x anaconda_setup.sh
 

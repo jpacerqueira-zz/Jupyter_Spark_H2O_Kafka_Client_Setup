@@ -11,3 +11,4 @@ bash -x anaconda_setup.sh
 sleep 1
 service supervisor start
 /bin/bash
+exit 1
