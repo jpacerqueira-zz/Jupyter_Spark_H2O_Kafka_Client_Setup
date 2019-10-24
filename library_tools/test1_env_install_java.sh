@@ -20,4 +20,11 @@ sudo apt install openjdk-8-jre-headless
 #
 # INSTALL JAVA ORACLE KNode DockerFile
 # 
+# Workarround for big files broken into max. 23MB file size zip
+#
+cat $HOME/java/jdk-8u221-linux-x64.tar.zip.0* > $HOME/java/jdk-8u221-linux-x64.tar.zip
+cd $HOME/java
+unzip jdk-8u221-linux-x64.tar.zip
+cd $HOME
+## execute ORACLE JAVA Standard installation
 sudo bash -x .$HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
