@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 
-# ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
-# RUN chmod 777 /usr/local/bin/setup-env-tools.sh
+ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
+
+RUN chmod 777 /usr/local/bin/setup-env-tools.sh
 
 RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
