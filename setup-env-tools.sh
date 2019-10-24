@@ -16,7 +16,7 @@ sudo apt install unzip
 cd $HOME
 #
 pwd
-ls -la
+ls -laR
 #
 nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err  
 #
