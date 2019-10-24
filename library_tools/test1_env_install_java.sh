@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 sudo add-apt-repository ppa:webupd8team/java
-sudo apt update
+sudo apt-get update
 #########sudo apt install oracle-java8-installer
 sudo apt install openjdk-8-jre-headless
+sudo apt install openjdk-8-jdk
+sudo apt install openjdk-11-jre-headless
+sudo apt install openjdk-11-jdk
 #
 # Install alternative Oracle Java
 #mkdir -p $HOME/java
