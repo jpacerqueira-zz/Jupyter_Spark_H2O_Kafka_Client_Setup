@@ -3,8 +3,6 @@ FROM ubuntu:18.04
 # ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
 # RUN chmod 777 /usr/local/bin/setup-env-tools.sh
 
-RUN apt-get update
-RUN apt-get install sudo
 RUN \
     groupadd -g 999 notebookuser && useradd -u 999 -g notebookuser -G sudo -m -s /bin/bash notebookuser && \
     sed -i /etc/sudoers -re 's/^%sudo.*/%sudo ALL=(ALL:ALL) NOPASSWD: ALL/g' && \
@@ -45,6 +43,19 @@ RUN chown notebookuser:notebookuser -R /home/notebookuser
 
 USER notebookuser
 
+# Refreshing the repositories
+RUN sudo apt update
+RUN sudo apt upgrade
+RUN sudo apt install sudo
+RUN sudo apt install curl
+RUN sudo apt install wget
+RUN sudo apt install zip
+RUN sudo apt install unzip
+RUN sudo apt install python-pip
+RUN sudo apt install python2.7
+RUN sudo apt install python3-pip
+RUN sudo apt install python3
+
 CMD export HOME=/home/notebookuser
 
 ADD library_tools/start-jupyter.sh /home/notebookuser/
@@ -57,5 +68,4 @@ ADD library_tools/install-pyarrow.sh /home/notebookuser/
 # CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
 
 CMD cd $HOME ; bash -x $HOME/setup-env-tools.sh ; sleep infinity
-
 #
