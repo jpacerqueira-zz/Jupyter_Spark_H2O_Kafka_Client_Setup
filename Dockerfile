@@ -46,4 +46,4 @@ ADD library_tools/install-pyarrow.sh /home/notebookuser/
 
 # CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
 # CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
-CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
+CMD cd $HOME ; bash -x $HOME/setup-env-tools.sh ; sleep infinity
