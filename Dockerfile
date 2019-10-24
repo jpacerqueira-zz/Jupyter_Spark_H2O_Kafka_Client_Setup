@@ -15,6 +15,19 @@ RUN \
     echo "notebookuser user:";  su - notebookuser -c id
 # RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
+# Refreshing the repositories
+RUN apt update
+RUN apt upgrade
+RUN apt-get install curl
+RUN apt-get install wget
+RUN apt-get install zip
+RUN apt-get install unzip
+RUN apt-get install tar
+RUN apt-get install python-pip
+RUN apt-get install python2.7
+RUN apt-get install python3-pip
+RUN apt-get install python3
+
 ADD library_tools/*.sh /home/notebookuser/
 
 RUN chmod 777 /home/notebookuser/*.sh
@@ -46,17 +59,11 @@ RUN chown notebookuser:notebookuser -R /home/notebookuser
 USER notebookuser
 
 # Refreshing the repositories
-RUN sudo apt update
-RUN sudo apt upgrade
-RUN sudo apt install sudo
-RUN sudo apt install curl
-RUN sudo apt install wget
-RUN sudo apt install zip
-RUN sudo apt install unzip
-RUN sudo apt install python-pip
-RUN sudo apt install python2.7
-RUN sudo apt install python3-pip
-RUN sudo apt install python3
+#RUN sudo apt update
+#RUN sudo apt upgrade
+#RUN sudo apt-get install zip
+#RUN sudo apt-get install unzip
+#RUN sudo apt-get install tar
 
 CMD export HOME=/home/notebookuser
 
