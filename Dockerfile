@@ -28,4 +28,4 @@ USER notebookuser
 
 CMD export HOME=/home/notebookuser
 
-CMD /usr/local/bin/setup-env-tools.sh ; sleep infinity
+CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
