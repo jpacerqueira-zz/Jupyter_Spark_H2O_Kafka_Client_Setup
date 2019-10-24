@@ -3,7 +3,15 @@ FROM ubuntu:18.04
 # ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
 # RUN chmod 777 /usr/local/bin/setup-env-tools.sh
 
-RUN useradd --user-group --system --create-home --no-log-init notebookuser
+RUN \
+    groupadd -g 999 notebookuser && useradd -u 999 -g notebookuser -G sudo -m -s /bin/bash notebookuser && \
+    sed -i /etc/sudoers -re 's/^%sudo.*/%sudo ALL=(ALL:ALL) NOPASSWD: ALL/g' && \
+    sed -i /etc/sudoers -re 's/^root.*/root ALL=(ALL:ALL) NOPASSWD: ALL/g' && \
+    sed -i /etc/sudoers -re 's/^#includedir.*/## **Removed the include directive** ##"/g' && \
+    echo "notebookuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
+    echo "Customized the sudoers file for passwordless access to the notebookuser user!" && \
+    echo "notebookuser user:";  su - notebookuser -c id
+# RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
 ADD library_tools/*.sh /home/notebookuser/
 

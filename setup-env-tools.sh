@@ -3,6 +3,15 @@
 # git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
 #
 #cd  ; cp library_tools/*.sh . ; bash -x anaconda_setup.sh
+#####################################################
+######### INSTALL MISSING BASIC TOOLS ###############
+sudo apt-get update
+sudo apt install curl
+sudo apt install wget
+sudo apt install zip
+sudo apt install unzip
+#####################################################
+#####################################################
 #
 cd $HOME
 #
