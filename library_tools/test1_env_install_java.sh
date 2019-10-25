@@ -2,7 +2,7 @@
 #
 #########sudo apt install oracle-java8-installer
 sudo add-apt-repository -y ppa:webupd8team/java
-RUN apt-get update && apt-get install -y \
+sudo apt-get update && apt-get install -y \
     openjdk-8-jre-headless \
     openjdk-8-jdk \
     openjdk-11-jre-headless \
