@@ -18,7 +18,7 @@ cd $HOME
 pwd
 ls -laR
 #
-nohup yes | bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err & 
+nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err & 
 #
 echo 'Sleep for 3 minutes'
 sleep 181
