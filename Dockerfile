@@ -66,10 +66,11 @@ USER notebookuser
 # CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
 # CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
 
-CMD  export HOME=/home/notebookuser | cd $HOME | \
-     bash -x $HOME/setup-env-tools.sh | \
-     sudo chown notebookuser:notebookuser -R /home/notebookuser | \
-     sudo chmod 777 /home/notebookuser/*.sh | \
-     bash -x $HOME/start-jupyter.sh | \
+CMD  export HOME=/home/notebookuser ; cd $HOME ; \
+     bash -x $HOME/setup-env-tools.sh ; \
+     sudo chown notebookuser:notebookuser -R /home/notebookuser ; \
+     sudo chmod 777 /home/notebookuser/*.sh ; \
+     sleep 720 ; \
+     bash -x $HOME/start-jupyter.sh ; \
      sleep infinity
 #
