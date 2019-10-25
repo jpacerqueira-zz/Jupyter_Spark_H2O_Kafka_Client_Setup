@@ -3,8 +3,7 @@ FROM ubuntu:18.04
 # ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
 # RUN chmod 777 /usr/local/bin/setup-env-tools.sh
 
-RUN apt-get update
-RUN apt-get install sudo
+RUN apt-get update && apt-get install -y sudo
 RUN \
     groupadd -g 999 notebookuser && useradd -u 999 -g notebookuser -G sudo -m -s /bin/bash notebookuser && \
     sed -i /etc/sudoers -re 's/^%sudo.*/%sudo ALL=(ALL:ALL) NOPASSWD: ALL/g' && \
@@ -16,17 +15,21 @@ RUN \
 # RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
 # Refreshing the repositories
-RUN apt update
-RUN apt upgrade
-RUN apt-get install curl
-RUN apt-get install wget
-RUN apt-get install zip
-RUN apt-get install unzip
-RUN apt-get install tar
-RUN apt-get install python-pip
-RUN apt-get install python2.7
-RUN apt-get install python3-pip
-RUN apt-get install python3
+RUN apt-get update
+RUN apt-get upgrade
+RUN apt-get update && apt-get install -y curl \
+    wget \
+    zip \
+    unzip \
+    tar \
+    bzip2
+
+RUN apt-get update && apt-get install -y \
+    python-qt4 \
+    python-pyside \
+    python-pip \
+    python3-pip \
+    python3-pyqt5
 
 ADD library_tools/*.sh /home/notebookuser/
 
