@@ -62,39 +62,15 @@ RUN chown notebookuser:notebookuser -R /home/notebookuser
 
 USER notebookuser
 
-# Refreshing the repositories
-#RUN sudo apt update
-#RUN sudo apt upgrade
-#RUN sudo apt-get install zip
-#RUN sudo apt-get install unzip
-#RUN sudo apt-get install tar
-
 CMD export HOME=/home/notebookuser
-
-ADD library_tools/start-jupyter.sh /home/notebookuser/
-
-ADD library_tools/stop-jupyter.sh /home/notebookuser/
-
-ADD library_tools/install-pyarrow.sh /home/notebookuser/
 
 # CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
 # CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
 
-CMD cd $HOME ; bash -x $HOME/setup-env-tools.sh ; sleep infinity
-#
-USER root
-
-RUN cp /home/notebookuser/library_tools/start-jupyter.sh /home/notebookuser
-
-RUN cp /home/notebookuser/library_tools/stop-jupyter.sh /home/notebookuser
-
-RUN cp /home/notebookuser/library_tools/install-pyarrow.sh /home/notebookuser
-
-RUN chown notebookuser:notebookuser -R /home/notebookuser
-
-USER notebookuser
-
-CMD export HOME=/home/notebookuser
-
-CMD cd $HOME ; bash -x $HOME/start-jupyter.sh ; sleep infinity
+CMD cd $HOME | bash -x $HOME/setup-env-tools.sh | \
+    cp /home/notebookuser/library_tools/start-jupyter.sh /home/notebookuser | \
+    cp /home/notebookuser/library_tools/stop-jupyter.sh /home/notebookuser | \
+    cp /home/notebookuser/library_tools/install-pyarrow.sh /home/notebookuser | \
+    bash -x $HOME/start-jupyter.sh | \
+    sleep infinity
 #
