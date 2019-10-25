@@ -82,3 +82,19 @@ ADD library_tools/install-pyarrow.sh /home/notebookuser/
 
 CMD cd $HOME ; bash -x $HOME/setup-env-tools.sh ; sleep infinity
 #
+USER root
+
+RUN cp /home/notebookuser/library_tools/start-jupyter.sh /home/notebookuser
+
+RUN cp /home/notebookuser/library_tools/stop-jupyter.sh /home/notebookuser
+
+RUN cp /home/notebookuser/library_tools/install-pyarrow.sh /home/notebookuser
+
+RUN chown notebookuser:notebookuser -R /home/notebookuser
+
+USER notebookuser
+
+CMD export HOME=/home/notebookuser
+
+CMD cd $HOME ; bash -x $HOME/start-jupyter.sh ; sleep infinity
+#
