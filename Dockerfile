@@ -69,7 +69,7 @@ ADD library_tools/stop-jupyter.sh /home/notebookuser
 
 ADD library_tools/install-pyarrow.sh /home/notebookuser
 
-RUN chown notebookuser:notebookuser -R /home/notebookuser
+RUN sudo chown notebookuser:notebookuser -R /home/notebookuser
 
 CMD cd $HOME ; bash -x $HOME/start-jupyter.sh ; sleep infinity
 #
