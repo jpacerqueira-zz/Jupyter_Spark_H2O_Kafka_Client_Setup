@@ -71,7 +71,7 @@ ADD library_tools/install-pyarrow.sh /home/notebookuser
 
 RUN sudo chown notebookuser:notebookuser -R /home/notebookuser
 
-RUN sudo chmod 777 /home/notebookuser/*/.sh
+RUN sudo chmod 777 /home/notebookuser/*.sh
 
 CMD cd $HOME ; bash -x $HOME/start-jupyter.sh ; sleep infinity
 #
