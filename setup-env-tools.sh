@@ -5,11 +5,11 @@
 #cd  ; cp library_tools/*.sh . ; bash -x anaconda_setup.sh
 #####################################################
 ######### INSTALL MISSING BASIC TOOLS ###############
-sudo apt-get update
-sudo apt install curl
-sudo apt install wget
-sudo apt install zip
-sudo apt install unzip
+#sudo apt-get update
+#sudo apt install curl
+#sudo apt install wget
+#sudo apt install zip
+#sudo apt install unzip
 #####################################################
 #####################################################
 #
