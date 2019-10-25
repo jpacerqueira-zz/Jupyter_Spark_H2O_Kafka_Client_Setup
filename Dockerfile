@@ -23,7 +23,8 @@ RUN apt-get update && apt-get install -y curl \
     zip \
     unzip \
     tar \
-    bzip2
+    bzip2 \
+    yes
 
 RUN apt-get update && apt-get install -y \
     python-qt4 \
