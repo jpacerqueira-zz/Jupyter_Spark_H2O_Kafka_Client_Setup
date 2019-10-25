@@ -61,7 +61,7 @@ CMD export HOME=/home/notebookuser
 # CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
 # CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
 
-CMD cd $HOME ; bash -x $HOME/setup-env-tools.sh; sleep infinity
+CMD cd $HOME ; bash -x $HOME/setup-env-tools.sh ; sleep 720
 
 ADD library_tools/start-jupyter.sh /home/notebookuser
 
@@ -70,6 +70,8 @@ ADD library_tools/stop-jupyter.sh /home/notebookuser
 ADD library_tools/install-pyarrow.sh /home/notebookuser
 
 RUN sudo chown notebookuser:notebookuser -R /home/notebookuser
+
+RUN sudo chmod 777 /home/notebookuser/*/.sh
 
 CMD cd $HOME ; bash -x $HOME/start-jupyter.sh ; sleep infinity
 #
