@@ -30,7 +30,9 @@ RUN apt-get update && apt-get install -y \
     python-pyside \
     python-pip \
     python3-pip \
-    python3-pyqt5
+    python3-pyqt5 \
+    vim \
+    software-properties-common
 
 ADD library_tools/*.sh /home/notebookuser/
 
@@ -62,7 +64,8 @@ ADD library_tools/install-pyarrow.sh /home/notebookuser
 
 USER notebookuser
 
-# CMD export HOME=/home/notebookuser
+CMD export HOME=/home/notebookuser
+
 # CMD ./usr/local/bin/setup-env-tools.sh ; sleep infinity
 # CMD cd $HOME ; ./setup-env-tools.sh ; sleep infinity
 
