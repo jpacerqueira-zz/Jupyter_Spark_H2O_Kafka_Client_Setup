@@ -46,7 +46,7 @@ CMD mkdir -p  /home/notebookuser/notebooks/data/
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 
-ADD notebooks/data/* /home/notebookuser/notebooks/data/
+ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/ 
 
 ADD library_tools/start-jupyter.sh /home/notebookuser
 

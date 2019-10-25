@@ -20,8 +20,8 @@ ls -laR
 #
 nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err  
 #
-echo 'Sleep for 1 x minutes'
-sleep 61
+echo 'Sleep for 3 minutes'
+sleep 181
 echo 'knode_ds.out'
 cat $HOME/knode_ds.out
 echo 'knote_ds.err'
