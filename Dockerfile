@@ -3,7 +3,8 @@ FROM ubuntu:18.04
 # ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
 # RUN chmod 777 /usr/local/bin/setup-env-tools.sh
 
-RUN apt-get update && apt-get install -y sudo
+RUN apt-get update && apt-get install -y apt-utils \
+    sudo
 RUN \
     groupadd -g 999 notebookuser && useradd -u 999 -g notebookuser -G sudo -m -s /bin/bash notebookuser && \
     sed -i /etc/sudoers -re 's/^%sudo.*/%sudo ALL=(ALL:ALL) NOPASSWD: ALL/g' && \
