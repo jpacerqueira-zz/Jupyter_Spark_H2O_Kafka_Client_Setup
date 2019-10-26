@@ -5,7 +5,13 @@ docker pull $IMG_LATEST
 docker image ls
 docker run $IMG_LATEST
 #
-###### MOUNT VOLUME ### docker run -it -v ~/Downloads:/Downloads $IMG_LATEST bash
+###### MOUNT VOLUME ### 
+## docker run -it -v ~/Downloads:/Downloads $IMG_LATEST bash
+## sudo su - notebookuser
+###### RUN MANUAL setup-env-tools.sh ## 
+##### AFTER ADDTIONAL PACKAGES CP ##
+## export HOME=/home/notebookuser ; cd $HOME ; bash -x $HOME/setup-env-tools.sh ; sleep 720 ; sudo chown notebookuser:notebookuser -R /home/notebookuser ; sudo cp /home/notebookuser/library_tools/start-jupyter.sh $HOME ; sudo cp /home/notebookuser/library_tools/stop-jupyter.sh $HOME ; sudo cp /home/notebookuser/library_tools/stop-jupyter.sh $HOME ; bash -x /home/notebookuser/library_tools/install-pyarrow.sh ; bash -x $HOME/start-jupyter.sh ; sleep infinity 10 ; exit  
+
 #
 ## docker exec -it  $(docker ps -a | grep $IMG_LATEST |  awk -F' ' '{ print $1 }') /bin/bash 
 #
