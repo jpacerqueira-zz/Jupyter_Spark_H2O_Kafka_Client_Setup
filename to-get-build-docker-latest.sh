@@ -11,7 +11,9 @@ docker run $IMG_LATEST
 #
 ##
 #### export MY_RUNNING_CONTAINER=$(docker ps -a | grep $IMG_LATEST |  awk -F' ' '{ print $1 }' )
-## 
+##
+## docker inspect $MY_RUNNING_CONTAINER 
+##
 ### docker stop $MY_RUNNING_CONTAINER
 ##
 ##### MOUNT VOLUME LATEST RUN ### docker run -it -v ~/Downloads:/Downloads $MY_RUNNING_CONTAINER bash
