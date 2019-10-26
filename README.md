@@ -5,7 +5,9 @@
 
    Setup Option 1 :
    
-    - Run using DockerHub with Dockerfile
+    - Run using Docker with repository 
+      -- https://hub.docker.com/r/gftjoao/datascience-fullstack-v1.0
+ 
     - Control installation process editing file setup-env-tools.sh in $HOME of notebookuser
     - Run Docker
         - :~ mac-jpac$  docker run -it -v ~/Downloads:/Downloads gftjoao/datascience-fullstack-v1.0:latest bash 
