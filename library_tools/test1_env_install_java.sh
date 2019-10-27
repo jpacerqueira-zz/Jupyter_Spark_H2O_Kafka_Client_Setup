@@ -32,4 +32,5 @@ unzip jdk-8u221-linux-x64.tar.zip
 cd $HOME
 ## execute ORACLE JAVA Standard installation
 sudo mkdir -p /usr/lib/jvm/
-sudo bash -x $HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
+echo 'y\ny\ny\ny\n' | sudo bash -x $HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
+#
