@@ -21,3 +21,9 @@
    3.) Jupyter enviromment should load under http://127.0.0.1:9003
 
   ![alt text](images/Docker_container_TensorFlow_Jupyter_h2o.ai_example_image.png?raw=true "Docker Container Jupyter TenforFlow H2o.ai")
+  
+  
+  
+   4.) Also another alternative setup with notebook installation of libraries for demos like : Spark h2o.ai pyarrow
+   
+  ![alt text](images/Run-Alternative-Execute-Notebook-Capture.PNG?raw=true "Alternative Docker container with jupyer notebook Setup-System-Java-Spark-h2o.ai-pyarrow.ipynb run")
