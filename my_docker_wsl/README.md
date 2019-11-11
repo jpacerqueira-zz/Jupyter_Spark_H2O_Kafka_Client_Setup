@@ -26,4 +26,6 @@
   
    4.) Also another alternative setup with notebook installation of libraries for demos like : Spark h2o.ai pyarrow
    
+      (run) $ ./run-alternative-tensorflow_2.0_jupyter_docker_machine-2.sh
+   
   ![alt text](images/Run-Alternative-Execute-Notebook-Capture.PNG?raw=true "Alternative Docker container with jupyer notebook Setup-System-Java-Spark-h2o.ai-pyarrow.ipynb run")
