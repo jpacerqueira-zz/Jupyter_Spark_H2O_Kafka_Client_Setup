@@ -1,47 +1,47 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[14]:
+# In[2]:
 
 
-!apt-get install wget
-!apt-get install tar
-!apt-get install openjdk-8-jdk-headless -qq > /dev/null
-!wget -q https://archive.apache.org/dist/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
-!tar xf spark-2.4.4-bin-hadoop2.7.tgz
+get_ipython().system('apt-get install wget')
+get_ipython().system('apt-get install tar')
+get_ipython().system('apt-get install openjdk-8-jdk-headless -qq > /dev/null')
+get_ipython().system('wget -q https://archive.apache.org/dist/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz')
+get_ipython().system('tar xf spark-2.4.4-bin-hadoop2.7.tgz')
 
 
-# In[15]:
+# In[3]:
 
 
-!pip install h2o
+get_ipython().system('pip install h2o')
 
 
-# In[16]:
+# In[4]:
 
 
-!pip install findspark
+get_ipython().system('pip install findspark')
 
 
-# In[17]:
+# In[5]:
 
 
-!pip install pyarrow
+get_ipython().system('pip install pyarrow')
 
 
-# In[18]:
+# In[6]:
 
 
-!pip install pandas
+get_ipython().system('pip install pandas')
 
 
-# In[19]:
+# In[7]:
 
 
-!pip install numpy
+get_ipython().system('pip install numpy')
 
 
-# In[20]:
+# In[8]:
 
 
 import subprocess 
@@ -50,7 +50,7 @@ returned_value0 = subprocess.call(cmd0, shell=True)
 print("returned value:", returned_value0)
 
 
-# In[21]:
+# In[9]:
 
 
 import subprocess 
@@ -59,7 +59,7 @@ returned_value1 = subprocess.call(cmd1, shell=True)
 print("returned value1:", returned_value1)
 
 
-# In[22]:
+# In[10]:
 
 
 import subprocess
@@ -68,7 +68,7 @@ returned_value2 = subprocess.call(cmd2, shell=True)
 print("returned value2:", returned_value2)
 
 
-# In[23]:
+# In[11]:
 
 
 import subprocess
@@ -77,7 +77,7 @@ returned_value3 = subprocess.call(cmd3, shell=True)
 print("returned value3:", returned_value3)
 
 
-# In[24]:
+# In[12]:
 
 
 import subprocess
@@ -86,7 +86,7 @@ returned_value4 = subprocess.call(cmd4, shell=True)
 print("returned value4:", returned_value4)
 
 
-# In[25]:
+# In[13]:
 
 
 import subprocess
@@ -95,7 +95,7 @@ returned_value5 = subprocess.call(cmd5, shell=True)
 print("returned value5:", returned_value5)
 
 
-# In[26]:
+# In[14]:
 
 
 import subprocess
@@ -104,7 +104,7 @@ returned_value6 = subprocess.call(cmd6, shell=True)
 print("returned value5:", returned_value6)
 
 
-# In[27]:
+# In[15]:
 
 
 import subprocess
@@ -113,7 +113,7 @@ returned_value7 = subprocess.call(cmd7, shell=True)
 print("returned value7:", returned_value7)
 
 
-# In[28]:
+# In[16]:
 
 
 import subprocess
@@ -122,7 +122,7 @@ returned_value8 = subprocess.call(cmd8, shell=True)
 print("returned value8:", returned_value8)
 
 
-# In[29]:
+# In[17]:
 
 
 import subprocess
@@ -131,7 +131,7 @@ returned_value9 = subprocess.call(cmd9, shell=True)
 print("returned value9:", returned_value9)
 
 
-# In[30]:
+# In[18]:
 
 
 import subprocess
@@ -140,7 +140,7 @@ returned_value10 = subprocess.call(cmd10, shell=True)
 print("returned value10:", returned_value10)
 
 
-# In[31]:
+# In[19]:
 
 
 import subprocess
@@ -149,7 +149,7 @@ returned_value11 = subprocess.call(cmd11, shell=True)
 print("returned value11:", returned_value11)
 
 
-# In[32]:
+# In[20]:
 
 
 import subprocess
@@ -158,7 +158,7 @@ returned_value12 = subprocess.call(cmd12, shell=True)
 print("returned value12:", returned_value12)
 
 
-# In[33]:
+# In[21]:
 
 
 import subprocess
@@ -167,7 +167,7 @@ returned_value13 = subprocess.call(cmd13, shell=True)
 print("returned value13:", returned_value13)
 
 
-# In[34]:
+# In[22]:
 
 
 import subprocess
@@ -176,7 +176,7 @@ returned_value_s1 = subprocess.call(cmds1, shell=True)
 print("returned value_s1:", returned_value_s1)
 
 
-# In[35]:
+# In[23]:
 
 
 import subprocess 
@@ -185,21 +185,9 @@ returned_value0 = subprocess.call(cmd0, shell=True)
 print("returned value0:", returned_value0)
 
 
-# In[36]:
+# In[ ]:
 
 
 import h2o
 h2o.init()
-
-
-# In[37]:
-
-
-exit()
-
-
-# In[38]:
-
-
-get_ipython().system(' type -a python3')
 
