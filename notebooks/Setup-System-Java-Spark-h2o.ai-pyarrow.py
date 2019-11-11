@@ -4,41 +4,41 @@
 # In[14]:
 
 
-get_ipython().system('apt-get install wget')
-get_ipython().system('apt-get install tar')
-get_ipython().system('apt-get install openjdk-8-jdk-headless -qq > /dev/null')
-get_ipython().system('wget -q https://archive.apache.org/dist/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz')
-get_ipython().system('tar xf spark-2.4.4-bin-hadoop2.7.tgz')
+!apt-get install wget
+!apt-get install tar
+!apt-get install openjdk-8-jdk-headless -qq > /dev/null
+!wget -q https://archive.apache.org/dist/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz
+!tar xf spark-2.4.4-bin-hadoop2.7.tgz
 
 
 # In[15]:
 
 
-get_ipython().system('pip install h2o')
+!pip install h2o
 
 
 # In[16]:
 
 
-get_ipython().system('pip install findspark')
+!pip install findspark
 
 
 # In[17]:
 
 
-get_ipython().system('pip install pyarrow')
+!pip install pyarrow
 
 
 # In[18]:
 
 
-get_ipython().system('pip install pandas')
+!pip install pandas
 
 
 # In[19]:
 
 
-get_ipython().system('pip install numpy')
+!pip install numpy
 
 
 # In[20]:
