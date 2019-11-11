@@ -50,11 +50,11 @@
 
 
 import subprocess 
-!echo 'PATH=$HOME/spark-2.4.4-bin-hadoop2.7/bin:\$PATH' >> \$HOME/.bashrc 
-!echo 'JAVA_HOME=/usr/lib/jvm/openjdk1.8.0_222' >> \$HOME./bashrc 
-!echo 'SPARK_HOME=$HOME/spark/spark-2.4.4-bin-hadoop2.7' >> \$HOME./bashrc
+!echo 'PATH=$HOME/spark-2.4.4-bin-hadoop2.7/bin:\$PATH' >> $HOME/.bashrc 
+!echo 'JAVA_HOME=/usr/lib/jvm/openjdk1.8.0_222' >> $HOME./bashrc 
+!echo 'SPARK_HOME=$HOME/spark/spark-2.4.4-bin-hadoop2.7' >> $HOME./bashrc
 !echo 'HADOOP_HOME=$SPARK_HOME' >> $HOME/.bashrc
-!echo 'JAVA_HOME=/usr/lib/jvm/jdk1.8.0_222' >> \$HOME/.bashrc
+!echo 'JAVA_HOME=/usr/lib/jvm/jdk1.8.0_222' >> $HOME/.bashrc
 !source $HOME/.bashrc
 
 
