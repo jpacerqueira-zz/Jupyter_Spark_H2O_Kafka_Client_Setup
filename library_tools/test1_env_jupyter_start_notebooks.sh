@@ -16,7 +16,7 @@ cd $HOME
 echo "spark.2.4.4"
 export SPARK_HOME=${HOME}/spark/spark-2.4.4-bin-hadoop2.7
 export HADOOP_HOME=${SPARK_HOME}
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_221
+export JAVA_HOME=/usr/lib/jvm/default-java
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS=notebook
 export PYSPARK_PYTHON=${HOME}/anaconda3/bin/python
