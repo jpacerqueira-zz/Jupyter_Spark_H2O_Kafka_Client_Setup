@@ -37,7 +37,7 @@ cd $HOME
 echo 'y\ny\ny\ny\n' | sudo bash -x $HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
 #
 #########sudo apt install openjdk11-installer
-sudo add-apt-repository ppa:openjdk-r/ppa
+echo 'y\ny\ny\ny\n' |  sudo add-apt-repository ppa:openjdk-r/ppa
 #sudo apt-get update && apt-get install -y \
 sudo apt-get update
 sudo apt install openjdk-11-jdk
