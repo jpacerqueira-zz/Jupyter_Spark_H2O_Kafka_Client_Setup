@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 # ADD setup-env-tools.sh /usr/local/bin/setup-env-tools.sh
 # RUN chmod 777 /usr/local/bin/setup-env-tools.sh
 
-RUN apt-get update && apt-get install -y apt-utils \
+RUN apt-get update -y && apt-get install -y apt-utils \
     sudo
 RUN \
     groupadd -g 999 notebookuser && useradd -u 999 -g notebookuser -G sudo -m -s /bin/bash notebookuser && \
@@ -16,16 +16,16 @@ RUN \
 # RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
 # Refreshing the repositories
-RUN apt-get update
-RUN apt-get upgrade
-RUN apt-get update && apt-get install -y curl \
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get update -y && apt-get install -y curl \
     wget \
     zip \
     unzip \
     tar \
     bzip2 
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update -y && apt-get install -y \
     python-qt4 \
     python-pyside \
     python-pip \
