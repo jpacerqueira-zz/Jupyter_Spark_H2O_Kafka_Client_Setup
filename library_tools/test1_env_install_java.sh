@@ -8,6 +8,13 @@
 #    openjdk-11-jre-headless \
 #    apt install openjdk-11-jdk 
 #
+#########sudo apt install openjdk11-installer
+sudo add-apt-repository -y ppa:openjdk-r/ppa
+sudo apt-get update
+sudo apt install openjdk-11-jdk
+#########sudo apt install openjdk11-installer - As Default JAVA
+export JAVA_HOME=/usr/lib/jvm/default-java
+#
 # Install alternative Oracle Java
 #mkdir -p $HOME/java
 #cp /mnt/c/Users/joci/Downloads/jdk-8u221-linux-x64.tar.gz $HOME/java
@@ -34,13 +41,8 @@ if [ ! -f "${HOME}/java/jdk-8u221-linux-x64.tar.gz" ]; then
 fi
 cd $HOME
 ## execute ORACLE JAVA Standard installation
-echo 'y\ny\ny\ny\n' | sudo bash -x $HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
-#
-#########sudo apt install openjdk11-installer
-echo 'y\n' |  sudo add-apt-repository ppa:openjdk-r/ppa
-#sudo apt-get update && apt-get install -y \
-sudo apt-get update
-sudo apt install openjdk-11-jdk
-#########sudo apt install openjdk11-installer - As Default JAVA
-export JAVA_HOME=/usr/lib/jvm/default-java
+if [ -f "${HOME}/java/jdk-8u221-linux-x64.tar.gz" ]; then
+    echo 'y\ny\ny\ny\n' | sudo bash -x $HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
+fi
+pwd
 #
