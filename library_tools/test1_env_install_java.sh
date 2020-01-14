@@ -10,8 +10,9 @@
 #
 #########sudo apt install openjdk11-installer
 sudo add-apt-repository -y ppa:openjdk-r/ppa
-sudo apt-get update
-sudo apt install openjdk-11-jdk
+sudo apt-get update && apt-get install -y \
+     openjdk-11-jre-headless
+sudo apt-get install -y openjdk-11-jdk
 #########sudo apt install openjdk11-installer - As Default JAVA
 export JAVA_HOME=/usr/lib/jvm/default-java
 #
