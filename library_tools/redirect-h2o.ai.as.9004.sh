@@ -1,5 +1,5 @@
 #!/usr/bin/env bash -xe
-sudo apt-get update  && apt-get install -y \
+sudo apt-get update -y && apt-get install -y \
      openssh-client \
      openssh-server \
      nginx

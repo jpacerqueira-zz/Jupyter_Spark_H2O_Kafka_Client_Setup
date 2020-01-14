@@ -2,7 +2,7 @@
 #
 #########sudo apt install openjdk8-installer
 #sudo add-apt-repository -y ppa:webupd8team/java
-#sudo apt-get update && apt-get install -y \
+#sudo apt-get update -y && apt-get install -y \
 #    openjdk-8-jre-headless \
 #    openjdk-8-jdk \
 #    openjdk-11-jre-headless \
@@ -10,7 +10,7 @@
 #
 #########sudo apt install openjdk11-installer
 sudo add-apt-repository -y ppa:openjdk-r/ppa
-sudo apt-get -y update && apt-get install -y \
+sudo apt-get update -y && apt-get install -y \
      openjdk-11-jre-headless
 sudo apt-get install -y openjdk-11-jdk
 #########sudo apt install openjdk11-installer - As Default JAVA
