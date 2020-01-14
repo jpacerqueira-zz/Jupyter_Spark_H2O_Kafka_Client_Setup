@@ -18,16 +18,22 @@ cd $HOME
 pwd
 ls -laR
 #
-nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err  #& 
+nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err
 #
-echo 'Sleep for 3 minutes'
-sleep 181
+echo 'Sleep for 5 secs'
+sleep 5
+##
 echo 'knode_ds.out'
 cat $HOME/knode_ds.out
 echo 'knote_ds.err'
 cat $HOME/knode_ds.err
 #
 sleep 1
+#
+cp $HOME/library_tools/install-pyarrow.sh $HOME
+cp $HOME/library_tools/stop-jupyter.sh $HOME
+cp $HOME/library_tools/start-jupyter.sh $HOME
+echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> $HOME/.bashrc
 #
 #service supervisor start
 #/bin/bash
