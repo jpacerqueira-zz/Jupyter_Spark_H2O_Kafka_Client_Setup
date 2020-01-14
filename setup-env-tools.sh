@@ -18,6 +18,8 @@ cd $HOME
 pwd
 ls -laR
 #
+echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> $HOME/.bashrc
+#
 nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err
 #
 echo 'Sleep for 5 secs'
