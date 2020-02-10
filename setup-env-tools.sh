@@ -22,8 +22,8 @@ echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> $HOME/.bashrc
 #
 nohup bash -x anaconda_setup.sh > $HOME/knode_ds.out 2> $HOME/knode_ds.err
 #
-echo 'Sleep for 5 secs'
-sleep 5
+echo 'Sleep for 3 minutes'
+sleep 181
 ##
 echo 'knode_ds.out'
 cat $HOME/knode_ds.out
