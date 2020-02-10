@@ -46,4 +46,9 @@ if [ -f "${HOME}/java/jdk-8u221-linux-x64.tar.gz" ]; then
     echo 'y\ny\ny\ny\n' | sudo bash -x $HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
 fi
 pwd
+cd  /usr/lib/jvm/
+ln -s java-11-openjdk-amd64 default-java
+pwd
+cd $HOME
+pwd
 #
