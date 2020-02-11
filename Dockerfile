@@ -19,6 +19,7 @@ RUN \
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y curl \
+    net-tools \
     wget \
     zip \
     unzip \
