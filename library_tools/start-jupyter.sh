@@ -12,9 +12,9 @@ cd $HOME
 #echo "spark.1.6"
 #export SPARK_HOME=/opt/cloudera/parcels/CDH/lib/spark
 
-# Spark.2.4.3
-echo "spark.2.4.3"
-export SPARK_HOME=${HOME}/spark/spark-2.4.3-bin-hadoop2.7
+# Spark.2.4.5
+echo "spark.2.4.5"
+export SPARK_HOME=${HOME}/spark/spark-2.4.5-bin-hadoop2.7
 export HADOOP_HOME=${SPARK_HOME}
 export JAVA_HOME=/usr/lib/jvm/default-java
 export PYSPARK_DRIVER_PYTHON=jupyter
