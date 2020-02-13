@@ -37,6 +37,9 @@ cp $HOME/library_tools/stop-jupyter.sh $HOME
 cp $HOME/library_tools/start-jupyter.sh $HOME
 echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> $HOME/.bashrc
 #
+# Open alternative port for Jupyter in Docker image via iptable definition
+sudo iptables -I INPUT 1 -p tcp --dport 9003 -j ACCEPT
+#
 #service supervisor start
 #/bin/bash
 #exit $?
