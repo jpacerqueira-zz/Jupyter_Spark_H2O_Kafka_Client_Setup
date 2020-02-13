@@ -20,6 +20,7 @@ RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y curl \
     net-tools \
+    iptables \
     iptables-persistent \
     wget \
     zip \
@@ -57,8 +58,6 @@ ADD setup-env-tools.sh /home/notebookuser/setup-env-tools.sh
 RUN chmod 777 /home/notebookuser/*.sh
 
 RUN chown notebookuser:notebookuser -R /home/notebookuser
-
-RUN sudo iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
 
 ADD library_tools/start-jupyter.sh /home/notebookuser
 
