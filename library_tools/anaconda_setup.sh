@@ -7,9 +7,12 @@ sha256sum Anaconda3-2019.03-Linux-x86_64.sh
 sudo chmod +x Anaconda3-2019.03-Linux-x86_64.sh
 echo 'yes' > yesinput.txt
 cat yesinput.txt | bash -x Anaconda3-2019.03-Linux-x86_64.sh -b -u
-cd ..
-conda activate base
+cd $HOME
+#conda activate base
+$HOME/anaconda3/bin/conda init
+$HOME/anaconda3/bin/activate base
 bash install_packages.sh
 ####### NOT REQUIRED  ####### bash redirect-h2o.ai.as.9004.sh
 mkdir -p $HOME/library_tools
 mv *.sh $HOME/library_tools
+#
