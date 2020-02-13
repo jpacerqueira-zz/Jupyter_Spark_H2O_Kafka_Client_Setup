@@ -9,6 +9,8 @@ echo 'yes' > yesinput.txt
 cat yesinput.txt | bash -x Anaconda3-2019.03-Linux-x86_64.sh -b -u
 cd $HOME
 #conda activate base
+echo  'export PATH="/home/notebookuser/anaconda3/bin:$PATH"' >> $HOME/.bashrc
+source $HOME/.bashrc
 $HOME/anaconda3/bin/conda init
 $HOME/anaconda3/bin/activate base
 bash install_packages.sh
