@@ -74,7 +74,7 @@ CMD export HOME=/home/notebookuser
 
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-env-tools.sh ; \
-     sleep 720 ; \
+     sleep 181 ; \
      sudo chown notebookuser:notebookuser -R /home/notebookuser ; \
      sudo cp /home/notebookuser/library_tools/start-jupyter.sh $HOME ; \
      sudo cp /home/notebookuser/library_tools/stop-jupyter.sh $HOME ; \
