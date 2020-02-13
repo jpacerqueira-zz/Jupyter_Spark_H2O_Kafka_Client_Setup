@@ -3,7 +3,7 @@
 export IMG_LATEST=gftjoao/datascience-fullstack-v1.0:latest
 docker pull $IMG_LATEST
 docker image ls
-docker run $IMG_LATEST
+docker run -it  -p 9003:9003 --cap-add=NET_ADMIN $IMG_LATEST
 #
 ###### MOUNT VOLUME ### 
 ## docker run -it -v ~/Downloads:/Downloads $IMG_LATEST bash
