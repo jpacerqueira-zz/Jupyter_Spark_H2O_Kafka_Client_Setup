@@ -65,6 +65,8 @@ ADD library_tools/stop-jupyter.sh /home/notebookuser
 
 ADD library_tools/install-pyarrow.sh /home/notebookuser
 
+EXPOSE 9003/tcp 54321/tcp
+
 USER notebookuser
 
 CMD export HOME=/home/notebookuser
