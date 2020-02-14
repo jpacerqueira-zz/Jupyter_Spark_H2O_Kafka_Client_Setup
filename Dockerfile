@@ -81,6 +81,6 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/start-jupyter.sh ; \
      sleep 5 ; \
      tail -n 6 $HOME/notebooks/jupyter.log ; \
-     sleep 21
-#    sleep infinity
+     sleep infinity     
+#     sleep 21
 #
