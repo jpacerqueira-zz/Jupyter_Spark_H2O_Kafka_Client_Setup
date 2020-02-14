@@ -74,13 +74,10 @@ CMD export HOME=/home/notebookuser
 
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-env-tools.sh ; \
-     sleep 19 ; \
      sudo chown notebookuser:notebookuser -R /home/notebookuser ; \
-     sudo cp /home/notebookuser/library_tools/start-jupyter.sh $HOME ; \
-     sudo cp /home/notebookuser/library_tools/stop-jupyter.sh $HOME ; \
-     sudo cp /home/notebookuser/library_tools/stop-jupyter.sh $HOME ; \
-     bash -x /home/notebookuser/library_tools/install-pyarrow.sh ; \
-     bash -x $HOME/start-jupyter.sh ; \
+     sleep 3
+     
+CMD  bash -x $HOME/start-jupyter.sh ; \
      sleep 5 ; \
      tail -n 6 $HOME/notebooks/jupyter.log ; \
      sleep 21
