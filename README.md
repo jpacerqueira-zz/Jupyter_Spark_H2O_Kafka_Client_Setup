@@ -13,7 +13,7 @@
         - :~ mac-jpac$  docker run -it -v ~/Downloads:/Downloads gftjoao/datascience-fullstack-v1.0:latest bash 
         
     - Run Docker with iptable port opening process
-        - :~ mac-jpac$ docker run  -itd  -p 9003:9003 --cap-add=NET_ADMIN  gftjoao/datascience-fullstack-v1.0:latest
+        - :~ mac-jpac$ docker run  -itd  -p 9003:9003 54321:54321 --cap-add=NET_ADMIN  gftjoao/datascience-fullstack-v1.0:latest
 
    Setup Option 2 :
 
