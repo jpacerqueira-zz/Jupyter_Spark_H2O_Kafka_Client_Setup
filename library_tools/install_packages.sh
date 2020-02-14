@@ -5,10 +5,6 @@ bash setup_install_findspark.sh
 bash setup_install_h2o.sh
 bash setup_install_kafka.sh
 bash install-pyarrow.sh
-bash setup_install_findspark.sh
-bash setup_install_h2o.sh
-bash setup_install_kafka.sh
-bash install-pyarrow.sh
 #
 #bash setup_jupyter_start_notebooks.sh
 #
