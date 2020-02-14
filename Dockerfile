@@ -76,10 +76,14 @@ CMD export HOME=/home/notebookuser
 
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-env-tools.sh ; \
-     sudo chown notebookuser:notebookuser -R /home/notebookuser ; \
-     sleep 3 ; \
-     bash -x $HOME/start-jupyter.sh ; \
+     sudo chown notebookuser:notebookuser -R $HOME ; \
      sleep 5 ; \
+     bash -x $HOME/library_tools/setup_install_findspark.sh ; \
+     bash -x $HOME/library_tools/setup_install_h2o.sh ; \
+     bash -x $HOME/library_tools/setup_install_kafka.sh ; \
+     bash -x $HOME/library_tools/install-pyarrow.sh ; \
+     bash -x $HOME/start-jupyter.sh ; \
+     sleep 3 ; \
      tail -n 6 $HOME/notebooks/jupyter.log ; \
      sleep infinity     
 #     sleep 21
