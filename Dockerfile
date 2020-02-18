@@ -47,13 +47,13 @@ ADD java_tools/*.* /home/notebookuser/java/
 
 RUN chmod 777 /home/notebookuser/java/*.sh
 
-CMD mkdir -p  /home/notebookuser/notebooks/data/
+CMD mkdir -p  /home/notebookuser/notebooks/data
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 
-ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/ 
+ADD notebooks/data/*  /home/notebookuser/notebooks/data/ 
 
-RUN cp -rf notebooks/data/* /home/notebookuser/notebooks/data/*
+#RUN cp -rf notebooks/data /home/notebookuser/notebooks/data
 
 ADD setup-env-tools.sh /home/notebookuser/setup-env-tools.sh
 
