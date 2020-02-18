@@ -65,10 +65,6 @@ RUN chmod 777 /home/notebookuser/*.sh
 
 RUN chown notebookuser:notebookuser -R /home/notebookuser
 
-ADD library_tools/start-jupyter.sh /home/notebookuser
-ADD library_tools/install-jupyter-support-packs.sh /home/notebookuser
-ADD library_tools/stop-jupyter.sh /home/notebookuser
-
 EXPOSE 9003/tcp 54321/tcp
 
 USER notebookuser
