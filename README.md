@@ -12,7 +12,7 @@
         - :~ mac-jpac$ docker run  -it -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN  jpacerqueira83/datascience-fullstack-vm1:latest
         
     - Run Docker exec to do a Jupyter start after aprox. 8 minutes
-        - :~ mac-jpac$ docker exec -it  intelligent_lalande  /bin/bash -c "cd ; bash -x start-jupyter.sh ; cat notebooks/jupyter.log ; sleep infinity"
+        - :~ mac-jpac$ docker exec -it  <<docker_container_id>>  /bin/bash -c "cd ; bash install-jupyter-support-packs.sh ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
 
    Setup Option 2 :
 
