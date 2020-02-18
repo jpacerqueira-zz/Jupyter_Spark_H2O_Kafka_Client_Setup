@@ -85,10 +85,5 @@ CMD export HOME=/home/notebookuser
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-env-tools.sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
-     sleep infinity     
-#     sleep 3 ; \
-#     bash -x $HOME/start-jupyter.sh ; \
-#     sleep 3 ; \
-#     tail -n 6 $HOME/notebooks/jupyter.log ; \
-#     sleep infinity
+     sleep 1
 #
