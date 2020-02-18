@@ -6,14 +6,13 @@
    Setup Option 1 :
    
     - Run using Docker with repository 
-      -- https://hub.docker.com/r/gftjoao/datascience-fullstack-v1.0
- 
-    - Control installation process editing file setup-env-tools.sh in $HOME of notebookuser
-    - Run Docker
-        - :~ mac-jpac$  docker run -it -v ~/Downloads:/Downloads jpacerqueira83/datascience-fullstack-vm1:latest bash 
+      -- https://hub.docker.com/r/jpacerqueira83/datascience-fullstack-vm1
         
     - Run Docker with iptable port opening process
-        - :~ mac-jpac$ docker run  -itd -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN  jpacerqueira83/datascience-fullstack-vm1:latest
+        - :~ mac-jpac$ docker run  -it -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN  jpacerqueira83/datascience-fullstack-vm1:latest
+        
+    - Run Docker exec to do a Jupyter start after aprox. 8 minutes
+        - :~ mac-jpac$ docker exec -it jpacerqueira83/datascience-fullstack-vm1:latest /bin/bash -c "bash -x $HOME/start-jupyter.sh"
 
    Setup Option 2 :
 
