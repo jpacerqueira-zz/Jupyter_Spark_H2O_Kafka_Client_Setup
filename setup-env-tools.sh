@@ -43,7 +43,9 @@ echo 'export JAVA_HOME=/usr/lib/jvm/default-java' >> $HOME/.bashrc
 sudo iptables -I INPUT 1 -p tcp --dport 54321 -j ACCEPT
 sudo iptables -I INPUT 1 -p tcp --dport 9003 -j ACCEPT
 #
-#service supervisor start
-#/bin/bash
-#exit $?
+echo " ____________________________ "
+echo "  Jupyter - SparkML - H2o.ai  "
+echo " ____________________________ "
+echo "        Installation done!    "
+echo " ____________________________ "
 #
