@@ -10,9 +10,7 @@ RUN \
     echo "notebookuser ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers && \
     echo "Customized the sudoers file for passwordless access to the notebookuser user!" && \
     echo "notebookuser user:";  su - notebookuser -c id
-# RUN useradd --user-group --system --create-home --no-log-init notebookuser
 
-# Refreshing the repositories
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get update -y && apt-get install -y curl \
@@ -68,10 +66,8 @@ RUN chmod 777 /home/notebookuser/*.sh
 RUN chown notebookuser:notebookuser -R /home/notebookuser
 
 ADD library_tools/start-jupyter.sh /home/notebookuser
-
-ADD library_tools/stop-jupyter.sh /home/notebookuser
-
 ADD library_tools/install-jupyter-support-packs.sh /home/notebookuser
+ADD library_tools/stop-jupyter.sh /home/notebookuser
 
 EXPOSE 9003/tcp 54321/tcp
 
@@ -84,4 +80,3 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/install-jupyter-support-packs.sh ; \
      sleep infinity
-#
