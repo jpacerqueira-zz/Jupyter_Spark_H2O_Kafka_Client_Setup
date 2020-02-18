@@ -86,15 +86,15 @@ CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      tail -n 6 $HOME/notebooks/jupyter.log ; \
      sleep infinity     
 #
-CMD  export HOME=/home/notebookuser ; cd $HOME ; \
-     sleep 720 ; \
-     bash -x $HOME/stop-jupyter.sh ; \
-     bash -x $HOME/library_tools/setup_install_findspark.sh ; \
-     bash -x $HOME/library_tools/setup_install_h2o.sh ; \
-     bash -x $HOME/library_tools/setup_install_kafka.sh ; \
-     bash -x $HOME/library_tools/install-pyarrow.sh ; \
-     bash -x $HOME/start-jupyter.sh ; \
-     sleep 3 ; \
-     tail -n 6 $HOME/notebooks/jupyter.log ; \
-     sleep infinity
+#CMD  export HOME=/home/notebookuser ; cd $HOME ; \
+#     sleep 720 ; \
+#     bash -x $HOME/stop-jupyter.sh ; \
+#     bash -x $HOME/library_tools/setup_install_findspark.sh ; \
+#     bash -x $HOME/library_tools/setup_install_h2o.sh ; \
+#     bash -x $HOME/library_tools/setup_install_kafka.sh ; \
+#     bash -x $HOME/library_tools/install-pyarrow.sh ; \
+#     bash -x $HOME/start-jupyter.sh ; \
+#     sleep 3 ; \
+#     tail -n 6 $HOME/notebooks/jupyter.log ; \
+#     sleep infinity
 #
