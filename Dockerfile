@@ -85,5 +85,5 @@ CMD export HOME=/home/notebookuser
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-env-tools.sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
-     sleep 1
+     sleep infinity
 #
