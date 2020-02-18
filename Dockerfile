@@ -51,7 +51,9 @@ CMD mkdir -p  /home/notebookuser/notebooks/data/
 
 ADD notebooks/*.* /home/notebookuser/notebooks/
 
-RUN cp -rf notebooks/data /home/notebookuser/notebooks/data
+ADD notebooks/data/*.*  /home/notebookuser/notebooks/data/ 
+
+RUN cp -rf notebooks/data/* /home/notebookuser/notebooks/data/*
 
 ADD setup-env-tools.sh /home/notebookuser/setup-env-tools.sh
 
