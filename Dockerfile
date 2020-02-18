@@ -74,7 +74,7 @@ ADD library_tools/start-jupyter.sh /home/notebookuser
 
 ADD library_tools/stop-jupyter.sh /home/notebookuser
 
-ADD library_tools/install-pyarrow.sh /home/notebookuser
+ADD library_tools/install-jupyter-support-packs.sh /home/notebookuser
 
 EXPOSE 9003/tcp 54321/tcp
 
@@ -85,5 +85,6 @@ CMD export HOME=/home/notebookuser
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-env-tools.sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
+     bash -x $HOME/install-jupyter-support-packs.sh ; \
      sleep infinity
 #
