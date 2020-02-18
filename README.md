@@ -18,9 +18,9 @@
 
     -  Run Setup in Ubunto 18.4 LTS or Windows WSL Ubunto 18.4 LTS
     - Consume package 
-        - :~ wsl-jpac$  cd ~ ; git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
+        - :~ wsl-jpac$  cd ; git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
     - Execute installation
-        - :~ wsl-jpac$  cd ~ ; cp ~/Jupyter_Spark_H2O_Kafka_Client_Setup/library_tools/*.sh . ; bash -x anaconda_setup.sh
+        - :~ wsl-jpac$  cd ; cp Jupyter_Spark_H2O_Kafka_Client_Setup/library_tools/*.sh . ; bash -x anaconda_setup.sh
 
 
    Issues and Workarrounds 3 :
