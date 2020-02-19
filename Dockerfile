@@ -74,5 +74,5 @@ CMD export HOME=/home/notebookuser
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
      bash -x $HOME/setup-env-tools.sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
-     bash -x $HOME/install-jupyter-support-packs.sh ; \
+     bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      sleep infinity
