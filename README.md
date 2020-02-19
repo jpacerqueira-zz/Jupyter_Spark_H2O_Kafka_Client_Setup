@@ -45,6 +45,10 @@
         ~ wsl-u$  cd ; cp Jupyter_Spark_H2O_Kafka_Client_Setup/library_tools/*.sh . ; bash -x anaconda_setup.sh
 
 
+   ![lost_saturn - container - Jupyter Notebooks DataScience](images/Docker_container_project_lost_saturn_v1.png)
+
+
+
    Issues and Workarrounds 
 =========
 
