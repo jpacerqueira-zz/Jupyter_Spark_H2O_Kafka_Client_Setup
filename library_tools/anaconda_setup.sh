@@ -11,8 +11,8 @@ cd $HOME
 #conda activate base
 echo  'export PATH="/home/notebookuser/anaconda3/bin:$PATH"' >> $HOME/.bashrc
 source $HOME/.bashrc
-$HOME/anaconda3/bin/conda init
-$HOME/anaconda3/bin/activate base
+$HOME/anaconda3/bin/conda create -n jupyter python=3.7 anaconda
+$HOME/anaconda3/bin/activate jupyter
 bash install_packages.sh
 ####### NOT REQUIRED  ####### bash redirect-h2o.ai.as.9004.sh
 mkdir -p $HOME/library_tools
