@@ -13,6 +13,7 @@ sudo add-apt-repository -y ppa:openjdk-r/ppa
 sudo apt-get update -y && apt-get install -y \
      openjdk-11-jre-headless
 sudo apt-get install -y openjdk-11-jdk
+sudo apt-get install -y openjdk-8-jdk openjdk-8-jre
 #########sudo apt install openjdk11-installer - As Default JAVA
 export JAVA_HOME=/usr/lib/jvm/default-java
 #
@@ -46,8 +47,9 @@ if [ -f "${HOME}/java/jdk-8u221-linux-x64.tar.gz" ]; then
     echo 'y\ny\ny\ny\n' | sudo bash -x $HOME/java/install-java.sh -f $HOME/java/jdk-8u221-linux-x64.tar.gz /usr/lib/jvm
 fi
 pwd
-cd  /usr/lib/jvm/
-sudo ln -s java-11-openjdk-amd64 default-java
+ls /usr/lib/jvm/java-8-openjdk-amd64/
+cd /usr/lib/jvm/
+sudo ln -s java-8-openjdk-amd64 default-java
 pwd
 cd $HOME
 pwd
