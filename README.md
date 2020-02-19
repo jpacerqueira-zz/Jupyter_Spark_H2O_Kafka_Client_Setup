@@ -31,7 +31,7 @@
 
 
 
-   Option 2
+   Option 3
 ===
    Run setup in Windows 10 with WSL app Ubunto 18.4 LTS 
 
