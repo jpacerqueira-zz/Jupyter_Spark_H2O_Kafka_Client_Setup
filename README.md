@@ -1,4 +1,4 @@
-# Project lost_saturn 
+# Jupyter_Spark_H2O_Kafka_Client_Setup for project lost_saturn : a setup with Jupyter Spark AutoML h2o.ai and client libraries Delta.io, PyArrow and Kafka
 
    An setup with Jupyter Spark AutoML h2o.ai and client libraries Delta.io, PyArrow and Kafka
    Ideal to use Jupyter and tools exploring data in environments
