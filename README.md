@@ -62,7 +62,7 @@
 
    Licensing
 =========
-  lost_saturn container is licensed under the Apache License, Version 2.0. See
+  Our docker container with jupyter ""lost_saturn""  is licensed under the Apache License, Version 2.0. See
   [LICENSE](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/README.md) for the full license text.
  
   Apache Spark, Apache Arrow, Open-JDK8 are Licensed under the Apache 2.0 License . Python, PyArrow , and pi py H2o.ai under GPL License
