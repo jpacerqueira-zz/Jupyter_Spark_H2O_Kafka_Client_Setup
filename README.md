@@ -8,7 +8,6 @@
 
    Option 1
 ===
-   
      Run using Docker Desktop in your Laptop
 
        ./install-container.sh
@@ -16,11 +15,10 @@
 
 
    Option 2
-===
-   
-     Run with an Docker container 
+=== 
+   Run with an Docker container 
 
-       docker container is registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/datascience-fullstack-vm1)
+   Follow our docker container registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/datascience-fullstack-vm1)
         
 
      Run Docker with iptable port opening process
@@ -36,8 +34,7 @@
 
    Option 2
 ===
-   
-     Run setup in Windows 10 with WSL app Ubunto 18.4 LTS 
+   Run setup in Windows 10 with WSL app Ubunto 18.4 LTS 
 
 
      Consume package 
