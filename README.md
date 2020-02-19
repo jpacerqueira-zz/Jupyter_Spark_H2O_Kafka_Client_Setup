@@ -16,19 +16,18 @@
 
    Option 2
 === 
-   Run with an Docker container 
-
-   Follow our docker container registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/datascience-fullstack-vm1)
+   Run with Docker the container registred in [repo datascience-fullstack](https://hub.docker.com/r/jpacerqueira83/datascience-fullstack-vm1)
         
 
-     Run Docker with iptable port opening process
+     Consume and run docker container with iptable port opening process
 
         ~ mac-u$ docker run  -it -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/datascience-fullstack-vm1:latest
 
         
-     Run Docker exec to do a Jupyter start after aprox. 6 minutes
+     Run Docker exec to start Jupyter after setup above finishes
 
-        ~ mac-u$ docker exec -it  <<docker_container_id>>  /bin/bash -c "cd ; bash -x library_tools/install-jupyter-support-packs.sh ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
+        ~ mac-u$ docker exec -it  lost_saturn  /bin/bash -c "cd ; bash -x library_tools/install-jupyter-support-packs.sh ; sleep 1"
+        ~ mac-u$ docker exec -it  lost_saturn  /bin/bash -c "cd ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
 
 
 
