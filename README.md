@@ -1,7 +1,8 @@
-# Project lost_saturn : a setup with Jupyter Spark AutoML h2o.ai and client libraries Delta.io, PyArrow and Kafka .
+# Project lost_saturn 
 
-   An local setup of Jupyter with Java8 Spark.2.4.3 H2O.ai SparklingWater Kafka and Jupyter Notebooks. 
-   Ideal for environment WSL (Windows Subsystem Linux) and Ubunto 18 LTS
+   An setup with Jupyter Spark AutoML h2o.ai and client libraries Delta.io, PyArrow and Kafka
+   Ideal to use Jupyter and tools exploring data in environments
+   Docker (Ubunto 18 LTS) or Windows10 WSL (Windows Subsystem Linux)
 
    Setup Options
 =========
