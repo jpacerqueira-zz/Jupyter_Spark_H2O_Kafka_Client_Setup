@@ -59,7 +59,7 @@ ADD notebooks/data/delta_real_estate_term_definitions/*.*  /home/notebookuser/no
 ADD notebooks/data/delta_terms_words_ngrams_real_estate/*.*  /home/notebookuser/notebooks/data/delta_terms_words_ngrams_real_estate/
 ADD notebooks/data/terms_words_mortgages/*.*  /home/notebookuser/notebooks/data/terms_words_mortgages/
 
-ADD setup-env-tools.sh /home/notebookuser/setup-env-tools.sh
+ADD setup-container-tools.sh /home/notebookuser/setup-container-tools.sh
 
 RUN chmod 777 /home/notebookuser/*.sh
 
@@ -72,7 +72,7 @@ USER notebookuser
 CMD export HOME=/home/notebookuser
 
 CMD  export HOME=/home/notebookuser ; cd $HOME ; \
-     bash -x $HOME/setup-env-tools.sh ; \
+     bash -x $HOME/setup-container-tools.sh .sh ; \
      sudo chown notebookuser:notebookuser -R $HOME ; \
      bash -x $HOME/library_tools/install-jupyter-support-packs.sh ; \
      sleep infinity

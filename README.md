@@ -3,35 +3,66 @@
    An local setup of Jupyter with Java8 Spark.2.4.3 H2O.ai SparklingWater Kafka and Jupyter Notebooks. 
    Ideal for environment WSL (Windows Subsystem Linux) and Ubunto 18 LTS
 
-   Setup Option 1 :
+   Setup Options
+=========
+
+   Option 1
+===
    
-    - Run using Docker with repository 
+    - Run using Docker Desktop in your Laptop
+
+       ./install-container.sh
+
+
+
+   Option 2
+===
+   
+    - Run using Docker with repository
+
       -- https://hub.docker.com/r/jpacerqueira83/datascience-fullstack-vm1
         
     - Run Docker with iptable port opening process
+
         - :~ mac-jpac$ docker run  -it -p 9003:9003 -p 54321:54321 --cap-add=NET_ADMIN --name lost_saturn  jpacerqueira83/datascience-fullstack-vm1:latest
         
     - Run Docker exec to do a Jupyter start after aprox. 6 minutes
+
         - :~ mac-jpac$ docker exec -it  <<docker_container_id>>  /bin/bash -c "cd ; bash -x library_tools/install-jupyter-support-packs.sh ; bash -x start-jupyter.sh ; sleep 4 ; cat notebooks/jupyter.log ; sleep infinity"
 
-   Setup Option 2 :
 
+
+   Option 2
+===
+   
     -  Run Setup in Ubunto 18.4 LTS or Windows WSL Ubunto 18.4 LTS
     - Consume package 
+
         - :~ wsl-jpac$  cd ; git clone https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup.git
+
     - Execute installation
         - :~ wsl-jpac$  cd ; cp Jupyter_Spark_H2O_Kafka_Client_Setup/library_tools/*.sh . ; bash -x anaconda_setup.sh
 
 
-   Issues and Workarrounds 3 :
+ Issues and Workarrounds :
+=========
 
-    - It is recommended to use JAVA8(Oracle) and not OpenJDK8
+    - It is recommended to use JAVA8(Oracle) or OpenJDK8 and not OpenJDK11
       -- Installation : https://www.linuxuprising.com/2019/02/install-any-oracle-java-jdk-version-in.html
       -- This installation resolve my issue here : https://github.com/jupyter/jupyter/issues/248    
     
     - Mount Additional driver in Docker Containers
       -- Your local container may require to mount large files like Oracle JAVA installer
 
-   License "use as it is! Fix it, improve it, share it back!"
 
-#
+ Licensing
+=========
+  lost_saturn container is licensed under the Apache License, Version 2.0. See
+  [LICENSE](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/README.md) for the full license text.
+ 
+  Apache Spark, Apache Arrow, Open-JDK8 are Licensed under the Apache 2.0 License . Python, PyArrow , and pi py H2o.ai under GPL License
+           
+  The end product here would benefit for an DevOps engineer with experience in docker-compose    
+    
+  If you are a DataScience expert use as it is, improve it, fix it, share it back!
+
