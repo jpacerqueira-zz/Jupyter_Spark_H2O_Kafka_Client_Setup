@@ -93,9 +93,15 @@
   Jupyter_Spark_h2o_Kafka_c lient repor is the core for "lost_saturn" docker container with jupyter SparkML and AutoML Ho2.ai is licensed under the Apache License, Version 2.0. See
   [LICENSE](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/README.md) for the full license text.
  
-  Apache Spark, Apache Arrow, H2o.ai.jar and Open-JDK8 are licensed under the Apache 2.0 License . Python, PyArrow and pi py H2o.ai under the GNU GPL License
-           
-  The end product here would benefit for an DevOps engineer with experience in docker-compose    
+  Apache Spark, Apache Arrow, H2o.ai.jar and Open-JDK8 are licensed under the Apache 2.0 License . Python, PyArrow and pi py H2o.ai under the GNU GPL License  
     
-  If you are a DataScience expert use as it is, improve it, fix it, share it back!
+  The end product here would benefit for an DevOps engineer with experience in docker-compose or Terraform, feel free to contribute.
+  
+  Usefull to experiment in the Latest Frameworks 
+  
+  [Delta.io opensource DeltaLake](https://delta.io)
+  [Delta Lake Sink readStream writeStream](https://docs.delta.io/latest/delta-streaming.html#delta-table-as-a-sink)
+  [Spark Structure Streaming Programming with Delta Late](https://docs.delta.io/latest/delta-streaming.html#delta-table-as-a-sink)
+    
+  If you are a Data engineer/scientist expert use as it is, improve it, fix it, share it back!
 
