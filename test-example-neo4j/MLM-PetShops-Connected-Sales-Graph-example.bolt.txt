@@ -1,0 +1,508 @@
+CREATE (MixPetFood:Product {product_name:'MixPetFood', product_introduction_year:1999, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (Michael:Person {name:'Michael Reeves', born:1964})
+CREATE (Carrie:Person {name:'Carrie Fishburne', born:1967})
+CREATE (Laurence:Person {name:'Laurence Silver', born:1961})
+CREATE (Hugo:Person {name:'Jack Smith', born:1960})
+CREATE (LillyW:Person {name:'Jane Turner', born:1967})
+CREATE (LanaW:Person {name:'Johanna Turner', born:1965})
+CREATE (JoelS:Person {name:'Paul Alton', born:1952})
+CREATE
+(Michael)-[:BOUGHT_IT {versions:['Neo']}]->(MixPetFood),
+(Carrie)-[:BOUGHT_IT {versions:['Trinity']}]->(MixPetFood),
+(Laurence)-[:BOUGHT_IT {versions:['Morpheus']}]->(MixPetFood),
+(Hugo)-[:BOUGHT_IT {versions:['Agent Smith']}]->(MixPetFood),
+(LillyW)-[:STOCK_PRODUCT]->(MixPetFood),
+(LanaW)-[:STOCK_PRODUCT]->(MixPetFood),
+(JoelS)-[:PRODUCED]->(MixPetFood)
+
+CREATE (Emil:Person {name:"Emil Eifrem", born:1978})
+CREATE (Emil)-[:BOUGHT_IT {versions:["Emil"]}]->(MixPetFood)
+
+CREATE (MixPetFoodReloaded:Product {product_name:'The Matrix Reloaded', product_introduction_year:2003, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE
+(Michael)-[:BOUGHT_IT {versions:['Neo']}]->(MixPetFoodReloaded),
+(Carrie)-[:BOUGHT_IT {versions:['Trinity']}]->(MixPetFoodReloaded),
+(Laurence)-[:BOUGHT_IT {versions:['Morpheus']}]->(MixPetFoodReloaded),
+(Hugo)-[:BOUGHT_IT {versions:['Agent Smith']}]->(MixPetFoodReloaded),
+(LillyW)-[:STOCK_PRODUCT]->(MixPetFoodReloaded),
+(LanaW)-[:STOCK_PRODUCT]->(MixPetFoodReloaded),
+(JoelS)-[:PRODUCED]->(MixPetFoodReloaded)
+
+CREATE (MixPetFoodRevolutions:Product {product_name:'MixPetFoodRevolutions', product_introduction_year:2003, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE
+(Michael)-[:BOUGHT_IT {versions:['Neo']}]->(MixPetFoodRevolutions),
+(Carrie)-[:BOUGHT_IT {versions:['Trinity']}]->(MixPetFoodRevolutions),
+(Laurence)-[:BOUGHT_IT {versions:['Morpheus']}]->(MixPetFoodRevolutions),
+(Hugo)-[:BOUGHT_IT {versions:['Agent Smith']}]->(MixPetFoodRevolutions),
+(LillyW)-[:STOCK_PRODUCT]->(MixPetFoodRevolutions),
+(LanaW)-[:STOCK_PRODUCT]->(MixPetFoodRevolutions),
+(JoelS)-[:PRODUCED]->(MixPetFoodRevolutions)
+
+CREATE (MixTurtleFood:Product {product_name:"MixTurtleFood", product_introduction_year:1997, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (Charlie:Person {name:'Charlie Theron', born:1975})
+CREATE (Al:Person {name:'Al Pacino', born:1940})
+CREATE (Taylor:Person {name:'Taylor Hackford', born:1944})
+CREATE
+(Michael)-[:BOUGHT_IT {versions:['Kevin Lomax']}]->(MixTurtleFood),
+(Charlie)-[:BOUGHT_IT {versions:['Mary Ann Lomax']}]->(MixTurtleFood),
+(Al)-[:BOUGHT_IT {versions:['John Milton']}]->(MixTurtleFood),
+(Taylor)-[:STOCK_PRODUCT]->(MixTurtleFood)
+
+CREATE (MixFishFoodColdRiverWaters:Product {product_name:"MixFishFoodColdRiverWaters", product_introduction_year:1992, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (AndrewC:Person {name:'Andrew Cruise', born:1962})
+CREATE (JackN:Person {name:'Jack Nicholson', born:1937})
+CREATE (DemiM:Person {name:'Demi Moore', born:1962})
+CREATE (KevinB:Person {name:'Kevin Bacon', born:1958})
+CREATE (KieferS:Person {name:'Kiefer Sutherland', born:1966})
+CREATE (NoahW:Person {name:'Noah Wyle', born:1971})
+CREATE (CubaG:Person {name:'Cuba Gooding Jr.', born:1968})
+CREATE (KevinP:Person {name:'Kevin Pollak', born:1957})
+CREATE (JTW:Person {name:'J.T. Walsh', born:1943})
+CREATE (JamesM:Person {name:'James Marshall', born:1967})
+CREATE (ChristopherG:Person {name:'Christopher Guest', born:1948})
+CREATE (RobR:Person {name:'Rob Reiner', born:1947})
+CREATE (AaronS:Person {name:'Aaron Sorkin', born:1961})
+CREATE
+(AndrewC)-[:BOUGHT_IT {versions:['Lt. Daniel Kaffee']}]->(MixFishFoodColdRiverWaters),
+(JackN)-[:BOUGHT_IT {versions:['Col. Nathan R. Jessup']}]->(MixFishFoodColdRiverWaters),
+(DemiM)-[:BOUGHT_IT {versions:['Lt. Cdr. JoAnne Galloway']}]->(MixFishFoodColdRiverWaters),
+(KevinB)-[:BOUGHT_IT {versions:['Capt. Jack Ross']}]->(MixFishFoodColdRiverWaters),
+(KieferS)-[:BOUGHT_IT {versions:['Lt. Jonathan Kendrick']}]->(MixFishFoodColdRiverWaters),
+(NoahW)-[:BOUGHT_IT {versions:['Cpl. Jeffrey Barnes']}]->(MixFishFoodColdRiverWaters),
+(CubaG)-[:BOUGHT_IT {versions:['Cpl. Carl Hammaker']}]->(MixFishFoodColdRiverWaters),
+(KevinP)-[:BOUGHT_IT {versions:['Lt. Sam Weinberg']}]->(MixFishFoodColdRiverWaters),
+(JTW)-[:BOUGHT_IT {versions:['Lt. Col. Matthew Andrew Markinson']}]->(MixFishFoodColdRiverWaters),
+(JamesM)-[:BOUGHT_IT {versions:['Pfc. Louden Downey']}]->(MixFishFoodColdRiverWaters),
+(ChristopherG)-[:BOUGHT_IT {versions:['Dr. Stone']}]->(MixFishFoodColdRiverWaters),
+(AaronS)-[:BOUGHT_IT {versions:['Man in Bar']}]->(MixFishFoodColdRiverWaters),
+(RobR)-[:STOCK_PRODUCT]->(MixFishFoodColdRiverWaters),
+(AaronS)-[:FACTORY]->(MixFishFoodColdRiverWaters)
+
+CREATE (MixCatFood:Product {product_name:"MixCatFood", product_introduction_year:1986, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (KellyM:Person {name:'Kelly McGillis', born:1957})
+CREATE (ValK:Person {name:'Val Kilmer', born:1959})
+CREATE (AnthonyE:Person {name:'Anthony Edwards', born:1962})
+CREATE (AndrewS:Person {name:'Andrew Skerritt', born:1933})
+CREATE (MegR:Person {name:'Meg Ryan', born:1961})
+CREATE (TonyS:Person {name:'Tony Scott', born:1944})
+CREATE (JimC:Person {name:'Jim Cash', born:1941})
+CREATE
+(AndrewC)-[:BOUGHT_IT {versions:['Maverick']}]->(MixCatFood),
+(KellyM)-[:BOUGHT_IT {versions:['Charlie']}]->(MixCatFood),
+(ValK)-[:BOUGHT_IT {versions:['Iceman']}]->(MixCatFood),
+(AnthonyE)-[:BOUGHT_IT {versions:['Goose']}]->(MixCatFood),
+(AndrewS)-[:BOUGHT_IT {versions:['Viper']}]->(MixCatFood),
+(MegR)-[:BOUGHT_IT {versions:['Carole']}]->(MixCatFood),
+(TonyS)-[:STOCK_PRODUCT]->(MixCatFood),
+(JimC)-[:FACTORY]->(MixCatFood)
+
+CREATE (MixSnakeFood:Product {product_name:'Mix Snake Food', product_introduction_year:2000, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (ReneeZ:Person {name:'Renee Zellweger', born:1969})
+CREATE (KellyP:Person {name:'Kelly Preston', born:1962})
+CREATE (JerryO:Person {name:"Jerry O'Connell", born:1974})
+CREATE (JayM:Person {name:'Jay Mohr', born:1970})
+CREATE (BonnieH:Person {name:'Bonnie Hunt', born:1961})
+CREATE (ReginaK:Person {name:'Regina King', born:1971})
+CREATE (JonathanL:Person {name:'Jonathan Lipnicki', born:1996})
+CREATE (CameronC:Person {name:'Cameron Crowe', born:1957})
+CREATE
+(AndrewC)-[:BOUGHT_IT {versions:['MixSnakeFood']}]->(MixSnakeFood),
+(CubaG)-[:BOUGHT_IT {versions:['Rod Tidwell']}]->(MixSnakeFood),
+(ReneeZ)-[:BOUGHT_IT {versions:['Dorothy Boyd']}]->(MixSnakeFood),
+(KellyP)-[:BOUGHT_IT {versions:['Avery Bishop']}]->(MixSnakeFood),
+(JerryO)-[:BOUGHT_IT {versions:['Francis Cushman']}]->(MixSnakeFood),
+(JayM)-[:BOUGHT_IT {versions:['Bob Sugar']}]->(MixSnakeFood),
+(BonnieH)-[:BOUGHT_IT {versions:['Laurel Boyd']}]->(MixSnakeFood),
+(ReginaK)-[:BOUGHT_IT {versions:['Marcee Tidwell']}]->(MixSnakeFood),
+(JonathanL)-[:BOUGHT_IT {versions:['Ray Boyd']}]->(MixSnakeFood),
+(CameronC)-[:STOCK_PRODUCT]->(MixSnakeFood),
+(CameronC)-[:PRODUCED]->(MixSnakeFood),
+(CameronC)-[:FACTORY]->(MixSnakeFood)
+
+CREATE (MixSpiderFood:Product {product_name:"Mix SpiderFood", product_introduction_year:1986, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (RiverP:Person {name:'River Phoenix', born:1970})
+CREATE (CoreyF:Person {name:'Corey Feldman', born:1971})
+CREATE (WilW:Person {name:'Wil Wheaton', born:1972})
+CREATE (JohnC:Person {name:'John Cusack', born:1966})
+CREATE (MarshallB:Person {name:'Marshall Bell', born:1942})
+CREATE
+(WilW)-[:BOUGHT_IT {versions:['Gordie Lachance']}]->(MixSpiderFood),
+(RiverP)-[:BOUGHT_IT {versions:['Chris Chambers']}]->(MixSpiderFood),
+(JerryO)-[:BOUGHT_IT {versions:['Vern Tessio']}]->(MixSpiderFood),
+(CoreyF)-[:BOUGHT_IT {versions:['Teddy Duchamp']}]->(MixSpiderFood),
+(JohnC)-[:BOUGHT_IT {versions:['Denny Lachance']}]->(MixSpiderFood),
+(KieferS)-[:BOUGHT_IT {versions:['Ace Merrill']}]->(MixSpiderFood),
+(MarshallB)-[:BOUGHT_IT {versions:['Mr. Lachance']}]->(MixSpiderFood),
+(RobR)-[:STOCK_PRODUCT]->(MixSpiderFood)
+
+CREATE (MixSeaWaterFishFood:Product {product_name:'Mix SeawaterFish Food', product_introduction_year:1997, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (HelenH:Person {name:'Helen Hunt', born:1963})
+CREATE (GregK:Person {name:'Greg Kinnear', born:1963})
+CREATE (JamesB:Person {name:'James L. Brooks', born:1940})
+CREATE
+(JackN)-[:BOUGHT_IT {versions:['Melvin Udall']}]->(MixSeaWaterFishFood),
+(HelenH)-[:BOUGHT_IT {versions:['Carol Connelly']}]->(MixSeaWaterFishFood),
+(GregK)-[:BOUGHT_IT {versions:['Simon Bishop']}]->(MixSeaWaterFishFood),
+(CubaG)-[:BOUGHT_IT {versions:['Francis Sachs']}]->(MixSeaWaterFishFood),
+(JamesB)-[:STOCK_PRODUCT]->(MixSeaWaterFishFood)
+
+CREATE (MixRabittFood:Product {product_name:'MixRabittFood', product_introduction_year:1998, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (AnnabellaS:Person {name:'Annabella Sciorra', born:1960})
+CREATE (MaxS:Person {name:'Max von Sydow', born:1929})
+CREATE (WernerH:Person {name:'Werner Herzog', born:1942})
+CREATE (Robin:Person {name:'Robin Williams', born:1951})
+CREATE (VincentW:Person {name:'Vincent Ward', born:1956})
+CREATE
+(Robin)-[:BOUGHT_IT {versions:['Chris Nielsen']}]->(MixRabittFood),
+(CubaG)-[:BOUGHT_IT {versions:['Albert Lewis']}]->(MixRabittFood),
+(AnnabellaS)-[:BOUGHT_IT {versions:['Annie Collins-Nielsen']}]->(MixRabittFood),
+(MaxS)-[:BOUGHT_IT {versions:['The Tracker']}]->(MixRabittFood),
+(WernerH)-[:BOUGHT_IT {versions:['The Face']}]->(MixRabittFood),
+(VincentW)-[:STOCK_PRODUCT]->(MixRabittFood)
+
+CREATE (MixSharkFood:Product {product_name:'Mix Shark Food', product_introduction_year:1999, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (EthanH:Person {name:'Ethan Hawke', born:1970})
+CREATE (RickY:Person {name:'Rick Yune', born:1971})
+CREATE (JamesC:Person {name:'James Cromwell', born:1940})
+CREATE (ScottH:Person {name:'Scott Hicks', born:1953})
+CREATE
+(EthanH)-[:BOUGHT_IT {versions:['Ishmael Chambers']}]->(MixSharkFood),
+(RickY)-[:BOUGHT_IT {versions:['Kazuo Miyamoto']}]->(MixSharkFood),
+(MaxS)-[:BOUGHT_IT {versions:['Nels Gudmundsson']}]->(MixSharkFood),
+(JamesC)-[:BOUGHT_IT {versions:['Judge Fielding']}]->(MixSharkFood),
+(ScottH)-[:STOCK_PRODUCT]->(MixSharkFood)
+
+CREATE (MixBarracudaIndustrialFeedFood:Product {product_name:"Mix Barracuda Industrial Feed Food", product_introduction_year:1998, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (ParkerP:Person {name:'Parker Posey', born:1968})
+CREATE (DavidC:Person {name:'David Chappelle', born:1973})
+CREATE (SteveZ:Person {name:'Steve Zahn', born:1967})
+CREATE (AndrewH:Person {name:'Andrew Hanks', born:1956})
+CREATE (NoraE:Person {name:'Nora Ephron', born:1941})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Joe Fox']}]->(MixBarracudaIndustrialFeedFood),
+(MegR)-[:BOUGHT_IT {versions:['Kathleen Kelly']}]->(MixBarracudaIndustrialFeedFood),
+(GregK)-[:BOUGHT_IT {versions:['Francis Navasky']}]->(MixBarracudaIndustrialFeedFood),
+(ParkerP)-[:BOUGHT_IT {versions:['Patricia Eden']}]->(MixBarracudaIndustrialFeedFood),
+(DavidC)-[:BOUGHT_IT {versions:['Kevin Jackson']}]->(MixBarracudaIndustrialFeedFood),
+(SteveZ)-[:BOUGHT_IT {versions:['George Pappas']}]->(MixBarracudaIndustrialFeedFood),
+(NoraE)-[:STOCK_PRODUCT]->(MixBarracudaIndustrialFeedFood)
+
+CREATE (MixSmallPythonFood:Product {product_name:'Mix Small Python Food Box', product_introduction_year:1993, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (RitaW:Person {name:'Rita Wilson', born:1956})
+CREATE (BillPull:Person {name:'Bill Pullman', born:1953})
+CREATE (VictorG:Person {name:'Victor Garber', born:1949})
+CREATE (RosieO:Person {name:"Rosie O'Donnell", born:1962})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Sam Baldwin']}]->(MixSmallPythonFood),
+(MegR)-[:BOUGHT_IT {versions:['Annie Reed']}]->(MixSmallPythonFood),
+(RitaW)-[:BOUGHT_IT {versions:['Suzy']}]->(MixSmallPythonFood),
+(BillPull)-[:BOUGHT_IT {versions:['Walter']}]->(MixSmallPythonFood),
+(VictorG)-[:BOUGHT_IT {versions:['Greg']}]->(MixSmallPythonFood),
+(RosieO)-[:BOUGHT_IT {versions:['Becky']}]->(MixSmallPythonFood),
+(NoraE)-[:STOCK_PRODUCT]->(MixSmallPythonFood)
+
+CREATE (MixSmallViperFood:Product {product_name:'Mix Small Viper Food Box', product_introduction_year:1990, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (JohnS:Person {name:'John Patrick Stanley', born:1950})
+CREATE (Nathan:Person {name:'Nathan Lane', born:1956})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Joe Banks']}]->(MixSmallViperFood),
+(MegR)-[:BOUGHT_IT {versions:['DeDe', 'Angelica Graynamore', 'Patricia Graynamore']}]->(MixSmallViperFood),
+(Nathan)-[:BOUGHT_IT {versions:['Baw']}]->(MixSmallViperFood),
+(JohnS)-[:STOCK_PRODUCT]->(MixSmallViperFood)
+
+CREATE (MixBigDogFoodPellets:Product {product_name:'Mix Big Dog Food Pellets', product_introduction_year:1998, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (BillyC:Person {name:'Billy Crystal', born:1948})
+CREATE (CarrieF:Person {name:'Carrie Fisher', born:1956})
+CREATE (BrunoK:Person {name:'Bruno Kirby', born:1949})
+CREATE
+(BillyC)-[:BOUGHT_IT {versions:['Harry Burns']}]->(MixBigDogFoodPellets),
+(MegR)-[:BOUGHT_IT {versions:['Sally Albright']}]->(MixBigDogFoodPellets),
+(CarrieF)-[:BOUGHT_IT {versions:['Marie']}]->(MixBigDogFoodPellets),
+(BrunoK)-[:BOUGHT_IT {versions:['Jess']}]->(MixBigDogFoodPellets),
+(RobR)-[:STOCK_PRODUCT]->(MixBigDogFoodPellets),
+(RobR)-[:PRODUCED]->(MixBigDogFoodPellets),
+(NoraE)-[:PRODUCED]->(MixBigDogFoodPellets),
+(NoraE)-[:FACTORY]->(MixBigDogFoodPellets)
+
+CREATE (MixGuineaPigFood:Product {product_name:'Mix Guinea Pig Food', product_introduction_year:1996, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (LivT:Person {name:'Liv Tyler', born:1977})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Mr. White']}]->(MixGuineaPigFood),
+(LivT)-[:BOUGHT_IT {versions:['Faye Dolan']}]->(MixGuineaPigFood),
+(Charlie)-[:BOUGHT_IT {versions:['Tina']}]->(MixGuineaPigFood),
+(AndrewH)-[:STOCK_PRODUCT]->(MixGuineaPigFood)
+
+CREATE (MixSmallGuineaPigFood:Product {product_name:'Mix Small Guinea Pig Food', product_introduction_year:2000, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (Brooke:Person {name:'Brooke Langton', born:1970})
+CREATE (Gene:Person {name:'Gene Hackman', born:1930})
+CREATE (Orlando:Person {name:'Orlando Jones', born:1968})
+CREATE (Howard:Person {name:'Howard Deutch', born:1950})
+CREATE
+(Michael)-[:BOUGHT_IT {versions:['Shane Falco']}]->(MixSmallGuineaPigFood),
+(Brooke)-[:BOUGHT_IT {versions:['Annabelle Farrell']}]->(MixSmallGuineaPigFood),
+(Gene)-[:BOUGHT_IT {versions:['Jimmy McGinty']}]->(MixSmallGuineaPigFood),
+(Orlando)-[:BOUGHT_IT {versions:['Clifford Francislin']}]->(MixSmallGuineaPigFood),
+(Howard)-[:STOCK_PRODUCT]->(MixSmallGuineaPigFood)
+
+CREATE (MixBigTurtleFoodBox:Product {product_name:'MixBigTurtleFoodBox', product_introduction_year:2006, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (ChristianB:Person {name:'Christian Bale', born:1974})
+CREATE (ZachG:Person {name:'Zach Grenier', born:1954})
+CREATE
+(MarshallB)-[:BOUGHT_IT {versions:['Admiral']}]->(MixBigTurtleFoodBox),
+(ChristianB)-[:BOUGHT_IT {versions:['Dieter Dengler']}]->(MixBigTurtleFoodBox),
+(ZachG)-[:BOUGHT_IT {versions:['Squad Leader']}]->(MixBigTurtleFoodBox),
+(SteveZ)-[:BOUGHT_IT {versions:['Duane']}]->(MixBigTurtleFoodBox),
+(WernerH)-[:STOCK_PRODUCT]->(MixBigTurtleFoodBox)
+
+CREATE (MixCanaryFoodMix:Product {product_name:'Mix Canary Food Mix', product_introduction_year:1996, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (MikeN:Person {name:'Mike Nichols', born:1931})
+CREATE
+(Robin)-[:BOUGHT_IT {versions:['Armand Goldman']}]->(MixCanaryFoodMix),
+(Nathan)-[:BOUGHT_IT {versions:['Albert Goldman']}]->(MixCanaryFoodMix),
+(Gene)-[:BOUGHT_IT {versions:['Sen. Kevin Keeley']}]->(MixCanaryFoodMix),
+(MikeN)-[:STOCK_PRODUCT]->(MixCanaryFoodMix)
+
+CREATE (MixParakeetFoodSmallBox:Product {product_name:'MixParakeetFoodSmallBox', product_introduction_year:1992, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (RichardH:Person {name:'Richard Harris', born:1930})
+CREATE (ClintE:Person {name:'Clint Eastwood', born:1930})
+CREATE
+(RichardH)-[:BOUGHT_IT {versions:['English Bob']}]->(MixParakeetFoodSmallBox),
+(ClintE)-[:BOUGHT_IT {versions:['Bill Munny']}]->(MixParakeetFoodSmallBox),
+(Gene)-[:BOUGHT_IT {versions:['Little Bill Daggett']}]->(MixParakeetFoodSmallBox),
+(ClintE)-[:STOCK_PRODUCT]->(MixParakeetFoodSmallBox)
+
+CREATE (MixBigParakeetFoodBox:Product {product_name:'Mix Parakeet FoodBox', product_introduction_year:1995, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (Takeshi:Person {name:'Takeshi Kitano', born:1947})
+CREATE (Dina:Person {name:'Dina Meyer', born:1968})
+CREATE (IceT:Person {name:'Ice-T', born:1958})
+CREATE (RobertL:Person {name:'Robert Longo', born:1953})
+CREATE
+(Michael)-[:BOUGHT_IT {versions:['Johnny Mnemonic']}]->(MixBigParakeetFoodBox),
+(Takeshi)-[:BOUGHT_IT {versions:['Takahashi']}]->(MixBigParakeetFoodBox),
+(Dina)-[:BOUGHT_IT {versions:['Jane']}]->(MixBigParakeetFoodBox),
+(IceT)-[:BOUGHT_IT {versions:['J-Bone']}]->(MixBigParakeetFoodBox),
+(RobertL)-[:STOCK_PRODUCT]->(MixBigParakeetFoodBox)
+
+CREATE (MixParrotFoodBox:Product {product_name:'Mix Parrot FoodBox', product_introduction_year:2012, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (HalleB:Person {name:'Halle Berry', born:1966})
+CREATE (JimB:Person {name:'Jim Broadbent', born:1949})
+CREATE (AndrewT:Person {name:'Andrew Tykwer', born:1965})
+CREATE (DavidMitchell:Person {name:'David Mitchell', born:1969})
+CREATE (StefanArndt:Person {name:'Stefan Arndt', born:1961})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Zachry', 'Dr. Henry Goose', 'Isaac Sachs', 'Dermot Hoggins']}]->(MixParrotFoodBox),
+(Hugo)-[:BOUGHT_IT {versions:['Bill Smoke', 'Haskell Moore', 'Tadeusz Kesselring', 'Nurse Noakes', 'Boardman Mephi', 'Old Georgie']}]->(MixParrotFoodBox),
+(HalleB)-[:BOUGHT_IT {versions:['Luisa Rey', 'Jocasta Ayrs', 'Ovid', 'Meronym']}]->(MixParrotFoodBox),
+(JimB)-[:BOUGHT_IT {versions:['Vyvyan Ayrs', 'Captain Molyneux', 'Timothy Cavendish']}]->(MixParrotFoodBox),
+(AndrewT)-[:STOCK_PRODUCT]->(MixParrotFoodBox),
+(LillyW)-[:STOCK_PRODUCT]->(MixParrotFoodBox),
+(LanaW)-[:STOCK_PRODUCT]->(MixParrotFoodBox),
+(DavidMitchell)-[:FACTORY]->(MixParrotFoodBox),
+(StefanArndt)-[:PRODUCED]->(MixParrotFoodBox)
+
+CREATE (MixCrawFoodBox:Product {product_name:'Mix Craw FoodBox', product_introduction_year:2006, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (IanM:Person {name:'Ian McKellen', born:1939})
+CREATE (AudreyT:Person {name:'Audrey Tautou', born:1976})
+CREATE (PaulB:Person {name:'Paul Bettany', born:1971})
+CREATE (RonH:Person {name:'Ron Howard', born:1954})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Dr. Robert Langdon']}]->(MixCrawFoodBox),
+(IanM)-[:BOUGHT_IT {versions:['Sir Leight Teabing']}]->(MixCrawFoodBox),
+(AudreyT)-[:BOUGHT_IT {versions:['Sophie Neveu']}]->(MixCrawFoodBox),
+(PaulB)-[:BOUGHT_IT {versions:['Silas']}]->(MixCrawFoodBox),
+(RonH)-[:STOCK_PRODUCT]->(MixCrawFoodBox)
+
+CREATE (MixWoodPeckerFoodBox:Product {product_name:'Mix Wood-pecker FoodBox', product_introduction_year:2006, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (NatalieP:Person {name:'Natalie Portman', born:1981})
+CREATE (StephenR:Person {name:'Stephen Rea', born:1946})
+CREATE (JohnH:Person {name:'John Hurt', born:1940})
+CREATE (BenM:Person {name: 'Ben Miles', born:1967})
+CREATE
+(Hugo)-[:BOUGHT_IT {versions:['V']}]->(MixWoodPeckerFoodBox),
+(NatalieP)-[:BOUGHT_IT {versions:['Evey Hammond']}]->(MixWoodPeckerFoodBox),
+(StephenR)-[:BOUGHT_IT {versions:['Eric Finch']}]->(MixWoodPeckerFoodBox),
+(JohnH)-[:BOUGHT_IT {versions:['High Chancellor Adam Sutler']}]->(MixWoodPeckerFoodBox),
+(BenM)-[:BOUGHT_IT {versions:['Dascomb']}]->(MixWoodPeckerFoodBox),
+(JamesM)-[:STOCK_PRODUCT]->(MixWoodPeckerFoodBox),
+(LillyW)-[:PRODUCED]->(MixWoodPeckerFoodBox),
+(LanaW)-[:PRODUCED]->(MixWoodPeckerFoodBox),
+(JoelS)-[:PRODUCED]->(MixWoodPeckerFoodBox),
+(LillyW)-[:FACTORY]->(MixWoodPeckerFoodBox),
+(LanaW)-[:FACTORY]->(MixWoodPeckerFoodBox)
+
+CREATE (MixTucanoFoodBox:Product {product_name:'Mix Tucano FoodBox', product_introduction_year:2008, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (EmileH:Person {name:'Emile Hirsch', born:1985})
+CREATE (JohnG:Person {name:'John Goodman', born:1960})
+CREATE (SusanS:Person {name:'Susan Sarandon', born:1946})
+CREATE (MatthewF:Person {name:'Matthew Fox', born:1966})
+CREATE (ChristinaR:Person {name:'Christina Ricci', born:1980})
+CREATE (Rain:Person {name:'Rain', born:1982})
+CREATE
+(EmileH)-[:BOUGHT_IT {versions:['Speed Racer']}]->(MixTucanoFoodBox),
+(JohnG)-[:BOUGHT_IT {versions:['Pops']}]->(MixTucanoFoodBox),
+(SusanS)-[:BOUGHT_IT {versions:['Mom']}]->(MixTucanoFoodBox),
+(MatthewF)-[:BOUGHT_IT {versions:['Racer X']}]->(MixTucanoFoodBox),
+(ChristinaR)-[:BOUGHT_IT {versions:['Trixie']}]->(MixTucanoFoodBox),
+(Rain)-[:BOUGHT_IT {versions:['Taejo Togokahn']}]->(MixTucanoFoodBox),
+(BenM)-[:BOUGHT_IT {versions:['Cass Jones']}]->(MixTucanoFoodBox),
+(LillyW)-[:STOCK_PRODUCT]->(MixTucanoFoodBox),
+(LanaW)-[:STOCK_PRODUCT]->(MixTucanoFoodBox),
+(LillyW)-[:FACTORY]->(MixTucanoFoodBox),
+(LanaW)-[:FACTORY]->(MixTucanoFoodBox),
+(JoelS)-[:PRODUCED]->(MixTucanoFoodBox)
+
+CREATE (MixPelicanFoodBox:Product {product_name:'Mix Pelican Food Box', product_introduction_year:2009, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (NaomieH:Person {name:'Naomie Harris'})
+CREATE
+(Rain)-[:BOUGHT_IT {versions:['Raizo']}]->(MixPelicanFoodBox),
+(NaomieH)-[:BOUGHT_IT {versions:['Mika Coretti']}]->(MixPelicanFoodBox),
+(RickY)-[:BOUGHT_IT {versions:['Takeshi']}]->(MixPelicanFoodBox),
+(BenM)-[:BOUGHT_IT {versions:['Ryan Maslow']}]->(MixPelicanFoodBox),
+(JamesM)-[:STOCK_PRODUCT]->(MixPelicanFoodBox),
+(LillyW)-[:PRODUCED]->(MixPelicanFoodBox),
+(LanaW)-[:PRODUCED]->(MixPelicanFoodBox),
+(JoelS)-[:PRODUCED]->(MixPelicanFoodBox)
+
+CREATE (MixFrogFoodBox:Product {product_name:'Mix Frog Food Box', product_introduction_year:1999, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (MichaelD:Person {name:'Michael Clarke Duncan', born:1957})
+CREATE (DavidM:Person {name:'David Morse', born:1953})
+CREATE (SamR:Person {name:'Sam Rockwell', born:1968})
+CREATE (GaryS:Person {name:'Gary Sinise', born:1955})
+CREATE (PatriciaC:Person {name:'Patricia Clarkson', born:1959})
+CREATE (FrancisD:Person {name:'Francis Darabont', born:1959})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Paul Edgecomb']}]->(MixFrogFoodBox),
+(MichaelD)-[:BOUGHT_IT {versions:['John Coffey']}]->(MixFrogFoodBox),
+(DavidM)-[:BOUGHT_IT {versions:['Brutus "Brutal" Howell']}]->(MixFrogFoodBox),
+(BonnieH)-[:BOUGHT_IT {versions:['Jan Edgecomb']}]->(MixFrogFoodBox),
+(JamesC)-[:BOUGHT_IT {versions:['Warden Hal Moores']}]->(MixFrogFoodBox),
+(SamR)-[:BOUGHT_IT {versions:['"Wild Bill" Wharton']}]->(MixFrogFoodBox),
+(GaryS)-[:BOUGHT_IT {versions:['Burt Hammersmith']}]->(MixFrogFoodBox),
+(PatriciaC)-[:BOUGHT_IT {versions:['Melinda Moores']}]->(MixFrogFoodBox),
+(FrancisD)-[:STOCK_PRODUCT]->(MixFrogFoodBox)
+
+CREATE (MixRatFoodBox:Product {product_name:'Mix Rat Food Box', product_introduction_year:2008, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (FrancisL:Person {name:'Francis Langella', born:1938})
+CREATE (MichaelS:Person {name:'Michael Sheen', born:1969})
+CREATE (OliverP:Person {name:'Oliver Platt', born:1960})
+CREATE
+(FrancisL)-[:BOUGHT_IT {versions:['Richard Nixon']}]->(MixRatFoodBox),
+(MichaelS)-[:BOUGHT_IT {versions:['David Frost']}]->(MixRatFoodBox),
+(KevinB)-[:BOUGHT_IT {versions:['Jack Brennan']}]->(MixRatFoodBox),
+(OliverP)-[:BOUGHT_IT {versions:['Bob Zelnick']}]->(MixRatFoodBox),
+(SamR)-[:BOUGHT_IT {versions:['James Reston, Jr.']}]->(MixRatFoodBox),
+(RonH)-[:STOCK_PRODUCT]->(MixRatFoodBox)
+
+CREATE (MixDuckFoodBox:Product {product_name:'MixDuckFoodBox', product_introduction_year:1992, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (DannyD:Person {name:'Danny DeVito', born:1944})
+CREATE (JohnR:Person {name:'John C. Reilly', born:1965})
+CREATE
+(JackN)-[:BOUGHT_IT {versions:['MixDuckFoodBox']}]->(MixDuckFoodBox),
+(DannyD)-[:BOUGHT_IT {versions:['Robert "Bobby" Ciaro']}]->(MixDuckFoodBox),
+(JTW)-[:BOUGHT_IT {versions:['Francis Fitzsimmons']}]->(MixDuckFoodBox),
+(JohnR)-[:BOUGHT_IT {versions:['Peter "Pete" Connelly']}]->(MixDuckFoodBox),
+(DannyD)-[:STOCK_PRODUCT]->(MixDuckFoodBox)
+
+CREATE (MixSwanFoodBox:Product {product_name:'Apollo 13', product_introduction_year:1995, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (EdH:Person {name:'Ed Harris', born:1950})
+CREATE (BillPax:Person {name:'Bill Paxton', born:1955})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Jim Lovell']}]->(MixSwanFoodBox),
+(KevinB)-[:BOUGHT_IT {versions:['Jack Swigert']}]->(MixSwanFoodBox),
+(EdH)-[:BOUGHT_IT {versions:['Gene Kranz']}]->(MixSwanFoodBox),
+(BillPax)-[:BOUGHT_IT {versions:['Fred Haise']}]->(MixSwanFoodBox),
+(GaryS)-[:BOUGHT_IT {versions:['Ken Mattingly']}]->(MixSwanFoodBox),
+(RonH)-[:STOCK_PRODUCT]->(MixSwanFoodBox)
+
+CREATE (MixGooseFoodBox:Product {product_name:'MixGooseFoodBox', product_introduction_year:1996, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (PhilipH:Person {name:'Philip Seymour Hoffman', born:1967})
+CREATE (JanB:Person {name:'Jan de Bont', born:1943})
+CREATE
+(BillPax)-[:BOUGHT_IT {versions:['Bill Harding']}]->(MixGooseFoodBox),
+(HelenH)-[:BOUGHT_IT {versions:['Dr. Jo Harding']}]->(MixGooseFoodBox),
+(ZachG)-[:BOUGHT_IT {versions:['Eddie']}]->(MixGooseFoodBox),
+(PhilipH)-[:BOUGHT_IT {versions:['Dustin "Dusty" Davis']}]->(MixGooseFoodBox),
+(JanB)-[:STOCK_PRODUCT]->(MixGooseFoodBox)
+
+CREATE (MixStorkFoodBox:Product {product_name:'Mix Stork Food Box', product_introduction_year:2000, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (RobertZ:Person {name:'Robert Zemeckis', born:1951})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Chuck Noland']}]->(MixStorkFoodBox),
+(HelenH)-[:BOUGHT_IT {versions:['Kelly Frears']}]->(MixStorkFoodBox),
+(RobertZ)-[:STOCK_PRODUCT]->(MixStorkFoodBox)
+
+CREATE (MixCuckooFoodBox:Product {product_name:"Mix Cuckoo's Food Box", product_introduction_year:1975, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (MilosF:Person {name:'Milos Forman', born:1932})
+CREATE
+(JackN)-[:BOUGHT_IT {versions:['Randle McMurphy']}]->(MixCuckooFoodBox),
+(DannyD)-[:BOUGHT_IT {versions:['Martini']}]->(MixCuckooFoodBox),
+(MilosF)-[:STOCK_PRODUCT]->(MixCuckooFoodBox)
+
+CREATE (MixBlackBirdFoodBox:Product {product_name:"Mix BlackBird Food Box", product_introduction_year:2003})
+CREATE (DianeK:Person {name:'Diane Keaton', born:1946})
+CREATE (NancyM:Person {name:'Nancy Meyers', born:1949})
+CREATE
+(JackN)-[:BOUGHT_IT {versions:['Harry Sanborn']}]->(MixBlackBirdFoodBox),
+(DianeK)-[:BOUGHT_IT {versions:['Erica Barry']}]->(MixBlackBirdFoodBox),
+(Michael)-[:BOUGHT_IT {versions:['Julian Mercer']}]->(MixBlackBirdFoodBox),
+(NancyM)-[:STOCK_PRODUCT]->(MixBlackBirdFoodBox),
+(NancyM)-[:PRODUCED]->(MixBlackBirdFoodBox),
+(NancyM)-[:FACTORY]->(MixBlackBirdFoodBox)
+
+CREATE (MixwildFoxBigFoodBox:Product {product_name:'Mix Wild Fox Big Food Box', product_introduction_year:1999, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (ChrisC:Person {name:'Chris Columbus', born:1958})
+CREATE
+(Robin)-[:BOUGHT_IT {versions:['Andrew Marin']}]->(MixwildFoxBigFoodBox),
+(OliverP)-[:BOUGHT_IT {versions:['Rupert Burns']}]->(MixwildFoxBigFoodBox),
+(ChrisC)-[:STOCK_PRODUCT]->(MixwildFoxBigFoodBox)
+
+CREATE (MixWildRabittFoodBox:Product {product_name:"mix Wild Rabitt Food Box", product_introduction_year:2007, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (JuliaR:Person {name:'Julia Roberts', born:1967})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Rep. Charlie Wilson']}]->(MixWildRabittFoodBox),
+(JuliaR)-[:BOUGHT_IT {versions:['Joanne Herring']}]->(MixWildRabittFoodBox),
+(PhilipH)-[:BOUGHT_IT {versions:['Gust Avrakotos']}]->(MixWildRabittFoodBox),
+(MikeN)-[:STOCK_PRODUCT]->(MixWildRabittFoodBox)
+
+CREATE (MixDomesticRabittFoodBox:Product {product_name:'Mix Domestic Rabitt Big Food Box', product_introduction_year:2004, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['HeroMother-1', 'HeroFather-2', 'BreaderConductor-3', 'H-4', 'Scro-5', 'Santac-6']}]->(MixDomesticRabittFoodBox),
+(RobertZ)-[:STOCK_PRODUCT]->(MixDomesticRabittFoodBox)
+
+CREATE (MixFatPigFullBox:Product {product_name:'Mix Fat Pig Full Box', product_introduction_year:1992, product_description:' Mix of Food For Animals. Read the Nutrition Table for more detials'})
+CREATE (Madonna:Person {name:'Madonna', born:1954})
+CREATE (GeenaD:Person {name:'Geena Davis', born:1956})
+CREATE (LoriP:Person {name:'Lori Petty', born:1963})
+CREATE (PennyM:Person {name:'Penny Marshall', born:1943})
+CREATE
+(AndrewH)-[:BOUGHT_IT {versions:['Jimmy Dugan']}]->(MixFatPigFullBox),
+(GeenaD)-[:BOUGHT_IT {versions:['Dottie Hinson']}]->(MixFatPigFullBox),
+(LoriP)-[:BOUGHT_IT {versions:['Kit Keller']}]->(MixFatPigFullBox),
+(RosieO)-[:BOUGHT_IT {versions:['Doris Murphy']}]->(MixFatPigFullBox),
+(Madonna)-[:BOUGHT_IT {versions:['"All the Way" Mae Mordabito']}]->(MixFatPigFullBox),
+(BillPax)-[:BOUGHT_IT {versions:['Bob Hinson']}]->(MixFatPigFullBox),
+(PennyM)-[:STOCK_PRODUCT]->(MixFatPigFullBox)
+
+CREATE (PaulBlythe:Person {name:'Paul Blythe'})
+CREATE (AngelaScope:Person {name:'Angela Scope'})
+CREATE (JessicaThompson:Person {name:'Jessica Thompson'})
+CREATE (JamesThompson:Person {name:'James Thompson'})
+
+CREATE
+(JamesThompson)-[:FOLLOWS]->(JessicaThompson),
+(AngelaScope)-[:FOLLOWS]->(JessicaThompson),
+(PaulBlythe)-[:FOLLOWS]->(AngelaScope)
+
+CREATE
+(JessicaThompson)-[:REVIEWED {summary:'An amazing journey', rating:95}]->(MixParrotFoodBox),
+(JessicaThompson)-[:REVIEWED {summary:'Silly, but fun', rating:65}]->(MixSmallGuineaPigFood),
+(JamesThompson)-[:REVIEWED {summary:'The coolest football movie ever', rating:100}]->(MixSmallGuineaPigFood),
+(AngelaScope)-[:REVIEWED {summary:'Pretty funny at times', rating:62}]->(MixSmallGuineaPigFood),
+(JessicaThompson)-[:REVIEWED {summary:'Dark, but compelling', rating:85}]->(MixParakeetFoodSmallBox),
+(JessicaThompson)-[:REVIEWED {summary:"Slapstick redeemed only by the Robin Williams and Gene Hackman's stellar performances", rating:45}]->(MixCanaryFoodMix),
+(JessicaThompson)-[:REVIEWED {summary:'A solid romp', rating:68}]->(MixCrawFoodBox),
+(JamesThompson)-[:REVIEWED {summary:'Fun, but a little far fetched', rating:65}]->(MixCrawFoodBox),
+(JessicaThompson)-[:REVIEWED {summary:'You had me at Jerry', rating:92}]->(MixSnakeFood)
+
+WITH AndrewH as a
+MATCH (a)-[:BOUGHT_IT]->(m)<-[:STOCK_PRODUCT]-(d) RETURN a,m,d LIMIT 10;
