@@ -1,0 +1,37 @@
+#
+# 
+1.------ Load Data from source
+LOAD CSV WITH HEADERS FROM "http://data.neo4j.com/northwind/products.csv" AS row
+CREATE (n:Product)
+SET n = row,
+n.unitPrice = toFloat(row.unitPrice),
+n.unitsInStock = toInteger(row.unitsInStock), n.unitsOnOrder = toInteger(row.unitsOnOrder),
+n.reorderLevel = toInteger(row.reorderLevel), n.discontinued = (row.discontinued <> "0")
+2.------
+LOAD CSV WITH HEADERS FROM "http://data.neo4j.com/northwind/categories.csv" AS row
+CREATE (n:Category)
+SET n = row
+3.------
+LOAD CSV WITH HEADERS FROM "http://data.neo4j.com/northwind/suppliers.csv" AS row
+CREATE (n:Supplier)
+SET n = row
+#
+#
+4.------ Create Indexes ...
+CREATE INDEX ON :Product(productID)
+5.------
+CREATE INDEX ON :Category(categoryID)
+6.------
+CREATE INDEX ON :SUPPLIER(supplierID)
+#
+#
+7.------ Create Data Relations ...
+MATCH (p:Product),(c:Category)
+WHERE p.categoryID = c.categoryID
+CREATE (p)-[:PART_OF]->(c)
+8.------
+MATCH (p:Product),(s:Supplier)
+WHERE p.supplierID = s.supplierID
+CREATE (s)-[:SUPPLIES]->(p)
+#
+#
