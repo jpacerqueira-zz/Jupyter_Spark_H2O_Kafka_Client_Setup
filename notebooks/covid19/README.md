@@ -20,9 +20,10 @@ An adaptive online Kalman filter provides us very good one-day predictions for e
 
 
 ### Automate to Run Notebook prediction Daily
- Setup a crontab for the provided script  
- $ crontab -e
- Runs everyday at 6h20 am to fetch and forecast daily for 21days
+ Setup a crontab for the provided script  ## Runs everyday at 6h20 am to fetch and forecast daily for 21days
+ 
+ $ crontab -e 
+  
  20 5 * * * /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh  
  
 
