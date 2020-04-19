@@ -14,7 +14,9 @@ An adaptive online Kalman filter provides us very good one-day predictions for e
 * [Notebook - Latest Stats and Predictions by Joao.Cerqueira ](https://github.com/jpacerqueira/Jupyter_Spark_H2O_Kafka_Client_Setup/blob/master/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY.ipynb)
 
 
-
+### How to Run Notebook prediction for NN Days
+ Follow the setup of lost_saturn docker container.
+* [Notebook - Run Yourself in this Docker container the Daily Predictions by Joao.Cerqueira](images/notebook-projections_run_in_container_project_lost_saturn_v1.png)
 
 
 ### Links to Medium article can be found here
