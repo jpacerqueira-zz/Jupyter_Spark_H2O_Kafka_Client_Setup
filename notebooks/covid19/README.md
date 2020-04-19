@@ -19,8 +19,8 @@ An adaptive online Kalman filter provides us very good one-day predictions for e
 * [Notebook - Run Yourself in this Docker container the Daily Predictions by Joao.Cerqueira](images/notebook-projections_run_in_container_project_lost_saturn_v1.png)
 
 
-### Automate to Run Notebook prediction Daily
- Setup a crontab for the provided script  ## Runs everyday at 6h20 am to fetch and forecast daily for 21days
+### Automate to run Notebook prediction daily with support script
+ Setup a crontab for the provided script  ---  Runs everyday at 6h20 am to fetch and forecast daily for 21days
  
  $ crontab -e 
   
