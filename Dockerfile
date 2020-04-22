@@ -82,6 +82,9 @@ EXPOSE 9003/tcp 54321/tcp
 
 RUN export DEBIAN_FRONTEND=interactive
 
+#Expose notebook cronjobs
+RUN (echo "20 6 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh" > /etc/cron.daily/notebooks-jupyter)
+
 USER notebookuser
 
 CMD export HOME=/home/notebookuser
