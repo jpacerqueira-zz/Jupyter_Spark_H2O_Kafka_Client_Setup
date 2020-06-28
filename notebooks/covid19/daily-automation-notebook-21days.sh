@@ -10,7 +10,7 @@ $HOME/anaconda3/bin/jupyter \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v14.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-14dayForecast-output-candidate.ipynb > crontab-run-$DATENB.log
 cp $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred14Days-displayFuelBigData.html      
-sleep 2
+sleep 1
 rm -rf  /tmp/*
 # 21DayForecast
 $HOME/anaconda3/bin/jupyter \
@@ -18,7 +18,7 @@ $HOME/anaconda3/bin/jupyter \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-output-candidate.ipynb > crontab-run-$DATENB.log
 cp $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred21Days-displayFuelBigData.html
-sleep 2
+sleep 1
 rm -rf  /tmp/*
 # 42DayForecast
 $HOME/anaconda3/bin/jupyter \
@@ -26,7 +26,7 @@ $HOME/anaconda3/bin/jupyter \
        $HOME/notebooks/covid19/MY_COVID19-Prediction_00MMYYYY-v42.ipynb  \
        --output $HOME/notebooks/covid19/MY_COVID19-Prediction_${DATENB}-42dayForecast-output-candidate.ipynb > crontab-run-$DATENB.log
 cp $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days.html $HOME/notebooks/covid19/heatmaps/Heatmap_Folium-Regional-${DATENB}-pred42Days-displayFuelBigData.html
-sleep 2
+sleep 1
 rm -rf  /tmp/*
 # 63DayForecast
 $HOME/anaconda3/bin/jupyter \
