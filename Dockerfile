@@ -37,7 +37,8 @@ RUN export DEBIAN_FRONTEND=noninteractive ; \
     python3-pip \
     python3-pyqt5 \
     vim \
-    software-properties-common
+    software-properties-common \
+    cron
 
 ADD library_tools/*.sh /home/notebookuser/
 
@@ -85,15 +86,30 @@ RUN chmod 777 /home/notebookuser/*.sh
 
 RUN chown notebookuser:notebookuser -R /home/notebookuser
 
-RUN ln -fs /usr/share/zoneinfo/GMT /etc/localtime
+RUN ln -fs /usr/share/zoneinfo/GMT+1 /etc/localtime
+
+# Add crontab file in the cron directory
+ADD crontab /etc/cron.d/hello-cron
+
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/hello-cron
+
+# Apply cron job
+RUN crontab /etc/cron.d/hello-cron
+
+# Create the log file to be able to run tail
+RUN touch /var/log/cron.log
+
+# Run the command on container startup
+CMD cron && tail -f /var/log/cron.log
+
+#Expose notebook cronjobs
+RUN (echo "* * * * * root echo "Hello world" >> /var/log/cron.log 2>&1" > /etc/cron.d/hello-cron ; chmod 0644 /etc/cron.d/hello-cron )
 
 EXPOSE 9003/tcp
 #EXPOSE 54321/tcp
 
 RUN export DEBIAN_FRONTEND=interactive
-
-#Expose notebook cronjobs
-RUN (echo "20 6 * * * notebookuser bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh" > /etc/cron.daily/notebooks-jupyter ; chmod 755 /etc/cron.daily/notebooks-jupyter )
 
 USER notebookuser
 
