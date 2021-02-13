@@ -4,7 +4,7 @@ bash -x automate-daily-analysis-file.sh $MYNDATE
 cd ../heatmaps 
 bash -x automate-daily-sed.sh $MYNDATE
 ######
-## cp -rf notebooks/data/delta_daily-covid19-global-analysis/dt=* ../project_lost_saturn/notebooks/data/delta_daily-covid19-global-analysis/
+## cp -rf notebooks/data/delta_daily-covid19-global-analysis/dt=* ../project_lost_saturn/notebooks/data/delta_daily-covid19-global-analysis/  #### Maintain just one day, too big to build in docker.io container! ####
 ## MYNDATE=02Feb2021
 ## echo $MYNDATE
 ## git status ; git add --all ; git commit -a -m "New - +daily spark reconciliation analysis  - $MYNDATE - #COVID19" ; git push ;
