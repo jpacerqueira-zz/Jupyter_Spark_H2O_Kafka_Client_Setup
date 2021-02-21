@@ -1,11 +1,21 @@
+#/usr/bin/bash -xe
 MYNDATE=$1
+######
+cd archive/covid19 
+mv ../../notebooks/covid19/data/archive/*.csv data 
+mv ../../notebooks/covid19/heatmaps/archive/*.html* heatmaps 
+mv ../../notebooks/covid19/archive/*.ipynb notebooks 
+cd ../../
+######
+#
 cd notebooks/covid19/data                             
 bash -x automate-daily-analysis-file.sh $MYNDATE
 cd ../heatmaps 
 bash -x automate-daily-sed.sh $MYNDATE
+#
 ######
 ## cp -rf notebooks/data/delta_daily-covid19-global-analysis/dt=* ../project_lost_saturn/notebooks/data/delta_daily-covid19-global-analysis/  #### Maintain just one day, too big to build in docker.io container! ####
-## MYNDATE=1xFeb2021
+## MYNDATE=2xFeb2021
 ## echo $MYNDATE
 ## git status ; git add --all ; git commit -a -m "New - +daily spark reconciliation analysis  - $MYNDATE - #COVID19" ; git push ;
 ## cd ../project_lost_saturn ; cd notebooks/ ; rm -rf covid19 ; cp -rf ../../Jupyter_Spark_H2O_Kafka_Client_Setup/notebooks/covid19 . ; git status ; git add --all ; git commit -a -m "New - +daily spark reconciliation analysis  - $MYNDATE - #COVID19" ; git push ; cd ../../Jupyter_Spark_H2O_Kafka_Client_Setup ;
