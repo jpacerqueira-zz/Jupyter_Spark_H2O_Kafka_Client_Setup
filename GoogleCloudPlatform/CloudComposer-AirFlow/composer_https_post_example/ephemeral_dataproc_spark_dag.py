@@ -10,20 +10,13 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
-# limitations under the License.
-
-from datetime import datetime, timedelta
-
-from airflow import DAG
+# limitations under the License.from datetime import datetime, timedeltafrom airflow import DAG
 from airflow.contrib.operators.dataproc_operator import DataprocClusterCreateOperator, \
     DataProcPySparkOperator, DataprocClusterDeleteOperator
 from airflow.contrib.operators.gcs_to_bq import GoogleCloudStorageToBigQueryOperator
 from airflow.operators import BashOperator, PythonOperator
 from airflow.models import Variable
-from airflow.utils.trigger_rule import TriggerRule
-
-
-##################################################################
+from airflow.utils.trigger_rule import TriggerRule##################################################################
 # This file defines the DAG for the logic pictured below.        #
 ##################################################################
 #                                                                #
@@ -46,18 +39,10 @@ from airflow.utils.trigger_rule import TriggerRule
 # failure of the up stream tasks. In this case the files in the  #
 # raw-{timestamp}/ GCS path will be moved to a failed-{timestamp}#
 # path.)                                                         #
-##################################################################
-
-
-
-# These are stored as a Variables in our Airflow Environment.
+################################################################### These are stored as a Variables in our Airflow Environment.
 BUCKET = Variable.get('gcs_bucket')  # GCS bucket with our data.
-OUTPUT_TABLE = Variable.get('bq_output_table')  # BigQuery table to which results will be written
-
-# Path to python script that does data manipulation
-PYSPARK_JOB = 'gs://' + BUCKET + '/spark-jobs/spark_avg_speed.py'
-
-# Airflow parameters, see https://airflow.incubator.apache.org/code.html
+OUTPUT_TABLE = Variable.get('bq_output_table')  # BigQuery table to which results will be written# Path to python script that does data manipulation
+PYSPARK_JOB = 'gs://' + BUCKET + '/spark-jobs/spark_avg_speed.py'# Airflow parameters, see https://airflow.incubator.apache.org/code.html
 DEFAULT_DAG_ARGS = {
     'owner': 'airflow',  # The owner of the task.
     # Task instance should not rely on the previous task's schedule to succeed.
@@ -76,10 +61,7 @@ DEFAULT_DAG_ARGS = {
     # Alternatively, this could be set to '@daily' to run the job once a day.
     # more options at https://airflow.apache.org/scheduler.html#dag-runs
     'schedule_interval': None
-}
-
-
-# Create Directed Acyclic Graph for Airflow
+}# Create Directed Acyclic Graph for Airflow
 with DAG('average-speed',
          default_args=DEFAULT_DAG_ARGS) as dag:  # Here we are using dag as context.
     # Create the Cloud Dataproc cluster.
@@ -91,9 +73,7 @@ with DAG('average-speed',
         cluster_name='ephemeral-spark-cluster-{{ ds_nodash }}',
         num_workers=2,
         zone=Variable.get('gce_zone')
-    )
-
-    # Submit the PySpark job.
+    )# Submit the PySpark job.
     submit_pyspark = DataProcPySparkOperator(
         task_id='run_dataproc_pyspark',
         main=PYSPARK_JOB,
@@ -102,11 +82,7 @@ with DAG('average-speed',
         # Let's template our arguments for the pyspark job from the POST payload.
         arguments=["--gcs_path_raw={{ dag_run.conf['raw_path'] }}",
                    "--gcs_path_transformed=gs://" + BUCKET +
-                   "/{{ dag_run.conf['transformed_path'] }}"]
-
-    )
-
-    # Load the transformed files to a BigQuery table.
+                   "/{{ dag_run.conf['transformed_path'] }}"])# Load the transformed files to a BigQuery table.
     bq_load = GoogleCloudStorageToBigQueryOperator(
         task_id='GCS_to_BigQuery',
         bucket=BUCKET,
@@ -121,24 +97,18 @@ with DAG('average-speed',
         skip_leading_rows=0,
         write_disposition='WRITE_TRUNCATE',  # If the table exists, overwrite it.
         max_bad_records=0
-     )
-
-    # Delete the Cloud Dataproc cluster.
+     )# Delete the Cloud Dataproc cluster.
     delete_cluster = DataprocClusterDeleteOperator(
         task_id='delete_dataproc_cluster',
         # Obviously needs to match the name of cluster created in the prior two Operators.
         cluster_name='ephemeral-spark-cluster-{{ ds_nodash }}',
         # This will tear down the cluster even if there are failures in upstream tasks.
         trigger_rule=TriggerRule.ALL_DONE
-    )
-
-    # Delete  gcs files in the timestamped transformed folder.
+    )# Delete  gcs files in the timestamped transformed folder.
     delete_transformed_files = BashOperator(
         task_id='delete_transformed_files',
         bash_command="gsutil -m rm -r gs://" + BUCKET + "/{{ dag_run.conf['transformed_path'] }}/"
-    )
-
-    # If the spark job or BQ Load fails we rename the timestamped raw path to
+    )# If the spark job or BQ Load fails we rename the timestamped raw path to
     # a timestamped failed path.
     move_failed_files = BashOperator(
         task_id='move_failed_files',
@@ -146,16 +116,4 @@ with DAG('average-speed',
                      + "gs://" + BUCKET + "/{{ dag_run.conf['failed_path'] }}/",
         trigger_rule=TriggerRule.ONE_FAILED
     )
-    # Set the dag property of the first Operators, this will be inherited by downstream Operators.
-
-    create_cluster.dag = dag
-
-    create_cluster.set_downstream(submit_pyspark)
-
-    submit_pyspark.set_downstream([delete_cluster, bq_load])
-
-    bq_load.set_downstream(delete_transformed_files)
-
-    move_failed_files.set_upstream([bq_load, submit_pyspark])
-
-
+    # Set the dag property of the first Operators, this will be inherited by downstream Operators.create_cluster.dag = dagcreate_cluster.set_downstream(submit_pyspark)submit_pyspark.set_downstream([delete_cluster, bq_load])bq_load.set_downstream(delete_transformed_files)move_failed_files.set_upstream([bq_load, submit_pyspark])

@@ -1,16 +1,10 @@
 
 import matplotlib
-matplotlib.use('agg')
-
-import argparse
+matplotlib.use('agg')import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("--bucket", help="bucket for input and output")
-args = parser.parse_args()
-
-BUCKET = args.bucket
-from pyspark.sql import SparkSession, SQLContext, Row
-
-gcs_bucket='qwiklabs-gcp-ffc84680e86718f5'
+args = parser.parse_args()BUCKET = args.bucket
+from pyspark.sql import SparkSession, SQLContext, Rowgcs_bucket='qwiklabs-gcp-ffc84680e86718f5'
 spark = SparkSession.builder.appName("kdd").getOrCreate()
 sc = spark.sparkContext
 data_file = "gs://"+gcs_bucket+"//kddcup.data_10_percent.gz"
@@ -62,9 +56,7 @@ attack_stats = sqlContext.sql("""
                            ORDER BY 3 DESC
                            """)
 attack_stats.show()
-# %matplotlib inline
-
-ax = attack_stats.toPandas().plot.bar(x='protocol_type', subplots=True, figsize=(10,25))
+# %matplotlib inlineax = attack_stats.toPandas().plot.bar(x='protocol_type', subplots=True, figsize=(10,25))
 ax[0].get_figure().savefig('report.png');
 import google.cloud.storage as gcs
 bucket = gcs.Client().get_bucket(BUCKET)

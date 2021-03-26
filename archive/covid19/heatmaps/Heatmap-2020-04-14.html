@@ -12,9 +12,7 @@
 			center: centerlatlng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
-		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-
-var heatmap_points = [
+		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);var heatmap_points = [
 new google.maps.LatLng(33.000000, 65.000000),
 new google.maps.LatLng(41.153300, 20.168300),
 new google.maps.LatLng(28.033900, 1.659600),
@@ -280,13 +278,9 @@ new google.maps.LatLng(6.877000, 31.307000),
 new google.maps.LatLng(24.215500, -12.885800),
 new google.maps.LatLng(0.186360, 6.613081),
 new google.maps.LatLng(15.552727, 48.516388),
-];
-
-var pointArray = new google.maps.MVCArray(heatmap_points);
+];var pointArray = new google.maps.MVCArray(heatmap_points);
 var heatmap;
-heatmap = new google.maps.visualization.HeatmapLayer({
-
-data: pointArray
+heatmap = new google.maps.visualization.HeatmapLayer({data: pointArray
 });
 heatmap.setMap(map);
 heatmap.set('threshold', 10);
