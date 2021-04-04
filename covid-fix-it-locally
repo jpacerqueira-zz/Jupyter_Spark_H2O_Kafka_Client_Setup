@@ -1,23 +1,38 @@
 #/usr/bin/bash -xe
-MYNDATE=$1
-######
-cd archive/covid19 
-mv ../../notebooks/covid19/data/archive/*.csv data 
-mv ../../notebooks/covid19/heatmaps/archive/*.html* heatmaps 
-mv ../../notebooks/covid19/archive/*.ipynb notebooks 
-cd ../../
-######
+MYNDATE="$1"
+if [ "$MYNDATE" == "" ]; then
+   MYNDATE=$(date +"%Y-%m-%d")
+fi
 #
 cd notebooks/covid19/data                             
 bash -x automate-daily-analysis-file.sh $MYNDATE
 cd ../heatmaps 
 bash -x automate-daily-sed.sh $MYNDATE
+cd ../../..
 #
 ######
-MYNDATE=01Apr2021
+TODAY=$(date "+%Y-%m-%d")
+echo $TODAY
+YESTERDAY=$(date -v -1d "+%Y-%m-%d")
+echo $YESTERDAY
+rm -rf notebooks/data/delta_daily-covid19-global-analysis/dt=$YESTERDAY
+rm -rf ../project_lost_saturn/notebooks/data/delta_daily-covid19-global-analysis/dt=$YESTERDAY
+cp -rf notebooks/data/delta_daily-covid19-global-analysis/dt=$TODAY ../project_lost_saturn/notebooks/data/delta_daily-covid19-global-analysis/  #### Maintain just one day, too big to build in docker.io container! ####
+###
+pwd
+cd archive/covid19
+#
+mv ../../notebooks/covid19/data/*$YESTERDAY*.csv data
+mv ../../notebooks/covid19/heatmaps/*$YESTERDAY*.html* heatmaps
+mv ../../notebooks/covid19/*$YESTERDAY*.ipynb notebooks
+#
+mv ../../notebooks/covid19/data/archive/*.csv data
+mv ../../notebooks/covid19/heatmaps/archive/*.html* heatmaps
+mv ../../notebooks/covid19/archive/*.ipynb notebooks
+cd ../../
+###
+MYNDATE=$(date +"%d%b%Y")
 echo $MYNDATE
-## cp -rf notebooks/data/delta_daily-covid19-global-analysis/dt=* ../project_lost_saturn/notebooks/data/delta_daily-covid19-global-analysis/  #### Maintain just one day, too big to build in docker.io container! ####
-##
 ## git status ; git add --all ; git commit -a -m "New - +daily spark reconciliation analysis  - $MYNDATE - #COVID19" ; git push ;
 ##
 ## cd ../project_lost_saturn ; cd notebooks/ ; rm -rf covid19 ; cp -rf ../../Jupyter_Spark_H2O_Kafka_Client_Setup/notebooks/covid19 . ; git status ; git add --all ; git commit -a -m "New - +daily spark reconciliation analysis  - $MYNDATE - #COVID19" ; git push ; cd ../../Jupyter_Spark_H2O_Kafka_Client_Setup ;
