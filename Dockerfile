@@ -38,7 +38,7 @@ RUN \
     vim \
     software-properties-common \
     cronRUN ln -fs /usr/share/zoneinfo/GMT+1 /etc/localtime#Expose notebook cronjobs
-RUN (echo "* * * * * root echo "Hello world" >> /var/log/cron.log 2>&1" > /etc/cron.d/hello-cron ; chmod 0644 /etc/cron.d/hello-cron )# Apply cron job
+RUN (echo "* * * * * root echo "Hello world" >> /var/log/cron.log 2>1&" > /etc/cron.d/hello-cron ; chmod 0644 /etc/cron.d/hello-cron )# Apply cron job
 RUN crontab /etc/cron.d/hello-cron# Create the log file to be able to run tail
 RUN touch /var/log/cron.log# Run the command on container startup
 CMD cron && tail -f /var/log/cron.log#Expose notebook cronjobs
@@ -108,7 +108,7 @@ RUN  sleep 1 ; export HOME=/home/notebookuser ; cd $HOME ; \
      fix-permissions $HOME ; \
      bash -x $HOME/stop-jupyter.sh ; \ 
      mkdir -p $HOME/crontab ; \
-     ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "46 5  * * * bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh 2>&1") | crontab - ; \
+     ! (crontab -l | grep -q "daily-automation-notebook-21days.sh") && (crontab -l; echo "46 5  * * * bash -x /home/notebookuser/notebooks/covid19/daily-automation-notebook-21days.sh 2>1&") | crontab - ; \
      sleep 1
 #
 CMD sleep 5 ; \
