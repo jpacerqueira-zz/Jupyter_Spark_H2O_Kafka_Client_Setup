@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2d9e065272894af2af4f094b83840ef2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_2d9e065272894af2af4f094b83840ef2" ></div>
+        
+</body>
+<script>    
+    
+            var map_2d9e065272894af2af4f094b83840ef2 = L.map(
+                "map_2d9e065272894af2af4f094b83840ef2",
+                {
+                    center: [40.99474, 6.87237],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0876006b6a374686b4a8ab033bb11c91 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var marker_cluster_d507f70e7fff429b9daabffaaad7281f = L.markerClusterGroup(
+                {}
+            );
+            map_2d9e065272894af2af4f094b83840ef2.addLayer(marker_cluster_d507f70e7fff429b9daabffaaad7281f);
+        
+    
+            var marker_4700bbaaf33247589cc3956c26e7c970 = L.marker(
+                [-38.4161, -63.6167],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_0131d10fe11b42e1be4ee0b1f81f8849 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_4700bbaaf33247589cc3956c26e7c970.setIcon(icon_0131d10fe11b42e1be4ee0b1f81f8849);
+        
+    
+        var popup_2b5d9d6eb48e4d96bded9d7a3599b51f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1681138b6569441aabc8fa0b156bcdf4 = $(`<div id="html_1681138b6569441aabc8fa0b156bcdf4" style="width: 100.0%; height: 100.0%;">Argentina Current7DayAvg=1560 Predicted7DayAvg=274098 ConfTotPred=20595800 Date=2022-06-20</div>`)[0];
+            popup_2b5d9d6eb48e4d96bded9d7a3599b51f.setContent(html_1681138b6569441aabc8fa0b156bcdf4);
+        
+
+        marker_4700bbaaf33247589cc3956c26e7c970.bindPopup(popup_2b5d9d6eb48e4d96bded9d7a3599b51f)
+        ;
+
+        
+    
+    
+            var marker_29b6baafc7d94710b65b6374fb618c75 = L.marker(
+                [-33.8688, 151.2093],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_4b1ac293e5174a6abee5699ea96c4236 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_29b6baafc7d94710b65b6374fb618c75.setIcon(icon_4b1ac293e5174a6abee5699ea96c4236);
+        
+    
+        var popup_62508de366564a77ad91eaa03c22e9f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2078def533d342408685f14565f60b46 = $(`<div id="html_2078def533d342408685f14565f60b46" style="width: 100.0%; height: 100.0%;">Australia_New South Wales Current7DayAvg=15707 Predicted7DayAvg=33147 ConfTotPred=3724984 Date=2022-06-20</div>`)[0];
+            popup_62508de366564a77ad91eaa03c22e9f3.setContent(html_2078def533d342408685f14565f60b46);
+        
+
+        marker_29b6baafc7d94710b65b6374fb618c75.bindPopup(popup_62508de366564a77ad91eaa03c22e9f3)
+        ;
+
+        
+    
+    
+            var marker_a631e18a8ade46bf900835c2ee6c6600 = L.marker(
+                [-37.8136, 144.9631],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_b8460aab1b4249e68e01c904a59b13bf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_a631e18a8ade46bf900835c2ee6c6600.setIcon(icon_b8460aab1b4249e68e01c904a59b13bf);
+        
+    
+        var popup_afa87d456fdb4134bfc2198441df91e7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_278e935df4944ba89134615650143660 = $(`<div id="html_278e935df4944ba89134615650143660" style="width: 100.0%; height: 100.0%;">Australia_Victoria Current7DayAvg=9347 Predicted7DayAvg=24851 ConfTotPred=2652661 Date=2022-06-20</div>`)[0];
+            popup_afa87d456fdb4134bfc2198441df91e7.setContent(html_278e935df4944ba89134615650143660);
+        
+
+        marker_a631e18a8ade46bf900835c2ee6c6600.bindPopup(popup_afa87d456fdb4134bfc2198441df91e7)
+        ;
+
+        
+    
+    
+            var marker_14ba5160c2474e959248ad822ce3b265 = L.marker(
+                [47.5162, 14.5501],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_885225eca6674863b58a26abe03d232a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkgreen", "prefix": "glyphicon"}
+            );
+            marker_14ba5160c2474e959248ad822ce3b265.setIcon(icon_885225eca6674863b58a26abe03d232a);
+        
+    
+        var popup_13fb6164b39a42758f5fa6b04ceb4375 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac9b06ec15674c2a827ac89a83b5b758 = $(`<div id="html_ac9b06ec15674c2a827ac89a83b5b758" style="width: 100.0%; height: 100.0%;">Austria Current7DayAvg=13861 Predicted7DayAvg=42555 ConfTotPred=5945470 Date=2022-06-20</div>`)[0];
+            popup_13fb6164b39a42758f5fa6b04ceb4375.setContent(html_ac9b06ec15674c2a827ac89a83b5b758);
+        
+
+        marker_14ba5160c2474e959248ad822ce3b265.bindPopup(popup_13fb6164b39a42758f5fa6b04ceb4375)
+        ;
+
+        
+    
+    
+            var marker_890fbb65ba8341bc9c0dc3abdbbf9e0a = L.marker(
+                [23.685, 90.3563],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_ae8c499336614a74bc0a72399cd12f4b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+            );
+            marker_890fbb65ba8341bc9c0dc3abdbbf9e0a.setIcon(icon_ae8c499336614a74bc0a72399cd12f4b);
+        
+    
+        var popup_fe02964a84f94d6eb4d108c1b5606773 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8b39198553f4fff936c3379959ff494 = $(`<div id="html_c8b39198553f4fff936c3379959ff494" style="width: 100.0%; height: 100.0%;">Bangladesh Current7DayAvg=42 Predicted7DayAvg=48690 ConfTotPred=3998936 Date=2022-06-20</div>`)[0];
+            popup_fe02964a84f94d6eb4d108c1b5606773.setContent(html_c8b39198553f4fff936c3379959ff494);
+        
+
+        marker_890fbb65ba8341bc9c0dc3abdbbf9e0a.bindPopup(popup_fe02964a84f94d6eb4d108c1b5606773)
+        ;
+
+        
+    
+    
+            var marker_0eb45bff209642debe8c1bfda6fcdd3c = L.marker(
+                [50.8333, 4.469936],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_0f57585244234579b112bc402ee23f3e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+            );
+            marker_0eb45bff209642debe8c1bfda6fcdd3c.setIcon(icon_0f57585244234579b112bc402ee23f3e);
+        
+    
+        var popup_abcd549c729647ecbbb991e31eef0469 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ef23c6c2c594c6292907f5fcb6ffdb5 = $(`<div id="html_3ef23c6c2c594c6292907f5fcb6ffdb5" style="width: 100.0%; height: 100.0%;">Belgium Current7DayAvg=7502 Predicted7DayAvg=30123 ConfTotPred=5336452 Date=2022-06-20</div>`)[0];
+            popup_abcd549c729647ecbbb991e31eef0469.setContent(html_3ef23c6c2c594c6292907f5fcb6ffdb5);
+        
+
+        marker_0eb45bff209642debe8c1bfda6fcdd3c.bindPopup(popup_abcd549c729647ecbbb991e31eef0469)
+        ;
+
+        
+    
+    
+            var marker_9c219c6c050a4c419968cfde8abb6f97 = L.marker(
+                [-14.235, -51.9253],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_4a4cd33ed3d34ee3a725595c92f1c3eb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+            );
+            marker_9c219c6c050a4c419968cfde8abb6f97.setIcon(icon_4a4cd33ed3d34ee3a725595c92f1c3eb);
+        
+    
+        var popup_ae3dc90b10cc4181b36b1184892c3564 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_61ad67966a564febb00679bd83a4ce25 = $(`<div id="html_61ad67966a564febb00679bd83a4ce25" style="width: 100.0%; height: 100.0%;">Brazil Current7DayAvg=18226 Predicted7DayAvg=390867 ConfTotPred=46916814 Date=2022-06-20</div>`)[0];
+            popup_ae3dc90b10cc4181b36b1184892c3564.setContent(html_61ad67966a564febb00679bd83a4ce25);
+        
+
+        marker_9c219c6c050a4c419968cfde8abb6f97.bindPopup(popup_ae3dc90b10cc4181b36b1184892c3564)
+        ;
+
+        
+    
+    
+            var marker_4103bf7a5d9349dba66c96d27b389725 = L.marker(
+                [-35.6751, -71.543],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_927d701511364665a36819b2ccbdc9a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+            );
+            marker_4103bf7a5d9349dba66c96d27b389725.setIcon(icon_927d701511364665a36819b2ccbdc9a3);
+        
+    
+        var popup_431ba9e86d514bca98bc7bfd7c1a7d5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_92b81442753944099ea220bdd5c86c25 = $(`<div id="html_92b81442753944099ea220bdd5c86c25" style="width: 100.0%; height: 100.0%;">Chile Current7DayAvg=3648 Predicted7DayAvg=59600 ConfTotPred=6068450 Date=2022-06-20</div>`)[0];
+            popup_431ba9e86d514bca98bc7bfd7c1a7d5a.setContent(html_92b81442753944099ea220bdd5c86c25);
+        
+
+        marker_4103bf7a5d9349dba66c96d27b389725.bindPopup(popup_431ba9e86d514bca98bc7bfd7c1a7d5a)
+        ;
+
+        
+    
+    
+            var marker_974126923aed4d3393679c781e32b309 = L.marker(
+                [4.5709, -74.2973],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_45fadd1cfdb44e5a847f518cc6d09905 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+            );
+            marker_974126923aed4d3393679c781e32b309.setIcon(icon_45fadd1cfdb44e5a847f518cc6d09905);
+        
+    
+        var popup_78d0cb88e9ad4535a0970a8deab5b0b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a20c9372f4b5494e853ea12979716539 = $(`<div id="html_a20c9372f4b5494e853ea12979716539" style="width: 100.0%; height: 100.0%;">Colombia Current7DayAvg=256 Predicted7DayAvg=88852 ConfTotPred=9824471 Date=2022-06-20</div>`)[0];
+            popup_78d0cb88e9ad4535a0970a8deab5b0b1.setContent(html_a20c9372f4b5494e853ea12979716539);
+        
+
+        marker_974126923aed4d3393679c781e32b309.bindPopup(popup_78d0cb88e9ad4535a0970a8deab5b0b1)
+        ;
+
+        
+    
+    
+            var marker_deaa78b903aa40bbb93d831de18eedcb = L.marker(
+                [49.8175, 15.472999999999999],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_ccb22308cb5c436f80ceca3088857d96 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+            );
+            marker_deaa78b903aa40bbb93d831de18eedcb.setIcon(icon_ccb22308cb5c436f80ceca3088857d96);
+        
+    
+        var popup_e176b4edfcf041ac9b950c6fbb65670e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d13207fa1bea468c84ad68c8a7466035 = $(`<div id="html_d13207fa1bea468c84ad68c8a7466035" style="width: 100.0%; height: 100.0%;">Czechia Current7DayAvg=3533 Predicted7DayAvg=66340 ConfTotPred=6695448 Date=2022-06-20</div>`)[0];
+            popup_e176b4edfcf041ac9b950c6fbb65670e.setContent(html_d13207fa1bea468c84ad68c8a7466035);
+        
+
+        marker_deaa78b903aa40bbb93d831de18eedcb.bindPopup(popup_e176b4edfcf041ac9b950c6fbb65670e)
+        ;
+
+        
+    
+    
+            var marker_cd39de9efb454c30b21938fca8ecca2f = L.marker(
+                [56.2639, 9.5018],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_f992c8175e0a43f3a38eded35cfdb677 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_cd39de9efb454c30b21938fca8ecca2f.setIcon(icon_f992c8175e0a43f3a38eded35cfdb677);
+        
+    
+        var popup_bf470c90126b460984626bb92a62f9f0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ebe93b8576f14651aaa0422bf9653a42 = $(`<div id="html_ebe93b8576f14651aaa0422bf9653a42" style="width: 100.0%; height: 100.0%;">Denmark Current7DayAvg=2323 Predicted7DayAvg=21683 ConfTotPred=4029795 Date=2022-06-20</div>`)[0];
+            popup_bf470c90126b460984626bb92a62f9f0.setContent(html_ebe93b8576f14651aaa0422bf9653a42);
+        
+
+        marker_cd39de9efb454c30b21938fca8ecca2f.bindPopup(popup_bf470c90126b460984626bb92a62f9f0)
+        ;
+
+        
+    
+    
+            var marker_6e10f58f333a4822a346afb8eb0aaf05 = L.marker(
+                [61.92411, 25.748151],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_538050a6c64c4fde9d1a1ee6b6981abf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_6e10f58f333a4822a346afb8eb0aaf05.setIcon(icon_538050a6c64c4fde9d1a1ee6b6981abf);
+        
+    
+        var popup_23439fda3b684d629ec58a3917b22c0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_42a261d7ce9a4a93bc0aa3d3de2f0065 = $(`<div id="html_42a261d7ce9a4a93bc0aa3d3de2f0065" style="width: 100.0%; height: 100.0%;">Finland Current7DayAvg=4877 Predicted7DayAvg=41353 ConfTotPred=2759858 Date=2022-06-20</div>`)[0];
+            popup_23439fda3b684d629ec58a3917b22c0b.setContent(html_42a261d7ce9a4a93bc0aa3d3de2f0065);
+        
+
+        marker_6e10f58f333a4822a346afb8eb0aaf05.bindPopup(popup_23439fda3b684d629ec58a3917b22c0b)
+        ;
+
+        
+    
+    
+            var marker_ac25344107464bcba10170586ffeed7d = L.marker(
+                [46.2276, 2.2137],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_35fd38b1394640e5a03eff0d16faf99a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightblue", "prefix": "glyphicon"}
+            );
+            marker_ac25344107464bcba10170586ffeed7d.setIcon(icon_35fd38b1394640e5a03eff0d16faf99a);
+        
+    
+        var popup_f524fba333d845b2bab37d50861fe2c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d6e534ca12e14a37ad86e7a06cc4101b = $(`<div id="html_d6e534ca12e14a37ad86e7a06cc4101b" style="width: 100.0%; height: 100.0%;">France Current7DayAvg=99127 Predicted7DayAvg=625697 ConfTotPred=54304007 Date=2022-06-20</div>`)[0];
+            popup_f524fba333d845b2bab37d50861fe2c6.setContent(html_d6e534ca12e14a37ad86e7a06cc4101b);
+        
+
+        marker_ac25344107464bcba10170586ffeed7d.bindPopup(popup_f524fba333d845b2bab37d50861fe2c6)
+        ;
+
+        
+    
+    
+            var marker_54701feb37a94aafa9f4b8d16555d433 = L.marker(
+                [42.3154, 43.3569],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_2f3611fbdc4b413ebf2079360d006a91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_54701feb37a94aafa9f4b8d16555d433.setIcon(icon_2f3611fbdc4b413ebf2079360d006a91);
+        
+    
+        var popup_da2ddf518fea424ca1ce9e1efd52de8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_cc270734e1c84d1b953768317e768f43 = $(`<div id="html_cc270734e1c84d1b953768317e768f43" style="width: 100.0%; height: 100.0%;">Georgia Current7DayAvg=264 Predicted7DayAvg=37628 ConfTotPred=3235594 Date=2022-06-20</div>`)[0];
+            popup_da2ddf518fea424ca1ce9e1efd52de8e.setContent(html_cc270734e1c84d1b953768317e768f43);
+        
+
+        marker_54701feb37a94aafa9f4b8d16555d433.bindPopup(popup_da2ddf518fea424ca1ce9e1efd52de8e)
+        ;
+
+        
+    
+    
+            var marker_6d681efc97104d8e9ebc4efb9e5a9fa2 = L.marker(
+                [42.3154, 43.3569],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_fcbad291a1684adc99490694332939ed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_6d681efc97104d8e9ebc4efb9e5a9fa2.setIcon(icon_fcbad291a1684adc99490694332939ed);
+        
+    
+        var popup_56fb1835586c4d9eb4fe8e2444dea0d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8989b8803044492f9661b982c383aad0 = $(`<div id="html_8989b8803044492f9661b982c383aad0" style="width: 100.0%; height: 100.0%;">Georgia Current7DayAvg=264 Predicted7DayAvg=37628 ConfTotPred=3235594 Date=2022-06-20</div>`)[0];
+            popup_56fb1835586c4d9eb4fe8e2444dea0d4.setContent(html_8989b8803044492f9661b982c383aad0);
+        
+
+        marker_6d681efc97104d8e9ebc4efb9e5a9fa2.bindPopup(popup_56fb1835586c4d9eb4fe8e2444dea0d4)
+        ;
+
+        
+    
+    
+            var marker_d27a629327c74d31960c05437e1d3a3d = L.marker(
+                [51.165690999999995, 10.451526],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_c03871bb55124d499226e6d21f0d17e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_d27a629327c74d31960c05437e1d3a3d.setIcon(icon_c03871bb55124d499226e6d21f0d17e7);
+        
+    
+        var popup_6034770feba24a26a13c28e069f28f19 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c107c807b5404c189507c5d26e5e7f31 = $(`<div id="html_c107c807b5404c189507c5d26e5e7f31" style="width: 100.0%; height: 100.0%;">Germany Current7DayAvg=139662 Predicted7DayAvg=401706 ConfTotPred=42000794 Date=2022-06-20</div>`)[0];
+            popup_6034770feba24a26a13c28e069f28f19.setContent(html_c107c807b5404c189507c5d26e5e7f31);
+        
+
+        marker_d27a629327c74d31960c05437e1d3a3d.bindPopup(popup_6034770feba24a26a13c28e069f28f19)
+        ;
+
+        
+    
+    
+            var marker_9bd6ac8c834a4a86b618543014fb72d2 = L.marker(
+                [39.0742, 21.8243],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_11f75da12ebf4b29b520d50712b951fd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "darkblue", "prefix": "glyphicon"}
+            );
+            marker_9bd6ac8c834a4a86b618543014fb72d2.setIcon(icon_11f75da12ebf4b29b520d50712b951fd);
+        
+    
+        var popup_047d8e436fdf4981901fd9f723df50dd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d0f8e7f110db4351bf4edc6f09e5c5d6 = $(`<div id="html_d0f8e7f110db4351bf4edc6f09e5c5d6" style="width: 100.0%; height: 100.0%;">Greece Current7DayAvg=11365 Predicted7DayAvg=24261 ConfTotPred=4359769 Date=2022-06-20</div>`)[0];
+            popup_047d8e436fdf4981901fd9f723df50dd.setContent(html_d0f8e7f110db4351bf4edc6f09e5c5d6);
+        
+
+        marker_9bd6ac8c834a4a86b618543014fb72d2.bindPopup(popup_047d8e436fdf4981901fd9f723df50dd)
+        ;
+
+        
+    
+    
+            var marker_3694f4a9a9e0482a91f20d21f27ec183 = L.marker(
+                [47.1625, 19.5033],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_009d32016e5e4ec585e544b8d3413baf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_3694f4a9a9e0482a91f20d21f27ec183.setIcon(icon_009d32016e5e4ec585e544b8d3413baf);
+        
+    
+        var popup_9f6306db1f0046bf931e931612d18a6b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b4fd0b3b95744ec931293bccf3c710e = $(`<div id="html_1b4fd0b3b95744ec931293bccf3c710e" style="width: 100.0%; height: 100.0%;">Hungary Current7DayAvg=1656 Predicted7DayAvg=34444 ConfTotPred=3349839 Date=2022-06-20</div>`)[0];
+            popup_9f6306db1f0046bf931e931612d18a6b.setContent(html_1b4fd0b3b95744ec931293bccf3c710e);
+        
+
+        marker_3694f4a9a9e0482a91f20d21f27ec183.bindPopup(popup_9f6306db1f0046bf931e931612d18a6b)
+        ;
+
+        
+    
+    
+            var marker_69dbacfc40bc4b8d8e34eac63273c1ac = L.marker(
+                [20.593684, 78.96288],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_b3feda2d56ab4258bf600abf560f9455 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_69dbacfc40bc4b8d8e34eac63273c1ac.setIcon(icon_b3feda2d56ab4258bf600abf560f9455);
+        
+    
+        var popup_e3839b342e144a93bda20d3ecc7faa70 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dfc1c9135a2341de94ed6dfd350781d6 = $(`<div id="html_dfc1c9135a2341de94ed6dfd350781d6" style="width: 100.0%; height: 100.0%;">India Current7DayAvg=1794 Predicted7DayAvg=781982 ConfTotPred=75931372 Date=2022-06-20</div>`)[0];
+            popup_e3839b342e144a93bda20d3ecc7faa70.setContent(html_dfc1c9135a2341de94ed6dfd350781d6);
+        
+
+        marker_69dbacfc40bc4b8d8e34eac63273c1ac.bindPopup(popup_e3839b342e144a93bda20d3ecc7faa70)
+        ;
+
+        
+    
+    
+            var marker_fe978a3eea264dbb8c696d3fdf856626 = L.marker(
+                [-0.7893, 113.9213],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_9f1709a0ec2348898cd1b59f993c05e5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_fe978a3eea264dbb8c696d3fdf856626.setIcon(icon_9f1709a0ec2348898cd1b59f993c05e5);
+        
+    
+        var popup_0afacc112760455bacef801eabd6fbc1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_659d6a205fbc4c498981aa8ba4c2147e = $(`<div id="html_659d6a205fbc4c498981aa8ba4c2147e" style="width: 100.0%; height: 100.0%;">Indonesia Current7DayAvg=1591 Predicted7DayAvg=87663 ConfTotPred=9729554 Date=2022-06-20</div>`)[0];
+            popup_0afacc112760455bacef801eabd6fbc1.setContent(html_659d6a205fbc4c498981aa8ba4c2147e);
+        
+
+        marker_fe978a3eea264dbb8c696d3fdf856626.bindPopup(popup_0afacc112760455bacef801eabd6fbc1)
+        ;
+
+        
+    
+    
+            var marker_ed21352fc32b4a0b92be2e11692ada56 = L.marker(
+                [32.427908, 53.68804599999999],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_306339983cf147c394c001323795d06d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_ed21352fc32b4a0b92be2e11692ada56.setIcon(icon_306339983cf147c394c001323795d06d);
+        
+    
+        var popup_5285981f689b4191a67a2160e85d7b65 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b141572034a644059b0807908e23af0d = $(`<div id="html_b141572034a644059b0807908e23af0d" style="width: 100.0%; height: 100.0%;">Iran Current7DayAvg=1898 Predicted7DayAvg=137342 ConfTotPred=12991920 Date=2022-06-20</div>`)[0];
+            popup_5285981f689b4191a67a2160e85d7b65.setContent(html_b141572034a644059b0807908e23af0d);
+        
+
+        marker_ed21352fc32b4a0b92be2e11692ada56.bindPopup(popup_5285981f689b4191a67a2160e85d7b65)
+        ;
+
+        
+    
+    
+            var marker_7ba82fe3e836497fb2b1d7a26c311506 = L.marker(
+                [33.223191, 43.679291],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_95af3f368da64b7584b33235ec60196f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_7ba82fe3e836497fb2b1d7a26c311506.setIcon(icon_95af3f368da64b7584b33235ec60196f);
+        
+    
+        var popup_2b8674a29e894dfe96364188687b5bb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac65d23a1aae47419a8cd5b3158aad35 = $(`<div id="html_ac65d23a1aae47419a8cd5b3158aad35" style="width: 100.0%; height: 100.0%;">Iraq Current7DayAvg=206 Predicted7DayAvg=20889 ConfTotPred=3203439 Date=2022-06-20</div>`)[0];
+            popup_2b8674a29e894dfe96364188687b5bb8.setContent(html_ac65d23a1aae47419a8cd5b3158aad35);
+        
+
+        marker_7ba82fe3e836497fb2b1d7a26c311506.bindPopup(popup_2b8674a29e894dfe96364188687b5bb8)
+        ;
+
+        
+    
+    
+            var marker_29335d0d7c7e4101a59be90261268b0f = L.marker(
+                [53.1424, -7.6921],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_0b33da53e1df4247a03325a42debbabe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_29335d0d7c7e4101a59be90261268b0f.setIcon(icon_0b33da53e1df4247a03325a42debbabe);
+        
+    
+        var popup_fe8b6c122f674230bc73b8073a02bfe6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ed2cf3830b974b3c8f61d755cc2cfd66 = $(`<div id="html_ed2cf3830b974b3c8f61d755cc2cfd66" style="width: 100.0%; height: 100.0%;">Ireland Current7DayAvg=2735 Predicted7DayAvg=25328 ConfTotPred=2584101 Date=2022-06-20</div>`)[0];
+            popup_fe8b6c122f674230bc73b8073a02bfe6.setContent(html_ed2cf3830b974b3c8f61d755cc2cfd66);
+        
+
+        marker_29335d0d7c7e4101a59be90261268b0f.bindPopup(popup_fe8b6c122f674230bc73b8073a02bfe6)
+        ;
+
+        
+    
+    
+            var marker_00c0aa90549145a29730fe7bda9d4a2b = L.marker(
+                [31.046051000000002, 34.851612],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_f5d96501e3c949fea94aa16164e0cd3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_00c0aa90549145a29730fe7bda9d4a2b.setIcon(icon_f5d96501e3c949fea94aa16164e0cd3b);
+        
+    
+        var popup_af21a6cb669747c288c1cf2120c73941 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e31b464217d49cfad8f548ea3234f2e = $(`<div id="html_6e31b464217d49cfad8f548ea3234f2e" style="width: 100.0%; height: 100.0%;">Israel Current7DayAvg=6422 Predicted7DayAvg=41668 ConfTotPred=5835459 Date=2022-06-20</div>`)[0];
+            popup_af21a6cb669747c288c1cf2120c73941.setContent(html_6e31b464217d49cfad8f548ea3234f2e);
+        
+
+        marker_00c0aa90549145a29730fe7bda9d4a2b.bindPopup(popup_af21a6cb669747c288c1cf2120c73941)
+        ;
+
+        
+    
+    
+            var marker_3b01cac54d684ac3912b4435cb3a07e6 = L.marker(
+                [31.046051000000002, 34.851612],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_960486fd5bf548dda4ec196864eeecf4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_3b01cac54d684ac3912b4435cb3a07e6.setIcon(icon_960486fd5bf548dda4ec196864eeecf4);
+        
+    
+        var popup_2300be73faba4d8090beabe77856ec29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_344340ccf7d241dbba82c17835c8a9a4 = $(`<div id="html_344340ccf7d241dbba82c17835c8a9a4" style="width: 100.0%; height: 100.0%;">Israel Current7DayAvg=6422 Predicted7DayAvg=41668 ConfTotPred=5835459 Date=2022-06-20</div>`)[0];
+            popup_2300be73faba4d8090beabe77856ec29.setContent(html_344340ccf7d241dbba82c17835c8a9a4);
+        
+
+        marker_3b01cac54d684ac3912b4435cb3a07e6.bindPopup(popup_2300be73faba4d8090beabe77856ec29)
+        ;
+
+        
+    
+    
+            var marker_95fd131236d14b67a80fa1c4e7e2c61e = L.marker(
+                [41.87194, 12.56738],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_39e862f1fd2343ae8735127869f19022 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "gray", "prefix": "glyphicon"}
+            );
+            marker_95fd131236d14b67a80fa1c4e7e2c61e.setIcon(icon_39e862f1fd2343ae8735127869f19022);
+        
+    
+        var popup_3dcb93e85e604235ba5e2a56f7b4517d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a324cbeab984edc9b0a3c42b2d2842b = $(`<div id="html_6a324cbeab984edc9b0a3c42b2d2842b" style="width: 100.0%; height: 100.0%;">Italy Current7DayAvg=60786 Predicted7DayAvg=313326 ConfTotPred=29794651 Date=2022-06-20</div>`)[0];
+            popup_3dcb93e85e604235ba5e2a56f7b4517d.setContent(html_6a324cbeab984edc9b0a3c42b2d2842b);
+        
+
+        marker_95fd131236d14b67a80fa1c4e7e2c61e.bindPopup(popup_3dcb93e85e604235ba5e2a56f7b4517d)
+        ;
+
+        
+    
+    
+            var marker_3361c56cfa9a44838ea6ca3b63213b34 = L.marker(
+                [36.204824, 138.252924],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_46a43425d06f4ffa940320d9b841de91 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            );
+            marker_3361c56cfa9a44838ea6ca3b63213b34.setIcon(icon_46a43425d06f4ffa940320d9b841de91);
+        
+    
+        var popup_c0212bc7b6ed4a1e8931979a4e4bb3d9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e66dc66b9ecf459d9cd0c331bf06b6b8 = $(`<div id="html_e66dc66b9ecf459d9cd0c331bf06b6b8" style="width: 100.0%; height: 100.0%;">Japan Current7DayAvg=42801 Predicted7DayAvg=235357 ConfTotPred=17858343 Date=2022-06-20</div>`)[0];
+            popup_c0212bc7b6ed4a1e8931979a4e4bb3d9.setContent(html_e66dc66b9ecf459d9cd0c331bf06b6b8);
+        
+
+        marker_3361c56cfa9a44838ea6ca3b63213b34.bindPopup(popup_c0212bc7b6ed4a1e8931979a4e4bb3d9)
+        ;
+
+        
+    
+    
+            var marker_d643a56a56ee4a16abcda3b8149881c2 = L.marker(
+                [31.24, 36.51],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_17854ec5c216440d8f27bf1e37928edd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            );
+            marker_d643a56a56ee4a16abcda3b8149881c2.setIcon(icon_17854ec5c216440d8f27bf1e37928edd);
+        
+    
+        var popup_29f6d62211cc4727a97a8a6870eb56dc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12d263c062de43d68cd97ba2519fb84b = $(`<div id="html_12d263c062de43d68cd97ba2519fb84b" style="width: 100.0%; height: 100.0%;">Jordan Current7DayAvg=163 Predicted7DayAvg=30678 ConfTotPred=2984608 Date=2022-06-20</div>`)[0];
+            popup_29f6d62211cc4727a97a8a6870eb56dc.setContent(html_12d263c062de43d68cd97ba2519fb84b);
+        
+
+        marker_d643a56a56ee4a16abcda3b8149881c2.bindPopup(popup_29f6d62211cc4727a97a8a6870eb56dc)
+        ;
+
+        
+    
+    
+            var marker_2731c7a14f314debbca4d30f8b2c9813 = L.marker(
+                [48.0196, 66.9237],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_08d1834122d546aca50b4e22985217a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_2731c7a14f314debbca4d30f8b2c9813.setIcon(icon_08d1834122d546aca50b4e22985217a3);
+        
+    
+        var popup_dce89c46c22e4db1942765baaed15724 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c435966e0390436cbb40ddd43e641aad = $(`<div id="html_c435966e0390436cbb40ddd43e641aad" style="width: 100.0%; height: 100.0%;">Kazakhstan Current7DayAvg=25 Predicted7DayAvg=26282 ConfTotPred=2499244 Date=2022-06-20</div>`)[0];
+            popup_dce89c46c22e4db1942765baaed15724.setContent(html_c435966e0390436cbb40ddd43e641aad);
+        
+
+        marker_2731c7a14f314debbca4d30f8b2c9813.bindPopup(popup_dce89c46c22e4db1942765baaed15724)
+        ;
+
+        
+    
+    
+            var marker_33a979643d7442b19db648fd9c9e1abb = L.marker(
+                [35.907757000000004, 127.766922],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_3efe6c39b806480f8abc645f9141bee5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_33a979643d7442b19db648fd9c9e1abb.setIcon(icon_3efe6c39b806480f8abc645f9141bee5);
+        
+    
+        var popup_be4e75cca4dc45c5b94ca1414ef8c6b1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec3a61616b0848c4a45915bd81f9aa52 = $(`<div id="html_ec3a61616b0848c4a45915bd81f9aa52" style="width: 100.0%; height: 100.0%;">Korea, South Current7DayAvg=156242 Predicted7DayAvg=315696 ConfTotPred=30696431 Date=2022-06-20</div>`)[0];
+            popup_be4e75cca4dc45c5b94ca1414ef8c6b1.setContent(html_ec3a61616b0848c4a45915bd81f9aa52);
+        
+
+        marker_33a979643d7442b19db648fd9c9e1abb.bindPopup(popup_be4e75cca4dc45c5b94ca1414ef8c6b1)
+        ;
+
+        
+    
+    
+            var marker_7bc3d0204c3f4fa6ba53f4dbe5ac6c3b = L.marker(
+                [4.210483999999999, 101.97576600000001],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_57234fda10ae4cfe915aa8a66300b3c7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_7bc3d0204c3f4fa6ba53f4dbe5ac6c3b.setIcon(icon_57234fda10ae4cfe915aa8a66300b3c7);
+        
+    
+        var popup_e3474dd6e70446ec8a8d9dc8240c05ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b15989f030cf4b10b2d07dfbbfd48a33 = $(`<div id="html_b15989f030cf4b10b2d07dfbbfd48a33" style="width: 100.0%; height: 100.0%;">Malaysia Current7DayAvg=9482 Predicted7DayAvg=78502 ConfTotPred=7749159 Date=2022-06-20</div>`)[0];
+            popup_e3474dd6e70446ec8a8d9dc8240c05ca.setContent(html_b15989f030cf4b10b2d07dfbbfd48a33);
+        
+
+        marker_7bc3d0204c3f4fa6ba53f4dbe5ac6c3b.bindPopup(popup_e3474dd6e70446ec8a8d9dc8240c05ca)
+        ;
+
+        
+    
+    
+            var marker_1b05daa1f3e84b5394d9cd5e08f5d0d5 = L.marker(
+                [23.6345, -102.5528],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_391a536fafb74d5a8409e0c69b3fa6a3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgreen", "prefix": "glyphicon"}
+            );
+            marker_1b05daa1f3e84b5394d9cd5e08f5d0d5.setIcon(icon_391a536fafb74d5a8409e0c69b3fa6a3);
+        
+    
+        var popup_def57dec0fc54e57bd55fe5b5be8f2ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8913bdb1394a4a1486a46ca94da57ff3 = $(`<div id="html_8913bdb1394a4a1486a46ca94da57ff3" style="width: 100.0%; height: 100.0%;">Mexico Current7DayAvg=2467 Predicted7DayAvg=105151 ConfTotPred=10156026 Date=2022-06-20</div>`)[0];
+            popup_def57dec0fc54e57bd55fe5b5be8f2ce.setContent(html_8913bdb1394a4a1486a46ca94da57ff3);
+        
+
+        marker_1b05daa1f3e84b5394d9cd5e08f5d0d5.bindPopup(popup_def57dec0fc54e57bd55fe5b5be8f2ce)
+        ;
+
+        
+    
+    
+            var marker_7a427356601b4a428ff61d1caad387d0 = L.marker(
+                [52.1326, 5.2913],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_48130bc6fd824bab9a16221b72583624 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_7a427356601b4a428ff61d1caad387d0.setIcon(icon_48130bc6fd824bab9a16221b72583624);
+        
+    
+        var popup_df96d5f17bfe41e6ac8588f842710e15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0bd16de0050e4c3e902cffe9beddd17f = $(`<div id="html_0bd16de0050e4c3e902cffe9beddd17f" style="width: 100.0%; height: 100.0%;">Netherlands Current7DayAvg=10289 Predicted7DayAvg=228921 ConfTotPred=17751805 Date=2022-06-20</div>`)[0];
+            popup_df96d5f17bfe41e6ac8588f842710e15.setContent(html_0bd16de0050e4c3e902cffe9beddd17f);
+        
+
+        marker_7a427356601b4a428ff61d1caad387d0.bindPopup(popup_df96d5f17bfe41e6ac8588f842710e15)
+        ;
+
+        
+    
+    
+            var marker_250e53e1ce884e09a3da6cb58bd30be9 = L.marker(
+                [60.472, 8.4689],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_6d0ea3443c8047979f5c4ef1a1b11ab6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_250e53e1ce884e09a3da6cb58bd30be9.setIcon(icon_6d0ea3443c8047979f5c4ef1a1b11ab6);
+        
+    
+        var popup_327eae2d3e8045b6a6bf64842f29d747 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_86279652426e4e70885583aed2c41dc7 = $(`<div id="html_86279652426e4e70885583aed2c41dc7" style="width: 100.0%; height: 100.0%;">Norway Current7DayAvg=881 Predicted7DayAvg=31784 ConfTotPred=2761729 Date=2022-06-20</div>`)[0];
+            popup_327eae2d3e8045b6a6bf64842f29d747.setContent(html_86279652426e4e70885583aed2c41dc7);
+        
+
+        marker_250e53e1ce884e09a3da6cb58bd30be9.bindPopup(popup_327eae2d3e8045b6a6bf64842f29d747)
+        ;
+
+        
+    
+    
+            var marker_40d185068c664a118ed0ae9585c55e62 = L.marker(
+                [-9.19, -75.0152],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_d7b41695d7a341079a73300286d9025e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+            );
+            marker_40d185068c664a118ed0ae9585c55e62.setIcon(icon_d7b41695d7a341079a73300286d9025e);
+        
+    
+        var popup_55f2a246791144f9a7906257e72a2519 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f334ef791f544bb58ff3b0ab466e2f91 = $(`<div id="html_f334ef791f544bb58ff3b0ab466e2f91" style="width: 100.0%; height: 100.0%;">Peru Current7DayAvg=600 Predicted7DayAvg=46236 ConfTotPred=5509991 Date=2022-06-20</div>`)[0];
+            popup_55f2a246791144f9a7906257e72a2519.setContent(html_f334ef791f544bb58ff3b0ab466e2f91);
+        
+
+        marker_40d185068c664a118ed0ae9585c55e62.bindPopup(popup_55f2a246791144f9a7906257e72a2519)
+        ;
+
+        
+    
+    
+            var marker_87f106dacf86404e887162d97a36fc9a = L.marker(
+                [12.879721, 121.77401699999999],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_12941260b2874f7dbca01e04c174992f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+            );
+            marker_87f106dacf86404e887162d97a36fc9a.setIcon(icon_12941260b2874f7dbca01e04c174992f);
+        
+    
+        var popup_3532f5b27d4d459abd363a55bab32e1a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7a371f2f79243febc4c8261b8cb38a5 = $(`<div id="html_d7a371f2f79243febc4c8261b8cb38a5" style="width: 100.0%; height: 100.0%;">Philippines Current7DayAvg=264 Predicted7DayAvg=55291 ConfTotPred=6009270 Date=2022-06-20</div>`)[0];
+            popup_3532f5b27d4d459abd363a55bab32e1a.setContent(html_d7a371f2f79243febc4c8261b8cb38a5);
+        
+
+        marker_87f106dacf86404e887162d97a36fc9a.bindPopup(popup_3532f5b27d4d459abd363a55bab32e1a)
+        ;
+
+        
+    
+    
+            var marker_767fab7c19a4499396bcb01276609bbb = L.marker(
+                [51.9194, 19.1451],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_2eda994cfdf24478b932f0fdef7edd62 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+            );
+            marker_767fab7c19a4499396bcb01276609bbb.setIcon(icon_2eda994cfdf24478b932f0fdef7edd62);
+        
+    
+        var popup_b351f775c55c4767bff5518a708bc9b2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6cc2e8b0d0334ae8a78587a3c4f5f48f = $(`<div id="html_6cc2e8b0d0334ae8a78587a3c4f5f48f" style="width: 100.0%; height: 100.0%;">Poland Current7DayAvg=1965 Predicted7DayAvg=147818 ConfTotPred=12206169 Date=2022-06-20</div>`)[0];
+            popup_b351f775c55c4767bff5518a708bc9b2.setContent(html_6cc2e8b0d0334ae8a78587a3c4f5f48f);
+        
+
+        marker_767fab7c19a4499396bcb01276609bbb.bindPopup(popup_b351f775c55c4767bff5518a708bc9b2)
+        ;
+
+        
+    
+    
+            var marker_79de379678354678ab230214be2ae2b2 = L.marker(
+                [39.3999, -8.2245],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_1ae46dc9b7614788b503025267eb9f89 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "lightgray", "prefix": "glyphicon"}
+            );
+            marker_79de379678354678ab230214be2ae2b2.setIcon(icon_1ae46dc9b7614788b503025267eb9f89);
+        
+    
+        var popup_bc0afee908594d5db132c8aced174e85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e983f06e3e2642acb4aa66b2a85af62b = $(`<div id="html_e983f06e3e2642acb4aa66b2a85af62b" style="width: 100.0%; height: 100.0%;">Portugal Current7DayAvg=10430 Predicted7DayAvg=62156 ConfTotPred=6507349 Date=2022-06-20</div>`)[0];
+            popup_bc0afee908594d5db132c8aced174e85.setContent(html_e983f06e3e2642acb4aa66b2a85af62b);
+        
+
+        marker_79de379678354678ab230214be2ae2b2.bindPopup(popup_bc0afee908594d5db132c8aced174e85)
+        ;
+
+        
+    
+    
+            var marker_b6be92e8fe9945b782ac61ff8d051f71 = L.marker(
+                [45.9432, 24.9668],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_b3662acfabc8405b8bc370eccc01e8ee = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b6be92e8fe9945b782ac61ff8d051f71.setIcon(icon_b3662acfabc8405b8bc370eccc01e8ee);
+        
+    
+        var popup_de2c4e3139aa4ac68571b2aaa651a96a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_700416e84d1e4c3a92526052425d3d55 = $(`<div id="html_700416e84d1e4c3a92526052425d3d55" style="width: 100.0%; height: 100.0%;">Romania Current7DayAvg=1607 Predicted7DayAvg=23808 ConfTotPred=3896243 Date=2022-06-20</div>`)[0];
+            popup_de2c4e3139aa4ac68571b2aaa651a96a.setContent(html_700416e84d1e4c3a92526052425d3d55);
+        
+
+        marker_b6be92e8fe9945b782ac61ff8d051f71.bindPopup(popup_de2c4e3139aa4ac68571b2aaa651a96a)
+        ;
+
+        
+    
+    
+            var marker_0161e1c08b2245f6b451e5de33514ddd = L.marker(
+                [61.52401, 105.31875600000001],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_1f6dacceba9e451085599afbd39d6639 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0161e1c08b2245f6b451e5de33514ddd.setIcon(icon_1f6dacceba9e451085599afbd39d6639);
+        
+    
+        var popup_9b1306ef02e24ecc850d805335f37410 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_32adfb6146cb457f885896d367cfd114 = $(`<div id="html_32adfb6146cb457f885896d367cfd114" style="width: 100.0%; height: 100.0%;">Russia Current7DayAvg=12716 Predicted7DayAvg=241999 ConfTotPred=28101255 Date=2022-06-20</div>`)[0];
+            popup_9b1306ef02e24ecc850d805335f37410.setContent(html_32adfb6146cb457f885896d367cfd114);
+        
+
+        marker_0161e1c08b2245f6b451e5de33514ddd.bindPopup(popup_9b1306ef02e24ecc850d805335f37410)
+        ;
+
+        
+    
+    
+            var marker_23b827a2ba7648aa9008fe01fd6c382e = L.marker(
+                [44.0165, 21.0059],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_931e83841b8c4584a2b8244063a390f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_23b827a2ba7648aa9008fe01fd6c382e.setIcon(icon_931e83841b8c4584a2b8244063a390f9);
+        
+    
+        var popup_e7963ba29e154d8bb75da3aefe9679e5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f0eb2a22e17467ea2d2435fd72511e5 = $(`<div id="html_5f0eb2a22e17467ea2d2435fd72511e5" style="width: 100.0%; height: 100.0%;">Serbia Current7DayAvg=1095 Predicted7DayAvg=24490 ConfTotPred=3036321 Date=2022-06-20</div>`)[0];
+            popup_e7963ba29e154d8bb75da3aefe9679e5.setContent(html_5f0eb2a22e17467ea2d2435fd72511e5);
+        
+
+        marker_23b827a2ba7648aa9008fe01fd6c382e.bindPopup(popup_e7963ba29e154d8bb75da3aefe9679e5)
+        ;
+
+        
+    
+    
+            var marker_799d7975e8b642e09ac0833ec8dc1293 = L.marker(
+                [48.669, 19.699],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_54ff423800b741d698acc62cf25376f3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_799d7975e8b642e09ac0833ec8dc1293.setIcon(icon_54ff423800b741d698acc62cf25376f3);
+        
+    
+        var popup_a7077f91c91540b3b901ef13d189d695 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21a796800a7e45f992bc6b1c72cd2d51 = $(`<div id="html_21a796800a7e45f992bc6b1c72cd2d51" style="width: 100.0%; height: 100.0%;">Slovakia Current7DayAvg=3646 Predicted7DayAvg=23920 ConfTotPred=3535166 Date=2022-06-20</div>`)[0];
+            popup_a7077f91c91540b3b901ef13d189d695.setContent(html_21a796800a7e45f992bc6b1c72cd2d51);
+        
+
+        marker_799d7975e8b642e09ac0833ec8dc1293.bindPopup(popup_a7077f91c91540b3b901ef13d189d695)
+        ;
+
+        
+    
+    
+            var marker_2e9fad9ed8c1499c92a689bfd9381f03 = L.marker(
+                [-30.5595, 22.9375],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_b9358e368db94cf29e40ceea015b1a88 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_2e9fad9ed8c1499c92a689bfd9381f03.setIcon(icon_b9358e368db94cf29e40ceea015b1a88);
+        
+    
+        var popup_384cc7cd4b7744769b702f61c7a2aeb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fb11998e207e4c4799844192647f905d = $(`<div id="html_fb11998e207e4c4799844192647f905d" style="width: 100.0%; height: 100.0%;">South Africa Current7DayAvg=2398 Predicted7DayAvg=49529 ConfTotPred=5888260 Date=2022-06-20</div>`)[0];
+            popup_384cc7cd4b7744769b702f61c7a2aeb1.setContent(html_fb11998e207e4c4799844192647f905d);
+        
+
+        marker_2e9fad9ed8c1499c92a689bfd9381f03.bindPopup(popup_384cc7cd4b7744769b702f61c7a2aeb1)
+        ;
+
+        
+    
+    
+            var marker_cdcd6a830f784ea1a37813814a9b6e98 = L.marker(
+                [40.463667, -3.7492199999999998],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_12f90065b8cb44bbb3936b25d9a2c9cd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_cdcd6a830f784ea1a37813814a9b6e98.setIcon(icon_12f90065b8cb44bbb3936b25d9a2c9cd);
+        
+    
+        var popup_920736887bb14da3a6acd29708879b7a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b57f6d40828491d8ee7f07061f6738f = $(`<div id="html_2b57f6d40828491d8ee7f07061f6738f" style="width: 100.0%; height: 100.0%;">Spain Current7DayAvg=13724 Predicted7DayAvg=97691 ConfTotPred=16080897 Date=2022-06-20</div>`)[0];
+            popup_920736887bb14da3a6acd29708879b7a.setContent(html_2b57f6d40828491d8ee7f07061f6738f);
+        
+
+        marker_cdcd6a830f784ea1a37813814a9b6e98.bindPopup(popup_920736887bb14da3a6acd29708879b7a)
+        ;
+
+        
+    
+    
+            var marker_c985f7165e1642eeaf742c2550d44043 = L.marker(
+                [60.128161, 18.643501],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_c6dff1062356494aab1b2aae95f61e22 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_c985f7165e1642eeaf742c2550d44043.setIcon(icon_c6dff1062356494aab1b2aae95f61e22);
+        
+    
+        var popup_34afde7fc93144fbbcc0df4110212458 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4588c066ed9b4b48863b543764dadfea = $(`<div id="html_4588c066ed9b4b48863b543764dadfea" style="width: 100.0%; height: 100.0%;">Sweden Current7DayAvg=601 Predicted7DayAvg=25829 ConfTotPred=3585732 Date=2022-06-20</div>`)[0];
+            popup_34afde7fc93144fbbcc0df4110212458.setContent(html_4588c066ed9b4b48863b543764dadfea);
+        
+
+        marker_c985f7165e1642eeaf742c2550d44043.bindPopup(popup_34afde7fc93144fbbcc0df4110212458)
+        ;
+
+        
+    
+    
+            var marker_a3691f63b786468e81bb7b34b0435e03 = L.marker(
+                [46.8182, 8.2275],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_1dbd44bf1f6c4a9fb04e626a1feb18e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_a3691f63b786468e81bb7b34b0435e03.setIcon(icon_1dbd44bf1f6c4a9fb04e626a1feb18e3);
+        
+    
+        var popup_cd455f589d6b4a9ab20797eeb112ee84 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d004a1501de54ceea7063e00668ce50f = $(`<div id="html_d004a1501de54ceea7063e00668ce50f" style="width: 100.0%; height: 100.0%;">Switzerland Current7DayAvg=6345 Predicted7DayAvg=64681 ConfTotPred=6359721 Date=2022-06-20</div>`)[0];
+            popup_cd455f589d6b4a9ab20797eeb112ee84.setContent(html_d004a1501de54ceea7063e00668ce50f);
+        
+
+        marker_a3691f63b786468e81bb7b34b0435e03.bindPopup(popup_cd455f589d6b4a9ab20797eeb112ee84)
+        ;
+
+        
+    
+    
+            var marker_c239e989fd0d445aabfbf3a544621e09 = L.marker(
+                [15.870032, 100.992541],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_5306282f6060404ebe6f64fe40ce5d4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_c239e989fd0d445aabfbf3a544621e09.setIcon(icon_5306282f6060404ebe6f64fe40ce5d4c);
+        
+    
+        var popup_dff1e8623da34f349d6e98850e8c0c0b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7f7b6db9168a478c8b12f9a7d2ffc887 = $(`<div id="html_7f7b6db9168a478c8b12f9a7d2ffc887" style="width: 100.0%; height: 100.0%;">Thailand Current7DayAvg=20555 Predicted7DayAvg=41570 ConfTotPred=6037284 Date=2022-06-20</div>`)[0];
+            popup_dff1e8623da34f349d6e98850e8c0c0b.setContent(html_7f7b6db9168a478c8b12f9a7d2ffc887);
+        
+
+        marker_c239e989fd0d445aabfbf3a544621e09.bindPopup(popup_dff1e8623da34f349d6e98850e8c0c0b)
+        ;
+
+        
+    
+    
+            var marker_d0c3c87ed4ac4a4593e995199b6e29f1 = L.marker(
+                [38.9637, 35.2433],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_c1c465b6e03047dbaafe583491e2ac90 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d0c3c87ed4ac4a4593e995199b6e29f1.setIcon(icon_c1c465b6e03047dbaafe583491e2ac90);
+        
+    
+        var popup_44b30a8de5334b8792d41d91e0272f13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9c7ddd23c4354a5589f9fdbd66b03ff1 = $(`<div id="html_9c7ddd23c4354a5589f9fdbd66b03ff1" style="width: 100.0%; height: 100.0%;">Turkey Current7DayAvg=7033 Predicted7DayAvg=190186 ConfTotPred=23023926 Date=2022-06-20</div>`)[0];
+            popup_44b30a8de5334b8792d41d91e0272f13.setContent(html_9c7ddd23c4354a5589f9fdbd66b03ff1);
+        
+
+        marker_d0c3c87ed4ac4a4593e995199b6e29f1.bindPopup(popup_44b30a8de5334b8792d41d91e0272f13)
+        ;
+
+        
+    
+    
+            var marker_b06e0fd1a6224a7bb4120a96606f818d = L.marker(
+                [40.0, -100.0],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_bf17dd8aa2dc48588c788a4f3bdd502a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_b06e0fd1a6224a7bb4120a96606f818d.setIcon(icon_bf17dd8aa2dc48588c788a4f3bdd502a);
+        
+    
+        var popup_3ec1526af11c4f5683211425373a4c90 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c6033cb3749b4d40b8db90d72d127f33 = $(`<div id="html_c6033cb3749b4d40b8db90d72d127f33" style="width: 100.0%; height: 100.0%;">United States Current7DayAvg=42091 Predicted7DayAvg=2087610 ConfTotPred=169278520 Date=2022-06-20</div>`)[0];
+            popup_3ec1526af11c4f5683211425373a4c90.setContent(html_c6033cb3749b4d40b8db90d72d127f33);
+        
+
+        marker_b06e0fd1a6224a7bb4120a96606f818d.bindPopup(popup_3ec1526af11c4f5683211425373a4c90)
+        ;
+
+        
+    
+    
+            var marker_d319e3ffee8b4dabb0bf7e687d3b5c49 = L.marker(
+                [48.3794, 31.1656],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_5aa690cbe45a41a6a3ec89312bae77a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_d319e3ffee8b4dabb0bf7e687d3b5c49.setIcon(icon_5aa690cbe45a41a6a3ec89312bae77a9);
+        
+    
+        var popup_30e4833752d642e3a322ff9c331555ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_834f8f6d1d0b4df7b3deeabb55255888 = $(`<div id="html_834f8f6d1d0b4df7b3deeabb55255888" style="width: 100.0%; height: 100.0%;">Ukraine Current7DayAvg=0 Predicted7DayAvg=128387 ConfTotPred=10432760 Date=2022-06-20</div>`)[0];
+            popup_30e4833752d642e3a322ff9c331555ce.setContent(html_834f8f6d1d0b4df7b3deeabb55255888);
+        
+
+        marker_d319e3ffee8b4dabb0bf7e687d3b5c49.bindPopup(popup_30e4833752d642e3a322ff9c331555ce)
+        ;
+
+        
+    
+    
+            var marker_12f66732adb54601ad6bf59a3cefcfc4 = L.marker(
+                [55.3781, -3.4360000000000004],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_08e3d58aac834bb1bd1da799a9cb0d4d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "purple", "prefix": "glyphicon"}
+            );
+            marker_12f66732adb54601ad6bf59a3cefcfc4.setIcon(icon_08e3d58aac834bb1bd1da799a9cb0d4d);
+        
+    
+        var popup_1caa4ac3f0c84f24bc64a396482a469f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3ac5dbe89c59430386a00f5a420ad428 = $(`<div id="html_3ac5dbe89c59430386a00f5a420ad428" style="width: 100.0%; height: 100.0%;">United Kingdom Current7DayAvg=37709 Predicted7DayAvg=185161 ConfTotPred=29876395 Date=2022-06-20</div>`)[0];
+            popup_1caa4ac3f0c84f24bc64a396482a469f.setContent(html_3ac5dbe89c59430386a00f5a420ad428);
+        
+
+        marker_12f66732adb54601ad6bf59a3cefcfc4.bindPopup(popup_1caa4ac3f0c84f24bc64a396482a469f)
+        ;
+
+        
+    
+    
+            var marker_a93035303c974fae8d46a5ba25d777db = L.marker(
+                [14.058323999999999, 108.277199],
+                {}
+            ).addTo(map_2d9e065272894af2af4f094b83840ef2);
+        
+    
+            var icon_c7dd964d9c954357996ab8993991615e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a93035303c974fae8d46a5ba25d777db.setIcon(icon_c7dd964d9c954357996ab8993991615e);
+        
+    
+        var popup_bf60170a08844ee3afec2f875e4ddbe2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1346c801e2d44ddf9bfa3f05f8dc1a41 = $(`<div id="html_1346c801e2d44ddf9bfa3f05f8dc1a41" style="width: 100.0%; height: 100.0%;">Vietnam Current7DayAvg=51686 Predicted7DayAvg=129812 ConfTotPred=16111902 Date=2022-06-20</div>`)[0];
+            popup_bf60170a08844ee3afec2f875e4ddbe2.setContent(html_1346c801e2d44ddf9bfa3f05f8dc1a41);
+        
+
+        marker_a93035303c974fae8d46a5ba25d777db.bindPopup(popup_bf60170a08844ee3afec2f875e4ddbe2)
+        ;
+
+        
+    
+</script>
